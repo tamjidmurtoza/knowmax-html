@@ -1,0 +1,88 @@
+.cs_course_thumb {
+  margin-bottom: 18px;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    .cs_sourse_badge {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+}
+
+.cs_badge_container {
+  width: calc(100% - 30px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.cs_sourse_badge {
+  padding: 3px 16px;
+  border-radius: 2px;
+  transition: all .4s ease-in-out;
+}
+
+.cs_course_cart {
+  display: flex;
+  gap: 10px;
+}
+
+.cs_course_info {
+  padding: 0 20px 20px;
+
+  .cs_separator {
+    width: 100%;
+    max-width: 363px;
+    height: 1px;
+    background: #E9E9E9;
+    margin-top: 23px;
+    margin-bottom: 13px;
+  }
+}
+
+.cs_course_meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.cs_course_title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.cs_course_instructor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs_instructor_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs_reviews_number {
+  margin-left: 10px;
+}
