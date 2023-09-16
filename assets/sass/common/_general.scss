@@ -186,6 +186,9 @@ hr {
   background-color: $primary;
 }
 
+/*================================
+ common component styling
+=================================*/
 .cs_btn_style_1 {
   padding: 16px 19px;
   display: inline-flex;
@@ -201,5 +204,17 @@ hr {
   &:hover {
     background-color: $white;
 
+  }
+}
+
+.cs_section_heading {
+  .cs_section_subtitle {
+    line-height: 1.556em;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+  }
+
+  .cs_section_title {
+    line-height: 1.21em;
   }
 }
