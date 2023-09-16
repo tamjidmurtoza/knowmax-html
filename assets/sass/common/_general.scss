@@ -1,0 +1,165 @@
+/*--------------------------------------------------------------
+  4. General
+----------------------------------------------------------------*/
+.cs_fs_16 {
+  font-size: 16px;
+}
+.cs_fs_17 {
+  font-size: 17px;
+}
+.cs_fs_18 {
+  font-size: 18px;
+}
+.cs_fs_20 {
+  font-size: 20px;
+}
+.cs_fs_22 {
+  font-size: 22px;
+}
+.cs_fs_24 {
+  font-size: 24px;
+}
+.cs_fs_30 {
+  font-size: 30px;
+}
+.cs_fs_36 {
+  font-size: 36px;
+}
+.cs_fs_45 {
+  font-size: 45px;
+}
+.cs_fs_48 {
+  font-size: 48px;
+}
+.cs_fs_55 {
+  font-size: 55px;
+}
+.cs_fs_65 {
+  font-size: 68px;
+  line-height: 1.15em;
+}
+
+.cs_light {
+  font-weight: 300;
+}
+
+.cs_normal {
+  font-weight: 400;
+}
+
+.cs_medium {
+  font-weight: 500;
+}
+
+.cs_semibold {
+  font-weight: 600;
+}
+
+.cs_bold {
+  font-weight: 700;
+}
+
+.cs_extra_bold {
+  font-weight: 800;
+}
+
+.cs_black {
+  font-weight: 900;
+}
+
+.cs_radius_3 {
+  border-radius: 3px;
+}
+
+.cs_radius_5 {
+  border-radius: 5px;
+}
+
+.cs_radius_7 {
+  border-radius: 7px;
+}
+
+.cs_radius_10 {
+  border-radius: 10px;
+}
+
+.cs_radius_15 {
+  border-radius: 15px;
+}
+
+.cs_mp0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid $border;
+}
+
+.cs_bg_filed {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cs_vertical_middle {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+}
+
+.cs_vertical_middle_in {
+  flex: none;
+  width: 100%;
+}
+
+.cs_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs_white_color {
+  color: $white;
+}
+
+.cs_primary_color {
+  color: $primary;
+}
+.cs_secondary_color {
+  color: $secondary;
+}
+
+.cs_ternary_color {
+  color: $ternary;
+}
+
+.cs_accent_color {
+  color: $accent;
+}
+.cs_gray_color {
+  color: $gray;
+}
+
+.cs_white_bg {
+  background-color: #fff;
+}
+
+.cs_accent_bg {
+  background-color: $accent;
+}
+.cs_gray_bg {
+  background-color: $gray;
+}
+
+.cs_gray_bg_3 {
+  background-color: $border;
+}
+
+.cs_primary_bg {
+  background-color: $primary;
+}
