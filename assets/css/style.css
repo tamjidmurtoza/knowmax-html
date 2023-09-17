@@ -1652,7 +1652,6 @@ hr {
   transition: all 0.4s ease-in-out;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_btn {
-  color: #666;
   line-height: 1.556em;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -1806,8 +1805,8 @@ hr {
   max-width: 363px;
   height: 1px;
   background: #E9E9E9;
-  margin-top: 23px;
-  margin-bottom: 13px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .cs_course_meta {
