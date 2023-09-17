@@ -1,3 +1,17 @@
+.cs_course_item {
+  width: 100%;
+  transition: all .4s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.10);
+
+    .cs_sourse_badge {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+}
+
 .cs_course_thumb {
   margin-bottom: 18px;
   position: relative;
@@ -9,12 +23,6 @@
     object-fit: cover;
   }
 
-  &:hover {
-    .cs_sourse_badge {
-      background-color: $accent;
-      color: $white;
-    }
-  }
 }
 
 .cs_badge_container {

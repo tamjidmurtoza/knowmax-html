@@ -207,11 +207,21 @@ hr {
   }
 }
 
+.cs_section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
 .cs_section_heading {
   .cs_section_subtitle {
+    display: block;
     line-height: 1.556em;
     letter-spacing: 2.7px;
     text-transform: uppercase;
+    margin-bottom: 15px;
   }
 
   .cs_section_title {
@@ -222,8 +232,4 @@ hr {
 .cs_star_container i {
   font-size: 12px;
   color: #FFC107;
-}
-
-.cs_shadow {
-  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.10);
 }

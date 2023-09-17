@@ -300,7 +300,7 @@
     6. Isotop Initialize
   --------------------------------------------------------------*/
   function isotopInit() {
-    if ($.exists('.cs_isotop')) {
+    if ($.exists('.cs_isotope')) {
       $('.cs_isotope').isotope({
         itemSelector: '.cs_isotope_item',
         transitionDuration: '0.60s',
