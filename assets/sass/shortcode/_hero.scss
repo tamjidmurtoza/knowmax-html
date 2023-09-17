@@ -3,7 +3,7 @@
 ----------------------------------------------------------------*/
 .cs_hero_inner {
   width: 100%;
-  min-height: 960px;
+  height: 900px;
   position: relative;
 }
 
@@ -23,7 +23,6 @@
   .cs_hero_mini_title {
     line-height: 1.459em;
     margin-bottom: 30px;
-
   }
 
   .cs_hero_title {
@@ -40,7 +39,6 @@
     display: flex;
     align-items: center;
     gap: 25px;
-
   }
 
   .cs_hero_btn2 {
@@ -50,7 +48,7 @@
   }
 
   .cs_star_container {
-    color: #FFC107;
+    color: #ffc107;
   }
 
   .cs_rating_text {

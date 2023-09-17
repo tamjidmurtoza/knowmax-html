@@ -308,6 +308,7 @@
         masonry: {
           columnWidth: '.cs_grid_sizer',
         },
+        // filter: '.engineering',
       });
       /* Active Class of Portfolio*/
       $('.cs_isotope_filter ul li').on('click', function (event) {
