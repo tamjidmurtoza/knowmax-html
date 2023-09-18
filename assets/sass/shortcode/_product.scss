@@ -1,5 +1,4 @@
 .cs_product_item {
-  border-radius: 3px;
   background: $white;
 
   .cs_product_thumb {
@@ -13,7 +12,6 @@
     top: 20px;
     padding: 10px 20px;
     line-height: 1em;
-    border-radius: 3px;
   }
 
   .cs_product_info {
@@ -44,7 +42,6 @@
     text-align: center;
     line-height: 1.445em;
     padding: 7px 60px;
-    border-radius: 2px;
   }
 
   .cs_cart_icon {
@@ -54,7 +51,6 @@
     align-items: center;
     justify-content: center;
     border: 1px solid #EBEDF4;
-    border-radius: 2px;
     transition: all .4s ease-in-out;
 
     &:hover {

@@ -16,15 +16,19 @@
   display: flex;
   justify-content: center;
   margin-top: 60px;
+
   @media (max-width: 575px) {
     margin-top: 40px;
   }
-  > * {
+
+  >* {
     position: relative;
     transition: all 0.4s ease;
+
     &:hover {
       color: $accent;
     }
+
     &:not(:last-child) {
       padding-right: 25px;
       margin-right: 25px;
@@ -38,18 +42,20 @@
   justify-content: center;
   gap: 14px;
   margin-top: 50px;
+
   .swiper-pagination-bullet {
     height: 10px;
     width: 10px;
     background-color: $secondary;
     opacity: 1;
-    border-radius: 1.6em;
     transition: all 0.4s ease;
+
     &.swiper-pagination-bullet-active {
       width: 25px;
     }
   }
 }
+
 .swiper-pagination-bullets.cs_number_pagination {
   display: flex;
   flex-direction: column;
@@ -60,6 +66,7 @@
   left: initial;
   right: calc((100vw - 1420px) / 2 / 2);
   width: initial;
+
   .swiper-pagination-bullet {
     height: 60px;
     width: 60px !important;

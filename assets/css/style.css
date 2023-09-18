@@ -1186,6 +1186,10 @@ textarea {
   font-weight: 900;
 }
 
+.cs_radius_2 {
+  border-radius: 2px;
+}
+
 .cs_radius_3 {
   border-radius: 3px;
 }
@@ -1788,7 +1792,6 @@ hr {
 }
 .cs_course_item.cs_style_1 .cs_sourse_badge {
   padding: 3px 16px;
-  border-radius: 2px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -1895,7 +1898,6 @@ hr {
 
 .cs_sourse_badge {
   padding: 3px 16px;
-  border-radius: 2px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -1975,7 +1977,6 @@ hr {
 }
 
 .cs_product_item {
-  border-radius: 3px;
   background: #fff;
 }
 .cs_product_item .cs_product_thumb {
@@ -1988,7 +1989,6 @@ hr {
   top: 20px;
   padding: 10px 20px;
   line-height: 1em;
-  border-radius: 3px;
 }
 .cs_product_item .cs_product_info {
   padding: 23px 16px 28px 20px;
@@ -2019,7 +2019,6 @@ hr {
   text-align: center;
   line-height: 1.445em;
   padding: 7px 60px;
-  border-radius: 2px;
 }
 .cs_product_item .cs_cart_icon {
   width: 44px;
@@ -2034,7 +2033,6 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
   border: 1px solid #EBEDF4;
-  border-radius: 2px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -2047,7 +2045,6 @@ hr {
 }
 
 .cs_accordian {
-  border-radius: 2px;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
@@ -2120,4 +2117,72 @@ hr {
 }
 .cs_faq_badge .cs_btn_style_1 {
   margin-top: 13px;
+}
+
+.cs_member.cs_style_1 .cs_member_badge1,
+.cs_member.cs_style_1 .cs_member_badge2 {
+  padding: 10px 14px;
+  background: rgba(0, 41, 53, 0.65);
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.071em;
+}
+.cs_member.cs_style_1 .cs_member_badge1 {
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_member.cs_style_1 .cs_member_badge2 {
+  left: 0;
+  bottom: 0;
+}
+.cs_member.cs_style_1 .cs_member_info {
+  padding: 25px 20px 30px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+}
+.cs_member.cs_style_1 .cs_member_name {
+  line-height: 1.458em;
+  margin-bottom: 5px;
+}
+.cs_member.cs_style_1 .cs_member_designation {
+  line-height: 1.438em;
+  margin-bottom: 20px;
+}
+.cs_member.cs_style_1 .cs_member_degree_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  margin-bottom: 25px;
+}
+.cs_member.cs_style_1 .cs_degree_icon {
+  width: 30px;
+  height: 30px;
+}
+.cs_member.cs_style_1 .cs_member_btn {
+  display: inline-block;
+  background: #EBE8FE;
+  width: 100%;
+  padding: 10px 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_member.cs_style_1:hover .cs_member_btn,
+.cs_member.cs_style_1:hover .cs_member_badge1 {
+  background-color: #573cff;
+  color: #fff;
 }
