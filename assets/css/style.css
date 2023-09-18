@@ -1298,10 +1298,19 @@ hr {
   background-color: #002935;
 }
 
+.cs_bg_style_1 {
+  background-color: #F8F9FA;
+}
+
+.cs_bg_style_2 {
+  background-color: #EBEDF4;
+}
+
 /*================================
  common component styling
 =================================*/
 .cs_btn_style_1 {
+  min-width: 190px;
   padding: 16px 25px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1309,6 +1318,9 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 18px;
   line-height: 1.5em;
   -webkit-transition: all 0.4s ease-in-out;
@@ -1481,9 +1493,6 @@ hr {
 }
 
 /*Isotop Menu Style1*/
-.cs_isotope_filter.cs_style_1 {
-  margin-bottom: 30px;
-}
 .cs_isotope_filter.cs_style_1 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1646,20 +1655,19 @@ hr {
 .cs_iconbox.cs_style_1 .cs_iconbox_title {
   line-height: 1.5em;
   margin-bottom: 15px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_btn {
   line-height: 1.556em;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  color: #747474;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_btn svg {
   margin-left: 7px;
 }
 .cs_iconbox.cs_style_1:hover::after {
   background-color: #573cff;
-  border: #573cff;
+  border-color: #573cff;
 }
 .cs_iconbox.cs_style_1:hover .cs_iconbox_title {
   color: #573cff;

@@ -187,13 +187,23 @@ hr {
   background-color: $primary;
 }
 
+.cs_bg_style_1 {
+  background-color: #F8F9FA;
+}
+
+.cs_bg_style_2 {
+  background-color: #EBEDF4;
+}
+
 /*================================
  common component styling
 =================================*/
 .cs_btn_style_1 {
+  min-width: 190px;
   padding: 16px 25px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   font-size: 18px;
   line-height: 1.5em;
   transition: all 0.4s ease-in-out;

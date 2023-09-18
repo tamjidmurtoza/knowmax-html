@@ -45,12 +45,12 @@
   .cs_iconbox_title {
     line-height: 1.5em;
     margin-bottom: 15px;
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 
   .cs_iconbox_btn {
     line-height: 1.556em;
-    transition: all .4s ease-in-out;
+    color: $secondary;
 
     svg {
       margin-left: 7px;
@@ -60,7 +60,7 @@
   &:hover {
     &::after {
       background-color: $accent;
-      border: $accent;
+      border-color: $accent;
     }
 
     .cs_iconbox_title {
