@@ -2041,3 +2041,83 @@ hr {
 .cs_product_item .cs_cart_icon:hover {
   border-color: #573cff;
 }
+
+.cs_accordian_wrap {
+  padding-right: 60px;
+}
+
+.cs_accordian {
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(221, 221, 221, 0.45);
+  margin-bottom: 25px;
+}
+.cs_accordian:last-child {
+  margin-bottom: 0;
+}
+.cs_accordian .cs_accordian_title {
+  padding: 20px 26px;
+  line-height: 1.3em;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.cs_accordian .cs_accordian_toggle {
+  width: 56px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(184, 184, 184, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cs_accordian .cs_accordian_toggle img {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_accordian .cs_accordian_body {
+  padding: 10px 30px 20px 30px;
+  line-height: 1.625em;
+}
+.cs_accordian.active .cs_accordian_title {
+  padding-bottom: 15px;
+}
+.cs_accordian.active .cs_accordian_toggle {
+  background-color: #573cff;
+}
+.cs_accordian.active .cs_accordian_toggle img {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.cs_faq_thumb {
+  width: 50vw;
+  position: relative;
+}
+
+.cs_faq_badge {
+  padding: 54px 152px 52px 162px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.cs_faq_badge .cs_faq_badge_icon {
+  margin-bottom: 10px;
+}
+.cs_faq_badge .cs_faq_support_text {
+  line-height: 35px;
+  margin-bottom: 8px;
+}
+.cs_faq_badge .cs_btn_style_1 {
+  margin-top: 13px;
+}

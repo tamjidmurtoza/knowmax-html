@@ -51,7 +51,7 @@
     //parallaxEffect();
     //scrollUp();
     //rippleInit();
-    //accordian();
+    accordianInit();
     //tabs();
     //hoverTab();
     //awardHover();
@@ -492,27 +492,18 @@
   /*--------------------------------------------------------------
     10. Accordian
   --------------------------------------------------------------*/
-  // function accordian() {
-  //   $('.cs_accordian').children('.cs_accordian_body').hide();
-  //   $('.cs_accordian.active').children('.cs_accordian_body').show();
-  //   $('.cs_accordian_head').on('click', function () {
-  //     $(this)
-  //       .parent('.cs_accordian')
-  //       .siblings()
-  //       .children('.cs_accordian_body')
-  //       .slideUp(250);
-  //     $(this).siblings().slideDown(250);
-  //     $(this)
-  //       .parent()
-  //       .parent()
-  //       .siblings()
-  //       .find('.cs_accordian_body')
-  //       .slideUp(250);
-  //     /* Accordian Active Class */
-  //     $(this).parents('.cs_accordian').addClass('active');
-  //     $(this).parent('.cs_accordian').siblings().removeClass('active');
-  //   });
-  // }
+  function accordianInit() {
+    var $this = $(this);
+    $('.cs_accordian').children('.cs_accordian_body').hide();
+    $('.cs_accordian.active').children('.cs_accordian_body').show();
+    $('.cs_accordian_title').on('click', function () {
+      $(this).parent('.cs_accordian').siblings().children('.cs_accordian_body').slideUp(250);
+      $(this).siblings().slideDown(250);
+      /* Accordian Active Class */
+      $(this).parents('.cs_accordian').addClass('active');
+      $(this).parent('.cs_accordian').siblings().removeClass('active');
+    });
+  }
   /*--------------------------------------------------------------
     9. Tabs
   --------------------------------------------------------------*/
