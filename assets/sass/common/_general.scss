@@ -188,10 +188,6 @@ hr {
 }
 
 .cs_bg_style_1 {
-  background-color: #F8F9FA;
-}
-
-.cs_bg_style_2 {
   background-color: #EBEDF4;
 }
 
@@ -239,4 +235,19 @@ hr {
 .cs_star_container i {
   font-size: 12px;
   color: #ffc107;
+}
+
+.cs_zoom {
+  position: relative;
+  overflow: hidden;
+
+  .cs_zoom_in {
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:hover {
+    .cs_zoom_in {
+      transform: scale(1.07);
+    }
+  }
 }

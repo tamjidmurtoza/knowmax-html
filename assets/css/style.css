@@ -1299,10 +1299,6 @@ hr {
 }
 
 .cs_bg_style_1 {
-  background-color: #F8F9FA;
-}
-
-.cs_bg_style_2 {
   background-color: #EBEDF4;
 }
 
@@ -1360,6 +1356,19 @@ hr {
 .cs_star_container i {
   font-size: 12px;
   color: #ffc107;
+}
+
+.cs_zoom {
+  position: relative;
+  overflow: hidden;
+}
+.cs_zoom .cs_zoom_in {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_zoom:hover .cs_zoom_in {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 /*--------------------------------------------------------------
@@ -1963,4 +1972,72 @@ hr {
 
 .cs_reviews_number {
   margin-left: 10px;
+}
+
+.cs_product_item {
+  border-radius: 3px;
+  background: #fff;
+}
+.cs_product_item .cs_product_thumb {
+  display: inline-block;
+  position: relative;
+}
+.cs_product_item .cs_product_badge {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  line-height: 1em;
+  border-radius: 3px;
+}
+.cs_product_item .cs_product_info {
+  padding: 23px 16px 28px 20px;
+}
+.cs_product_item .cs_product_title {
+  line-height: 1.444em;
+  margin-bottom: 12px;
+}
+.cs_product_item .cs_product_price {
+  line-height: 0.941em;
+  margin-bottom: 20px;
+}
+.cs_product_item .cs_product_price s {
+  margin-right: 4px;
+}
+.cs_product_item .cs_product_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cs_product_item .cs_cart_btn {
+  text-align: center;
+  line-height: 1.445em;
+  padding: 7px 60px;
+  border-radius: 2px;
+}
+.cs_product_item .cs_cart_icon {
+  width: 44px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #EBEDF4;
+  border-radius: 2px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_product_item .cs_cart_icon:hover {
+  border-color: #573cff;
 }

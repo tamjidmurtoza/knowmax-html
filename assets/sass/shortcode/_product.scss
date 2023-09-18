@@ -1,0 +1,64 @@
+.cs_product_item {
+  border-radius: 3px;
+  background: $white;
+
+  .cs_product_thumb {
+    display: inline-block;
+    position: relative;
+  }
+
+  .cs_product_badge {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    line-height: 1em;
+    border-radius: 3px;
+  }
+
+  .cs_product_info {
+    padding: 23px 16px 28px 20px;
+  }
+
+  .cs_product_title {
+    line-height: 1.444em;
+    margin-bottom: 12px;
+  }
+
+  .cs_product_price {
+    line-height: .941em;
+    margin-bottom: 20px;
+
+    s {
+      margin-right: 4px;
+    }
+  }
+
+  .cs_product_cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cs_cart_btn {
+    text-align: center;
+    line-height: 1.445em;
+    padding: 7px 60px;
+    border-radius: 2px;
+  }
+
+  .cs_cart_icon {
+    width: 44px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EBEDF4;
+    border-radius: 2px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
+}
