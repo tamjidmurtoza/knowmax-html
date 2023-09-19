@@ -1,4 +1,4 @@
-.cs_product_item {
+.cs_product.cs_style_1 {
   background: $white;
 
   .cs_product_thumb {
@@ -24,7 +24,7 @@
   }
 
   .cs_product_price {
-    line-height: .941em;
+    line-height: 0.941em;
     margin-bottom: 20px;
 
     s {
@@ -50,8 +50,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #EBEDF4;
-    transition: all .4s ease-in-out;
+    border: 1px solid #ebedf4;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
       border-color: $accent;

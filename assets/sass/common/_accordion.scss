@@ -1,0 +1,53 @@
+.cs_accordian {
+  background-color: $white;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(221, 221, 221, 0.45);
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .cs_accordian_title {
+    padding: 20px 26px;
+    line-height: 1.3em;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .cs_accordian_toggle {
+    width: 56px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(184, 184, 184, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      transition: all 0.4s ease-in-out;
+    }
+  }
+
+  .cs_accordian_body {
+    padding: 10px 30px 20px 30px;
+    line-height: 1.625em;
+  }
+
+  &.active {
+    .cs_accordian_title {
+      padding-bottom: 15px;
+    }
+
+    .cs_accordian_toggle {
+      background-color: $accent;
+
+      img {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+}

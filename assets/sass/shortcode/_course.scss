@@ -1,4 +1,4 @@
-.cs_course_item.cs_style_1 {
+.cs_course.cs_style_1 {
   width: 100%;
   transition: all 0.4s ease-in-out;
 
@@ -99,7 +99,6 @@
     height: 100%;
     object-fit: cover;
   }
-
 }
 
 .cs_badge_container {
@@ -114,7 +113,7 @@
 
 .cs_sourse_badge {
   padding: 3px 16px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .cs_course_cart {
@@ -129,7 +128,7 @@
     width: 100%;
     max-width: 363px;
     height: 1px;
-    background: #E9E9E9;
+    background: #e9e9e9;
     margin-top: 25px;
     margin-bottom: 20px;
   }
