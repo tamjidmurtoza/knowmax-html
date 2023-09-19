@@ -3134,3 +3134,65 @@ odometer
   -webkit-transition: inherit;
   transition: inherit;
 }
+
+.cs_pricing_control {
+  list-style: none;
+}
+.cs_pricing_control li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.cs_pricing_control li:last-child a::before {
+  left: initial;
+  right: 100%;
+}
+.cs_pricing_control .cs_switch {
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 134px;
+  border-radius: 45px;
+  background: #EBE8FE;
+  margin: 0 25px;
+}
+.cs_pricing_control .cs_switch::before {
+  content: "";
+  width: 78px;
+  height: 50px;
+  border-radius: 45px;
+  background-color: #573cff;
+  top: 0px;
+  left: 55px;
+  position: absolute;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_pricing_control .active .cs_switch::before {
+  left: 0;
+}
+.cs_pricing_control a {
+  position: relative;
+}
+.cs_pricing_control a::before {
+  content: "";
+  height: 50px;
+  width: 78px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100%;
+  z-index: 1;
+}
+
+.cs_tab {
+  display: none;
+}
+.cs_tab.active {
+  display: block;
+}

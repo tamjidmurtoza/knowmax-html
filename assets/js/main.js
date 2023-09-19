@@ -52,7 +52,7 @@
     //scrollUp();
     //rippleInit();
     accordianInit();
-    //tabs();
+    tabs();
     //hoverTab();
     //awardHover();
     //hoverActive();
@@ -507,17 +507,17 @@
   /*--------------------------------------------------------------
     9. Tabs
   --------------------------------------------------------------*/
-  // function tabs() {
-  //   $('.cs_tabs .cs_tab_links a').on('click', function (e) {
-  //     var currentAttrValue = $(this).attr('href');
-  //     $('.cs_tabs ' + currentAttrValue)
-  //       .fadeIn(400)
-  //       .siblings()
-  //       .hide();
-  //     $(this).parents('li').addClass('active').siblings().removeClass('active');
-  //     e.preventDefault();
-  //   });
-  // }
+  function tabs() {
+    $('.cs_tab_links a').on('click', function (e) {
+      var currentAttrValue = $(this).attr('href');
+      $('.cs_tabs ' + currentAttrValue)
+        .fadeIn(400)
+        .siblings()
+        .hide();
+      $(this).parents('li').addClass('active').siblings().removeClass('active');
+      e.preventDefault();
+    });
+  }
   /*--------------------------------------------------------------
     15. Hover Tab
   --------------------------------------------------------------*/

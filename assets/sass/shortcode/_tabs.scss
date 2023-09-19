@@ -1,0 +1,73 @@
+.cs_pricing_control {
+  list-style: none;
+  // font-size: 20px;
+  // line-height: 1.6em;
+
+  li {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:last-child {
+      a {
+        &::before {
+          left: initial;
+          right: 100%;
+        }
+      }
+    }
+  }
+
+  .cs_switch {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 134px;
+    border-radius: 45px;
+    background: #EBE8FE;
+    margin: 0 25px;
+
+    &::before {
+      content: '';
+      width: 78px;
+      height: 50px;
+      border-radius: 45px;
+      background-color: $accent;
+      top: 0px;
+      left: 55px;
+      position: absolute;
+      transition: all 0.4s ease;
+    }
+  }
+
+  .active {
+    .cs_switch {
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 50px;
+      width: 78px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      z-index: 1;
+    }
+  }
+}
+
+.cs_tab {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
