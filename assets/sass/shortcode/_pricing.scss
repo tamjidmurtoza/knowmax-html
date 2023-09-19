@@ -1,0 +1,98 @@
+.cs_pricing_table {
+  .cs_pricing_in {
+    border-radius: 3px;
+    background: #FFF;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    padding: 27px 25px 30px;
+  }
+
+  .cs_pricing_heading {
+    border-radius: 3px 3px 0 0;
+    padding: 12px 18px 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cs_pricing_badge {
+    padding: 8px 24px;
+    border-radius: 40px;
+    font-size: 12px;
+    line-height: 1.333em;
+  }
+
+  .cs_pricing_title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    line-height: 1.444em;
+  }
+
+  .cs_pricing_info {
+    .cs_pricing_title {
+      margin-bottom: 7px;
+    }
+
+    .cs_pricing_subtitle {
+      margin-bottom: 17px;
+    }
+  }
+
+  hr {
+    margin-bottom: 20px;
+  }
+
+  small {
+    line-height: 1.389em;
+  }
+
+  .cs_list.cs_style_1 li {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    i {
+      color: $accent;
+      margin-right: 15px;
+    }
+
+  }
+
+  .cs_card_btn.cs_style_1 {
+    background-color: $primary;
+    color: $white;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: $accent;
+
+      svg:first-child {
+        transform: translate(30px, -25px);
+        visibility: hidden;
+        opacity: 0;
+
+      }
+
+      svg:last-child {
+        transform: translate(-15px, -3px);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    svg:first-child {
+      transform: translate(5px, -3px);
+      transition: inherit;
+
+    }
+
+    svg:last-child {
+      transform: translate(-35px, 20px);
+      visibility: hidden;
+      opacity: 0;
+      transition: inherit;
+    }
+  }
+}

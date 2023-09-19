@@ -644,6 +644,66 @@ textarea {
   .cs_height_150 {
     height: 150px !important;
   }
+  .cs_height_151 {
+    height: 151px !important;
+  }
+  .cs_height_152 {
+    height: 152px !important;
+  }
+  .cs_height_153 {
+    height: 153px !important;
+  }
+  .cs_height_154 {
+    height: 154px !important;
+  }
+  .cs_height_155 {
+    height: 155px !important;
+  }
+  .cs_height_156 {
+    height: 156px !important;
+  }
+  .cs_height_157 {
+    height: 157px !important;
+  }
+  .cs_height_158 {
+    height: 158px !important;
+  }
+  .cs_height_159 {
+    height: 159px !important;
+  }
+  .cs_height_160 {
+    height: 160px !important;
+  }
+  .cs_height_161 {
+    height: 161px !important;
+  }
+  .cs_height_162 {
+    height: 162px !important;
+  }
+  .cs_height_163 {
+    height: 163px !important;
+  }
+  .cs_height_164 {
+    height: 164px !important;
+  }
+  .cs_height_165 {
+    height: 165px !important;
+  }
+  .cs_height_166 {
+    height: 166px !important;
+  }
+  .cs_height_167 {
+    height: 167px !important;
+  }
+  .cs_height_168 {
+    height: 168px !important;
+  }
+  .cs_height_169 {
+    height: 169px !important;
+  }
+  .cs_height_170 {
+    height: 170px !important;
+  }
 }
 @media screen and (max-width: 991px) {
   .cs_height_lg_1 {
@@ -1306,34 +1366,15 @@ hr {
   background-color: #EBEDF4;
 }
 
+.cs_mp0 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /*================================
  common component styling
 =================================*/
-.cs_btn_style_1 {
-  min-width: 190px;
-  padding: 16px 25px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 18px;
-  line-height: 1.5em;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.cs_btn_style_1 svg {
-  margin-left: 7px;
-}
-.cs_btn_style_1:hover {
-  background-color: #fff;
-  color: #573cff;
-}
-
 .cs_section_heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1373,6 +1414,167 @@ hr {
 .cs_zoom:hover .cs_zoom_in {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+
+/*=====================================
+odometer
+=====================================*/
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default .odometer-digit {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.odometer-formatting-mark {
+  display: none;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+  display: block;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  font-family: "Jost", sans-serif;
+  line-height: 1.182em;
+}
+
+.odometer.odometer-auto-theme .odometer-value,
+.odometer.odometer-theme-default .odometer-value {
+  text-align: center;
+}
+
+.cs_btn_style_1 {
+  min-width: 190px;
+  padding: 16px 25px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 18px;
+  line-height: 1.5em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_btn_style_1 svg {
+  margin-left: 7px;
+}
+.cs_btn_style_1:hover {
+  background-color: #fff;
+  color: #573cff;
+}
+
+.cs_card_btn {
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.cs_card_btn.cs_style_1 {
+  background: #EBE8FE;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.cs_card_btn.cs_style_2 {
+  padding: 10px 38px;
+  background-color: #573cff;
+  color: #fff;
+  line-height: 30px;
+}
+.cs_card_btn.cs_style_2:hover {
+  background-color: #EBE8FE;
+  color: #002935;
 }
 
 .cs_accordian {
@@ -2692,8 +2894,8 @@ hr {
   margin-top: 13px;
 }
 
-.cs_member.cs_style_1 .cs_member_badge1,
-.cs_member.cs_style_1 .cs_member_badge2 {
+.cs_card.cs_style_1 .cs_card_badge,
+.cs_card.cs_style_1 .cs_card_review {
   padding: 10px 14px;
   background: rgba(0, 41, 53, 0.65);
   -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
@@ -2703,31 +2905,31 @@ hr {
   font-size: 14px;
   line-height: 1.071em;
 }
-.cs_member.cs_style_1 .cs_member_badge1 {
+.cs_card.cs_style_1 .cs_card_badge {
   top: 0;
   right: 0;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.cs_member.cs_style_1 .cs_member_badge2 {
+.cs_card.cs_style_1 .cs_card_review {
   left: 0;
   bottom: 0;
 }
-.cs_member.cs_style_1 .cs_member_info {
+.cs_card.cs_style_1 .cs_card_info {
   padding: 25px 20px 30px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
 }
-.cs_member.cs_style_1 .cs_member_name {
+.cs_card.cs_style_1 .cs_card_title {
   line-height: 1.458em;
   margin-bottom: 5px;
 }
-.cs_member.cs_style_1 .cs_member_designation {
+.cs_card.cs_style_1 .cs_card_subtitle {
   line-height: 1.438em;
   margin-bottom: 20px;
 }
-.cs_member.cs_style_1 .cs_member_degree_container {
+.cs_card.cs_style_1 .cs_card_badges {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2742,20 +2944,193 @@ hr {
           column-gap: 10px;
   margin-bottom: 25px;
 }
-.cs_member.cs_style_1 .cs_degree_icon {
+.cs_card.cs_style_1 .cs_card_badge_icon {
   width: 30px;
   height: 30px;
 }
-.cs_member.cs_style_1 .cs_member_btn {
-  display: inline-block;
-  background: #EBE8FE;
-  width: 100%;
-  padding: 10px 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.cs_member.cs_style_1:hover .cs_member_btn,
-.cs_member.cs_style_1:hover .cs_member_badge1 {
+.cs_card.cs_style_1:hover .cs_card_btn,
+.cs_card.cs_style_1:hover .cs_card_badge {
   background-color: #573cff;
   color: #fff;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.cs_card_wrapper {
+  width: 100%;
+  height: 312px;
+  position: relative;
+}
+.cs_card_wrapper .cs_height_half {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cs_counting.cs_style_1 {
+  width: 100%;
+  height: 100%;
+  min-height: 750px;
+}
+
+.cs_card.cs_style_2 {
+  background: #F8F9FA;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  position: relative;
+}
+.cs_card.cs_style_2 .cs_card_content {
+  padding-right: 205px;
+}
+.cs_card.cs_style_2 .cs_card_title {
+  line-height: 1.433em;
+  margin-bottom: 13px;
+}
+.cs_card.cs_style_2 .cs_card_subtitle {
+  line-height: 1.625em;
+  margin-bottom: 18px;
+}
+.cs_card.cs_style_2 .cs_card_thumb {
+  width: 200px;
+  position: absolute;
+  bottom: -1px;
+  right: 0px;
+}
+
+.cs_funfact_col {
+  position: relative;
+}
+.cs_funfact_col:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 160px;
+  background: rgba(221, 221, 221, 0.3);
+  position: absolute;
+  top: 0;
+  right: 45px;
+}
+
+.cs_funfact.cs_style1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 38px;
+}
+.cs_funfact.cs_style1 .cs_funfact_icon {
+  height: 90px;
+  width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cs_funfact.cs_style1 .cs_funfact_number {
+  line-height: 1.182em;
+  margin-bottom: 2px;
+}
+.cs_funfact.cs_style1 .cs_funfact_title {
+  line-height: 1.364em;
+}
+
+.cs_pricing_table .cs_pricing_in {
+  border-radius: 3px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+  padding: 27px 25px 30px;
+}
+.cs_pricing_table .cs_pricing_heading {
+  border-radius: 3px 3px 0 0;
+  padding: 12px 18px 12px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cs_pricing_table .cs_pricing_badge {
+  padding: 8px 24px;
+  border-radius: 40px;
+  font-size: 12px;
+  line-height: 1.333em;
+}
+.cs_pricing_table .cs_pricing_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  line-height: 1.444em;
+}
+.cs_pricing_table .cs_pricing_info .cs_pricing_title {
+  margin-bottom: 7px;
+}
+.cs_pricing_table .cs_pricing_info .cs_pricing_subtitle {
+  margin-bottom: 17px;
+}
+.cs_pricing_table hr {
+  margin-bottom: 20px;
+}
+.cs_pricing_table small {
+  line-height: 1.389em;
+}
+.cs_pricing_table .cs_list.cs_style_1 li {
+  margin-bottom: 15px;
+}
+.cs_pricing_table .cs_list.cs_style_1 li:last-child {
+  margin-bottom: 0;
+}
+.cs_pricing_table .cs_list.cs_style_1 li i {
+  color: #573cff;
+  margin-right: 15px;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1 {
+  background-color: #002935;
+  color: #fff;
+  margin-top: 30px;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1:hover {
+  background-color: #573cff;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1:hover svg:first-child {
+  -webkit-transform: translate(30px, -25px);
+          transform: translate(30px, -25px);
+  visibility: hidden;
+  opacity: 0;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1:hover svg:last-child {
+  -webkit-transform: translate(-15px, -3px);
+          transform: translate(-15px, -3px);
+  visibility: visible;
+  opacity: 1;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1 svg:first-child {
+  -webkit-transform: translate(5px, -3px);
+          transform: translate(5px, -3px);
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.cs_pricing_table .cs_card_btn.cs_style_1 svg:last-child {
+  -webkit-transform: translate(-35px, 20px);
+          transform: translate(-35px, 20px);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
