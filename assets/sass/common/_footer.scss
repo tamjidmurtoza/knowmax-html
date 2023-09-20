@@ -1,3 +1,183 @@
 /*--------------------------------------------------------------
-  8. Footer
+33. Footer
 ----------------------------------------------------------------*/
+.cs_site_footer {
+  background-color: $primary;
+
+  .cs_footer_widget_title {
+    color: $white;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.523em;
+    margin-bottom: 32px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.cs_main_footer {
+  position: relative;
+}
+
+.cs_footer_logo {
+  margin-bottom: 35px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 15px;
+  }
+}
+
+.cs_footer_widget input {
+  width: 100%;
+  background-color: #0E1013;
+  border: 1px solid $accent;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  margin-top: 17px;
+
+  &::placeholder {
+    color: #c1c1c1;
+  }
+}
+
+.cs_social_btn.cs_style1 {
+  display: flex;
+  gap: 10px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    height: 42px;
+    width: 42px;
+    background-color: $white;
+    color: $accent;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      background-color: $accent;
+      color: $white;
+    }
+  }
+}
+
+.cs_footer_widget+.cs_footer_widget {
+  margin-top: 35px;
+}
+
+.cs_footer_widget_nav {
+
+  li {
+    margin-bottom: 13px;
+    color: $white;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    svg {
+      transition: all .4s ease-in-out;
+      margin-right: 7px;
+    }
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      svg {
+        color: $accent;
+      }
+    }
+  }
+}
+
+.cs_footer_widget_address li {
+  display: flex;
+  gap: 20px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+
+.cs_copyright_wrap {
+  background-color: $primary;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    opacity: 0.3;
+    background: $border;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cs_facility_options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.cs_copyright_text {
+  padding: 20px 0;
+}
+
+.cs_newsletter {
+  .cs_btn.cs_style1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    padding: 6px 20px;
+
+    &:hover {
+      color: $white;
+
+      // &::after {
+      //   background-color: $light_green;
+      // }
+    }
+  }
+
+  @media (max-width: 991px) {
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.cs_footer_shape1 {
+  position: absolute;
+  bottom: 140px;
+  right: 130px;
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+// .cs_sticky_footer {
+//   width: 100%;
+//   position: fixed;
+//   bottom: 0;
+//   left: 0;
+//   overflow: hidden;
+
+//   @media (max-width: 991px) {
+//     position: initial;
+//   }
+// }

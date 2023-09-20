@@ -1,0 +1,80 @@
+.cs_post.cs_style_1 {
+  background: $white;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
+
+  &:hover {
+
+    .cs_post_author_icon,
+    .cs_post_category_icon,
+    .cs_post_title,
+    .cs_post_btn {
+      color: $accent;
+    }
+
+    .cs_post_date {
+      background-color: $accent;
+    }
+  }
+
+  .cs_post_content {
+    padding: 33px;
+  }
+
+  .cs_post_thumb {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .cs_post_info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: $white;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    height: 53px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .cs_post_date {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    line-height: 1.25em;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_post_author_icon,
+  .cs_post_category_icon {
+    margin-bottom: -3px;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_post_author,
+  .cs_post_category {
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.429em;
+  }
+
+  .cs_post_title {
+    line-height: 1.546em;
+    margin-top: 32px;
+    margin-bottom: 18px;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_post_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 26px;
+    margin-top: 20px;
+    transition: all .4s ease-in-out;
+  }
+}

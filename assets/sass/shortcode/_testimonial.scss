@@ -1,0 +1,37 @@
+.cs_testimonial.cs_style_1 {
+  border-radius: 3px;
+  background: $white;
+  padding: 0 15px 35px 25px;
+
+
+  .cs_testimonial_heading {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .cs_testimonial_thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -60px;
+
+    img {
+      z-index: 2;
+      border: 10px solid $gray;
+      border-radius: 50%;
+    }
+  }
+
+  .cs_testimonial_title {
+    line-height: 1.167em;
+    margin-bottom: 10px;
+  }
+
+  .cs_testimonial_subtitle:not(:last-child) {
+    margin-bottom: 23px;
+  }
+}

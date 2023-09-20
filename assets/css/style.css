@@ -1372,6 +1372,10 @@ hr {
   padding: 0;
 }
 
+.cs_remove_overflow {
+  overflow: visible;
+}
+
 /*================================
  common component styling
 =================================*/
@@ -1628,6 +1632,51 @@ odometer
 .cs_accordian.active .cs_accordian_toggle img {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
+}
+
+.cs_slider_1.swiper {
+  overflow-y: visible;
+}
+
+.cs_swiper_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  gap: 20px;
+}
+.cs_swiper_btns .swiper-button-prev,
+.cs_swiper_btns .swiper-button-next {
+  position: initial;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #573cff;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_swiper_btns .swiper-button-prev:hover,
+.cs_swiper_btns .swiper-button-next:hover {
+  background-color: #573cff;
+  color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  width: 12.86px;
+  height: 20.573px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.swiper-button-next::after {
+  margin-left: 3px;
 }
 
 /*--------------------------------------------------------------
@@ -2200,6 +2249,194 @@ odometer
     max-width: 150px;
   }
 }
+/*--------------------------------------------------------------
+33. Footer
+----------------------------------------------------------------*/
+.cs_site_footer {
+  background-color: #002935;
+}
+.cs_site_footer .cs_footer_widget_title {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.523em;
+  margin-bottom: 32px;
+}
+@media (max-width: 991px) {
+  .cs_site_footer .cs_footer_widget_title {
+    margin-bottom: 15px;
+  }
+}
+
+.cs_main_footer {
+  position: relative;
+}
+
+.cs_footer_logo {
+  margin-bottom: 35px;
+}
+@media (max-width: 991px) {
+  .cs_footer_logo {
+    margin-bottom: 15px;
+  }
+}
+
+.cs_footer_widget input {
+  width: 100%;
+  background-color: #0E1013;
+  border: 1px solid #573cff;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  margin-top: 17px;
+}
+.cs_footer_widget input::-webkit-input-placeholder {
+  color: #c1c1c1;
+}
+.cs_footer_widget input::-moz-placeholder {
+  color: #c1c1c1;
+}
+.cs_footer_widget input:-ms-input-placeholder {
+  color: #c1c1c1;
+}
+.cs_footer_widget input::-ms-input-placeholder {
+  color: #c1c1c1;
+}
+.cs_footer_widget input::placeholder {
+  color: #c1c1c1;
+}
+
+.cs_social_btn.cs_style1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.cs_social_btn.cs_style1 a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 2px;
+  height: 42px;
+  width: 42px;
+  background-color: #fff;
+  color: #573cff;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_social_btn.cs_style1 a:hover {
+  background-color: #573cff;
+  color: #fff;
+}
+
+.cs_footer_widget + .cs_footer_widget {
+  margin-top: 35px;
+}
+
+.cs_footer_widget_nav li {
+  margin-bottom: 13px;
+  color: #fff;
+}
+.cs_footer_widget_nav li:last-child {
+  margin-bottom: 0;
+}
+.cs_footer_widget_nav li svg {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-right: 7px;
+}
+.cs_footer_widget_nav li a {
+  color: #fff;
+}
+.cs_footer_widget_nav li:hover svg {
+  color: #573cff;
+}
+
+.cs_footer_widget_address li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.cs_footer_widget_address li h4 {
+  margin-bottom: 10px;
+}
+
+.cs_copyright_wrap {
+  background-color: #002935;
+  position: relative;
+}
+.cs_copyright_wrap::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  opacity: 0.3;
+  background: #dedede;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs_copyright_wrap .cs_facility_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cs_copyright_text {
+  padding: 20px 0;
+}
+
+.cs_newsletter .cs_btn.cs_style1 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 6px 20px;
+}
+.cs_newsletter .cs_btn.cs_style1:hover {
+  color: #fff;
+}
+@media (max-width: 991px) {
+  .cs_newsletter {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cs_newsletter {
+    width: 100%;
+  }
+}
+
+.cs_footer_shape1 {
+  position: absolute;
+  bottom: 140px;
+  right: 130px;
+}
+@media (max-width: 1199px) {
+  .cs_footer_shape1 {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 8. Isotopee
 ----------------------------------------------------------------*/
@@ -3195,4 +3432,203 @@ odometer
 }
 .cs_tab.active {
   display: block;
+}
+
+.cs_testimonial.cs_style_1 {
+  border-radius: 3px;
+  background: #fff;
+  padding: 0 15px 35px 25px;
+}
+.cs_testimonial.cs_style_1 .cs_testimonial_heading {
+  height: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cs_testimonial.cs_style_1 .cs_testimonial_thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-top: -60px;
+}
+.cs_testimonial.cs_style_1 .cs_testimonial_thumb img {
+  z-index: 2;
+  border: 10px solid #f8f9fa;
+  border-radius: 50%;
+}
+.cs_testimonial.cs_style_1 .cs_testimonial_title {
+  line-height: 1.167em;
+  margin-bottom: 10px;
+}
+.cs_testimonial.cs_style_1 .cs_testimonial_subtitle:not(:last-child) {
+  margin-bottom: 23px;
+}
+
+.cs_post.cs_style_1 {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+.cs_post.cs_style_1:hover .cs_post_author_icon,
+.cs_post.cs_style_1:hover .cs_post_category_icon,
+.cs_post.cs_style_1:hover .cs_post_title,
+.cs_post.cs_style_1:hover .cs_post_btn {
+  color: #573cff;
+}
+.cs_post.cs_style_1:hover .cs_post_date {
+  background-color: #573cff;
+}
+.cs_post.cs_style_1 .cs_post_content {
+  padding: 33px;
+}
+.cs_post.cs_style_1 .cs_post_thumb {
+  display: inline-block;
+  overflow: hidden;
+}
+.cs_post.cs_style_1 .cs_post_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
+  height: 53px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.cs_post.cs_style_1 .cs_post_date {
+  width: 60px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 14px;
+  line-height: 1.25em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_post.cs_style_1 .cs_post_author_icon,
+.cs_post.cs_style_1 .cs_post_category_icon {
+  margin-bottom: -3px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_post.cs_style_1 .cs_post_author,
+.cs_post.cs_style_1 .cs_post_category {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  line-height: 1.429em;
+}
+.cs_post.cs_style_1 .cs_post_title {
+  line-height: 1.546em;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_post.cs_style_1 .cs_post_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 26px;
+  margin-top: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.cs_news_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-animation: slide-left 50s linear infinite;
+          animation: slide-left 50s linear infinite;
+}
+.cs_news_message .cs_partner_logo {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 78px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_news_message .cs_partner_logo:hover {
+  color: #573cff;
+}
+.cs_news_message .cs_partner_logo:hover .cs_news_message {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes slide-left {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-left {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/*===========================
+  Animated text
+============================*/
+.cs_partners_lists {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.cs_partners_lists:hover .cs_news_message {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }

@@ -45,7 +45,7 @@
     //stickyHeader();
     dynamicBackground();
     counterInit();
-    //swiperInit();
+    swiperInit();
     //modalVideo();
     isotopInit();
     //parallaxEffect();
@@ -160,98 +160,95 @@
   /*--------------------------------------------------------------
     5. Swiper Initialize
   --------------------------------------------------------------*/
-  // function swiperInit() {
-  //   if ($.exists('.cs_slider_1')) {
-  //     var swiper = new Swiper('.cs_slider_1', {
-  //       slidesPerView: 1,
-  //       loop: true,
-  //       speed: 1000,
-  //       spaceBetween: 24,
-  //       pagination: {
-  //         el: '.cs_pagination',
-  //         clickable: true,
-  //       },
-  //       breakpoints: {
-  //         575: {
-  //           slidesPerView: 2,
-  //         },
-  //         991: {
-  //           slidesPerView: 3,
-  //         },
-  //         1750: {
-  //           slidesPerView: 4,
-  //         },
-  //       },
-  //     });
-  //   }
-  //   if ($.exists('.cs_slider_1_1')) {
-  //     var swiper = new Swiper('.cs_slider_1_1', {
-  //       slidesPerView: 1,
-  //       loop: true,
-  //       speed: 1000,
-  //       spaceBetween: 24,
-  //       pagination: {
-  //         el: '.cs_pagination',
-  //         clickable: true,
-  //       },
-  //       breakpoints: {
-  //         575: {
-  //           slidesPerView: 2,
-  //         },
-  //         991: {
-  //           slidesPerView: 3,
-  //         },
-  //         1300: {
-  //           slidesPerView: 3,
-  //         },
-  //       },
-  //     });
-  //   }
-  //   if ($.exists('.cs_slider_2')) {
-  //     var swiper2 = new Swiper('.cs_slider_2', {
-  //       loop: true,
-  //       speed: 1000,
-  //       navigation: {
-  //         nextEl: '.cs_swiper_next',
-  //         prevEl: '.cs_swiper_prev',
-  //       },
-  //     });
-  //   }
-  //   if ($.exists('.cs_slider_3')) {
-  //     var swiper = new Swiper('.cs_slider_3', {
-  //       slidesPerView: 1,
-  //       loop: true,
-  //       speed: 1000,
-  //       spaceBetween: 24,
-  //       pagination: false,
-  //       breakpoints: {
-  //         575: {
-  //           slidesPerView: 2,
-  //         },
-  //         991: {
-  //           slidesPerView: 4,
-  //         },
-  //         1300: {
-  //           slidesPerView: 6,
-  //         },
-  //       },
-  //     });
-  //   }
-  //   if ($.exists('.cs_slider_4')) {
-  //     var swiper = new Swiper('.cs_slider_4', {
-  //       slidesPerView: 1,
-  //       loop: true,
-  //       speed: 1000,
-  //       pagination: {
-  //         el: '.cs_number_pagination',
-  //         clickable: true,
-  //         renderBullet: function (index, className) {
-  //           return '<span class="' + className + '">' + (index + 1) + '</span>';
-  //         },
-  //       },
-  //     });
-  //   }
-  // }
+  function swiperInit() {
+    if ($.exists('.cs_slider_1')) {
+      new Swiper('.cs_slider_1', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1000,
+        spaceBetween: 24,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
+    if ($.exists('.cs_slider_1_1')) {
+      var swiper = new Swiper('.cs_slider_1_1', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1000,
+        spaceBetween: 24,
+        pagination: {
+          el: '.cs_pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 3,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
+    if ($.exists('.cs_slider_2')) {
+      var swiper2 = new Swiper('.cs_slider_2', {
+        loop: true,
+        speed: 1000,
+        navigation: {
+          nextEl: '.cs_swiper_next',
+          prevEl: '.cs_swiper_prev',
+        },
+      });
+    }
+    if ($.exists('.cs_slider_3')) {
+      var swiper = new Swiper('.cs_slider_3', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1000,
+        spaceBetween: 24,
+        pagination: false,
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+          },
+          991: {
+            slidesPerView: 4,
+          },
+          1300: {
+            slidesPerView: 6,
+          },
+        },
+      });
+    }
+    if ($.exists('.cs_slider_4')) {
+      var swiper = new Swiper('.cs_slider_4', {
+        slidesPerView: 1,
+        loop: true,
+        speed: 1000,
+        pagination: {
+          el: '.cs_number_pagination',
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          },
+        },
+      });
+    }
+  }
 
   /*--------------------------------------------------------------
     6. Modal Video
@@ -577,69 +574,117 @@
   //   });
   // }
   /*--------------------------------------------------------------
-    21. Ecommerce
+    5. Slick Slider
   --------------------------------------------------------------*/
-  // function ecommerce() {
-  //   // Star Rating Input
-  //   $('.cs_input_rating i').on('click', function () {
-  //     $(this).siblings().removeClass('fa-solid');
-  //     $(this).addClass('fa-solid').prevAll().addClass('fa-solid');
-  //   });
-  //   // Product Single Slider
-  //   $('.cs_single_product_thumb').slick({
-  //     slidesToShow: 1,
-  //     slidesToScroll: 1,
-  //     arrows: false,
-  //     asNavFor: '.cs_single_product_nav',
-  //   });
+  // function slickInit() {
+  //   if ($.exists('.cs_slider')) {
+  //     $('.cs_slider').each(function () {
+  //       // Slick Variable
+  //       var $ts = $(this).find('.cs_slider_container');
+  //       var $slickActive = $(this).find('.cs_slider_wrapper');
 
-  //   $('.cs_single_product_nav').slick({
-  //     slidesToShow: 4,
-  //     slidesToScroll: 1,
-  //     asNavFor: '.cs_single_product_thumb',
-  //     focusOnSelect: true,
-  //     arrows: false,
-  //   });
-  //   // Check All
-  //   $('#checkAll').change(function () {
-  //     var isChecked = $(this).prop('checked');
-  //     $('table input[type="checkbox"]').prop('checked', isChecked);
-  //   });
-  //   // Range Slider
-  //   if ($.exists('#slider-range')) {
-  //     $('#slider-range').slider({
-  //       range: true,
-  //       min: 0,
-  //       max: 1000,
-  //       values: [100, 600],
-  //       slide: function (event, ui) {
-  //         $('#amount').val('Price: $' + ui.values[0] + ' - $' + ui.values[1]);
-  //       },
+  //       // Auto Play
+  //       var autoPlayVar = parseInt($ts.attr('data-autoplay'), 10);
+  //       // Auto Play Time Out
+  //       var autoplaySpdVar = 3000;
+  //       if (autoPlayVar > 1) {
+  //         autoplaySpdVar = autoPlayVar;
+  //         autoPlayVar = 1;
+  //       }
+  //       // Slide Change Speed
+  //       var speedVar = parseInt($ts.attr('data-speed'), 10);
+  //       // Slider Loop
+  //       var loopVar = Boolean(parseInt($ts.attr('data-loop'), 10));
+  //       // Slider Center
+  //       var centerVar = Boolean(parseInt($ts.attr('data-center'), 10));
+  //       // Variable Width
+  //       var variableWidthVar = Boolean(
+  //         parseInt($ts.attr('data-variable-width'), 10),
+  //       );
+  //       // Pagination
+  //       var paginaiton = $(this)
+  //         .find('.cs_pagination')
+  //         .hasClass('cs_pagination');
+  //       // Slide Per View
+  //       var slidesPerView = $ts.attr('data-slides-per-view');
+  //       if (slidesPerView == 1) {
+  //         slidesPerView = 1;
+  //       }
+  //       if (slidesPerView == 'responsive') {
+  //         var slidesPerView = parseInt($ts.attr('data-add-slides'), 10);
+  //         var lgPoint = parseInt($ts.attr('data-lg-slides'), 10);
+  //         var mdPoint = parseInt($ts.attr('data-md-slides'), 10);
+  //         var smPoint = parseInt($ts.attr('data-sm-slides'), 10);
+  //         var xsPoing = parseInt($ts.attr('data-xs-slides'), 10);
+  //       }
+  //       // Fade Slider
+  //       var fadeVar = parseInt($($ts).attr('data-fade-slide'));
+  //       fadeVar === 1 ? (fadeVar = true) : (fadeVar = false);
+
+  //       // Slick Active Code
+  //       $slickActive.slick({
+  //         centerMode: centerVar,
+  //         autoplay: autoPlayVar,
+  //         dots: paginaiton,
+  //         speed: speedVar,
+  //         infinite: loopVar,
+  //         autoplaySpeed: autoplaySpdVar,
+  //         fade: fadeVar,
+  //         prevArrow: $(this).find('.cs_left_arrow'),
+  //         nextArrow: $(this).find('.cs_right_arrow'),
+  //         appendDots: $(this).find('.cs_pagination'),
+  //         slidesToShow: slidesPerView,
+  //         variableWidth: variableWidthVar,
+  //         // slidesToScroll: slidesPerView,
+  //         responsive: [
+  //           {
+  //             breakpoint: 1600,
+  //             settings: {
+  //               slidesToShow: lgPoint,
+  //               // slidesToScroll: lgPoint,
+  //             },
+  //           },
+  //           {
+  //             breakpoint: 1200,
+  //             settings: {
+  //               slidesToShow: mdPoint,
+  //               // slidesToScroll: mdPoint,
+  //             },
+  //           },
+  //           {
+  //             breakpoint: 992,
+  //             settings: {
+  //               slidesToShow: smPoint,
+  //               // slidesToScroll: smPoint,
+  //             },
+  //           },
+  //           {
+  //             breakpoint: 768,
+  //             settings: {
+  //               slidesToShow: xsPoing,
+  //               slidesToScroll: xsPoing,
+  //             },
+  //           },
+  //         ],
+  //       });
   //     });
   //   }
-  //   if ($.exists('#amount')) {
-  //     $('#amount').val(
-  //       'Price: $' +
-  //         $('#slider-range').slider('values', 0) +
-  //         ' - $' +
-  //         $('#slider-range').slider('values', 1),
-  //     );
-  //   }
-  //   // Counter
-  //   $('.cs_increment').click(function () {
-  //     var countElement = $(this).siblings('.cs_quantity_input');
-  //     var count = parseInt(countElement.text());
-  //     count++;
-  //     countElement.text(count);
+  //   // Testimonial Slider
+  //   $('.slider-for').slick({
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     arrows: true,
+  //     asNavFor: '.slider-nav',
   //   });
 
-  //   $('.cs_decrement').click(function () {
-  //     var countElement = $(this).siblings('.cs_quantity_input');
-  //     var count = parseInt(countElement.text());
-  //     if (count > 0) {
-  //       count--;
-  //       countElement.text(count);
-  //     }
+  //   $('.slider-nav').slick({
+  //     slidesToShow: 2,
+  //     slidesToScroll: 1,
+  //     asNavFor: '.slider-for',
+  //     dots: true,
+  //     centerMode: true,
+  //     focusOnSelect: true,
+  //     variableWidth: true,
   //   });
   // }
   /*--------------------------------------------------------------

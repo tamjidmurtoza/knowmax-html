@@ -1,0 +1,49 @@
+.cs_news_message {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-shrink: 0;
+  animation: slide-left 50s linear infinite;
+
+  .cs_partner_logo {
+    display: inline-block;
+    width: max-content;
+    padding: 0 78px;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      color: $accent;
+
+      .cs_news_message {
+        animation-play-state: paused;
+      }
+    }
+  }
+
+  @keyframes slide-left {
+    from {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    to {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/*===========================
+  Animated text
+============================*/
+.cs_partners_lists {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &:hover {
+    .cs_news_message {
+      animation-play-state: paused;
+    }
+  }
+}

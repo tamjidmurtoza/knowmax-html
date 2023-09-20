@@ -1,92 +1,37 @@
-/*--------------------------------------------------------------
-  5. Slider
-----------------------------------------------------------------*/
-
-.cs_slider {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  z-index: 1;
+.cs_slider_1.swiper {
+  overflow-y: visible;
 }
 
-.cs_swiper_navigation.cs_style_1 {
+.cs_swiper_btns {
   display: flex;
-  justify-content: center;
-  margin-top: 60px;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 20px;
 
-  @media (max-width: 575px) {
-    margin-top: 40px;
-  }
-
-  >* {
-    position: relative;
-    transition: all 0.4s ease;
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: initial;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $accent;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
 
     &:hover {
-      color: $accent;
-    }
-
-    &:not(:last-child) {
-      padding-right: 25px;
-      margin-right: 25px;
-      border-right: 1px solid $secondary;
+      background-color: $accent;
+      color: $white;
     }
   }
 }
 
-.cs_pagination.cs_style_1 {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 50px;
-
-  .swiper-pagination-bullet {
-    height: 10px;
-    width: 10px;
-    background-color: $secondary;
-    opacity: 1;
-    transition: all 0.4s ease;
-
-    &.swiper-pagination-bullet-active {
-      width: 25px;
-    }
-  }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  width: 12.86px;
+  height: 20.573px;
+  font-size: 20px;
+  font-weight: 900;
 }
 
-.swiper-pagination-bullets.cs_number_pagination {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: initial;
-  right: calc((100vw - 1420px) / 2 / 2);
-  width: initial;
-
-  .swiper-pagination-bullet {
-    height: 60px;
-    width: 60px !important;
-    flex: none;
-    width: initial;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: transparent;
-    border: 2px solid $gray2;
-    color: $gray2;
-    transition: all 0.4s ease;
-    opacity: 1;
-    margin: 0 !important;
-
-    &:hover,
-    &.swiper-pagination-bullet-active {
-      border-color: $secondary;
-      color: $secondary;
-    }
-  }
+.swiper-button-next::after {
+  margin-left: 3px;
 }

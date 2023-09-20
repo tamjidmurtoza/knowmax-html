@@ -5,10 +5,10 @@
 @import 'common/general';
 @import 'common/buttons';
 @import 'common/accordion';
-//@import 'common/slider';
+@import 'common/slider';
 //@import 'common/video-modal';
 @import 'common/header';
-//@import 'common/footer';
+@import 'common/footer';
 ///@import 'common/sidebar';
 @import 'common/isotope';
 @import 'common/iconbox';
@@ -21,3 +21,6 @@
 @import 'shortcode/funfact';
 @import 'shortcode/pricing';
 @import 'shortcode/tabs';
+@import 'shortcode/testimonial';
+@import 'shortcode/post';
+@import 'shortcode/partners';
