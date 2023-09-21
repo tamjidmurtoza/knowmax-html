@@ -1634,49 +1634,54 @@ odometer
           transform: rotateX(180deg);
 }
 
-.cs_slider_1.swiper {
-  overflow-y: visible;
+.cs_slider.cs_style_1 .cs_slider_wrapper {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.cs_slider.cs_style_1 .slick_slide_in {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.cs_slider.cs_style_1 .slick-list {
+  padding-top: 50px;
 }
 
-.cs_swiper_btns {
+/*======================
+Slider arrow design
+=======================*/
+.cs_slider_arrows.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   gap: 20px;
 }
-.cs_swiper_btns .swiper-button-prev,
-.cs_swiper_btns .swiper-button-next {
-  position: initial;
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow {
   width: 50px;
   height: 50px;
   border: 1px solid #573cff;
   border-radius: 50%;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.cs_swiper_btns .swiper-button-prev:hover,
-.cs_swiper_btns .swiper-button-next:hover {
-  background-color: #573cff;
-  color: #fff;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  width: 12.86px;
-  height: 20.573px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #573cff;
   font-size: 20px;
   font-weight: 900;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
-
-.swiper-button-next::after {
-  margin-left: 3px;
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover {
+  background-color: #573cff;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -3073,17 +3078,16 @@ odometer
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  gap: 10px;
 }
 .cs_product.cs_style_1 .cs_cart_btn {
+  width: 80%;
   text-align: center;
   line-height: 1.445em;
-  padding: 7px 60px;
+  padding: 7px 0;
 }
 .cs_product.cs_style_1 .cs_cart_icon {
-  width: 44px;
+  width: 20%;
   height: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3131,6 +3135,9 @@ odometer
   margin-top: 13px;
 }
 
+.cs_card.cs_style_1 .cs_card_thumb {
+  display: block;
+}
 .cs_card.cs_style_1 .cs_card_badge,
 .cs_card.cs_style_1 .cs_card_review {
   padding: 10px 14px;
@@ -3568,67 +3575,6 @@ odometer
   transition: all 0.4s ease-in-out;
 }
 
-.cs_news_message {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-animation: slide-left 50s linear infinite;
-          animation: slide-left 50s linear infinite;
-}
-.cs_news_message .cs_partner_logo {
-  display: inline-block;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0 78px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.cs_news_message .cs_partner_logo:hover {
-  color: #573cff;
-}
-.cs_news_message .cs_partner_logo:hover .cs_news_message {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-@-webkit-keyframes slide-left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-@keyframes slide-left {
-  from {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
 /*===========================
   Animated text
 ============================*/
-.cs_partners_lists {
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-.cs_partners_lists:hover .cs_news_message {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}

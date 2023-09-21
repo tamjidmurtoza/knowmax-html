@@ -35,17 +35,18 @@
   .cs_product_cart {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
   }
 
   .cs_cart_btn {
+    width: 80%;
     text-align: center;
     line-height: 1.445em;
-    padding: 7px 60px;
+    padding: 7px 0;
   }
 
   .cs_cart_icon {
-    width: 44px;
+    width: 20%;
     height: 38px;
     display: flex;
     align-items: center;

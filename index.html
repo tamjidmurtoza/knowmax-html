@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/odometer.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -685,7 +685,7 @@
   </section>
   <!-- End Course -->
   <!-- Start Product -->
-  <section class="cs_product cs_style_1 cs_gray_bg">
+  <section class="cs_gray_bg">
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
       <div class="cs_section_heading cs_style_1">
@@ -1135,7 +1135,7 @@
       <div class="row">
         <div class="col-xl-3 col-lg-4 col-md-6">
           <div class="cs_card cs_style_1">
-            <div class="cs_card_thumb cs_zoom position-relative">
+            <a href="#" class="cs_card_thumb cs_zoom position-relative">
               <img src="assets/img/member1.jpg" alt="Member Image" class="cs_zoom_in">
               <div class="cs_card_badge cs_white_color cs_radius_2 cs_medium">Level 2</div>
               <div class="cs_card_review cs_white_color cs_medium">
@@ -1150,7 +1150,7 @@
                   <span class="cs_reviews_number">(09)</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="cs_card_info cs_radius_2 text-center">
               <h3 class="cs_card_title cs_fs_24 cs_medium"><a href="#">Richard David</a></h3>
               <p class="cs_card_subtitle">Python Developer</p>
@@ -1178,7 +1178,7 @@
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6">
           <div class="cs_card cs_style_1">
-            <div class="cs_card_thumb cs_zoom position-relative">
+            <a href="#" class="cs_card_thumb cs_zoom position-relative">
               <img src="assets/img/member2.jpg" alt="Member Image" class="cs_zoom_in">
               <div class="cs_card_badge cs_white_color cs_radius_2 cs_medium">Level 3</div>
               <div class="cs_card_review cs_white_color cs_medium">
@@ -1193,7 +1193,7 @@
                   <span class="cs_reviews_number">(12)</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="cs_card_info cs_radius_2 text-center">
               <h3 class="cs_card_title cs_fs_24 cs_medium"><a href="#">Jacob Jones</a></h3>
               <p class="cs_card_subtitle">UX/UI Expert</p>
@@ -1221,7 +1221,7 @@
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6">
           <div class="cs_card cs_style_1">
-            <div class="cs_card_thumb cs_zoom position-relative">
+            <a href="#" class="cs_card_thumb cs_zoom position-relative">
               <img src="assets/img/member3.jpg" alt="Member Image" class="cs_zoom_in">
               <div class="cs_card_badge cs_white_color cs_radius_2 cs_medium">Level 4</div>
               <div class="cs_card_review cs_white_color cs_medium">
@@ -1236,7 +1236,7 @@
                   <span class="cs_reviews_number">(21)</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="cs_card_info cs_radius_2 text-center">
               <h3 class="cs_card_title cs_fs_24 cs_medium"><a href="#">Millar Richard</a></h3>
               <p class="cs_card_subtitle">Business</p>
@@ -1264,7 +1264,7 @@
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6">
           <div class="cs_card cs_style_1">
-            <div class="cs_card_thumb cs_zoom position-relative">
+            <a href="#" class="cs_card_thumb cs_zoom position-relative">
               <img src="assets/img/member4.jpg" alt="Member Image" class="cs_zoom_in">
               <div class="cs_card_badge cs_white_color cs_radius_2 cs_medium">Level 5</div>
               <div class="cs_card_review cs_white_color cs_medium">
@@ -1279,7 +1279,7 @@
                   <span class="cs_reviews_number">(15)</span>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="cs_card_info cs_radius_2 text-center">
               <h3 class="cs_card_title cs_fs_24 cs_medium"><a href="#">Jenny Wilson</a></h3>
               <p class="cs_card_subtitle">Marketing Expert</p>
@@ -1703,7 +1703,7 @@
   </section>
   <!-- End Pricing  -->
   <!-- Start testimonial -->
-  <section class="cs_gray_bg">
+  <section class="cs_gray_bg cs_slider cs_style_1">
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
       <div class="cs_section_heading cs_style_1">
@@ -1712,135 +1712,110 @@
           <h2 class="cs_section_title cs_fs_48 cs_semibold mb-0">What Our Clients Says</h2>
         </div>
         <div class="cs_section_heading_right">
-          <div class="swipe-arrow cs_style_1 w-100 position-absolute d-flex justify-content-between">
-            <div class="cs_left_arrow cs_btn cs_style_2">
+          <div class="cs_slider_arrows cs_slider cs_style_1">
+            <div class="cs_left_arrow cs_slider_arrow">
               <i class="fa-solid fa-chevron-left"></i>
             </div>
-            <div class="cs_right_arrow cs_btn cs_style_2">
+            <div class="cs_right_arrow cs_slider_arrow">
               <i class="fa-solid fa-chevron-right"></i>
             </div>
           </div>
         </div>
       </div>
-      <div class="cs_height_105 cs_height_lg_85"></div>
-      <div class="cs_slider cs_style_1 position-relative">
-        <div class="cs_slider_container" data-autoplay="1" data-loop="1" data-speed="600" data-center="0"
-          data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="2"
-          data-add-slides="2">
-          <div class="cs_slider_wrapper">
-            <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1">
-                <div class="cs_testimonial_heading">
-                  <div class="cs_testimonial_thumb">
-                    <img src="assets/img/client1.png" alt="">
-                  </div>
-                  <div class="cs_star_container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
+      <div class="cs_height_53 cs_height_lg_35"></div>
+      <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
+        data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="1"
+        data-add-slides="3">
+        <div class="cs_slider_wrapper">
+          <div class="slick_slide_in">
+            <div class="cs_testimonial cs_style_1">
+              <div class="cs_testimonial_heading">
+                <div class="cs_testimonial_thumb">
+                  <img src="assets/img/client1.png" alt="">
                 </div>
-                <div class="cs_testimonial_info">
-                  <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Courtney Henry</h3>
-                  <p class="cs_testimonial_subtitle cs_accent_color">Marketing Expert</p>
-                  <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
-                    tate velit esse cillum dolore eu fugiat nulla partr
-                    iatur sunt in culp qui officia deserunt mollit</p>
+                <div class="cs_star_container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </div>
               </div>
-            </div>
-            <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1">
-                <div class="cs_testimonial_heading">
-                  <div class="cs_testimonial_thumb">
-                    <img src="assets/img/client2.png" alt="">
-                  </div>
-                  <div class="cs_star_container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                </div>
-                <div class="cs_testimonial_info">
-                  <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Jacob Jones</h3>
-                  <p class="cs_testimonial_subtitle cs_accent_color">Python Developer</p>
-                  <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
-                    tate velit esse cillum dolore eu fugiat nulla partr
-                    iatur sunt in culp qui officia deserunt mollit</p>
-                </div>
+              <div class="cs_testimonial_info">
+                <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Courtney Henry</h3>
+                <p class="cs_testimonial_subtitle cs_accent_color">Marketing Expert</p>
+                <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
+                  tate velit esse cillum dolore eu fugiat nulla partr
+                  iatur sunt in culp qui officia deserunt mollit</p>
               </div>
             </div>
-            <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1">
-                <div class="cs_testimonial_heading">
-                  <div class="cs_testimonial_thumb">
-                    <img src="assets/img/client3.png" alt="">
-                  </div>
-                  <div class="cs_star_container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
+          </div>
+          <div class="slick_slide_in">
+            <div class="cs_testimonial cs_style_1">
+              <div class="cs_testimonial_heading">
+                <div class="cs_testimonial_thumb">
+                  <img src="assets/img/client2.png" alt="">
                 </div>
-                <div class="cs_testimonial_info">
-                  <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Silverster Scoot</h3>
-                  <p class="cs_testimonial_subtitle cs_accent_color">Sr. UX/UI Designer</p>
-                  <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
-                    tate velit esse cillum dolore eu fugiat nulla partr
-                    iatur sunt in culp qui officia deserunt mollit</p>
+                <div class="cs_star_container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </div>
               </div>
-            </div>
-            <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1">
-                <div class="cs_testimonial_heading">
-                  <div class="cs_testimonial_thumb">
-                    <img src="assets/img/client1.png" alt="">
-                  </div>
-                  <div class="cs_star_container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                </div>
-                <div class="cs_testimonial_info">
-                  <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Courtney Henry</h3>
-                  <p class="cs_testimonial_subtitle cs_accent_color">Marketing Expert</p>
-                  <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
-                    tate velit esse cillum dolore eu fugiat nulla partr
-                    iatur sunt in culp qui officia deserunt mollit</p>
-                </div>
+              <div class="cs_testimonial_info">
+                <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Jacob Jones</h3>
+                <p class="cs_testimonial_subtitle cs_accent_color">Python Developer</p>
+                <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
+                  tate velit esse cillum dolore eu fugiat nulla partr
+                  iatur sunt in culp qui officia deserunt mollit</p>
               </div>
             </div>
-            <div class="slick_slide_in">
-              <div class="cs_testimonial cs_style_1">
-                <div class="cs_testimonial_heading">
-                  <div class="cs_testimonial_thumb">
-                    <img src="assets/img/client2.png" alt="">
-                  </div>
-                  <div class="cs_star_container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
+          </div>
+          <div class="slick_slide_in">
+            <div class="cs_testimonial cs_style_1">
+              <div class="cs_testimonial_heading">
+                <div class="cs_testimonial_thumb">
+                  <img src="assets/img/client3.png" alt="">
                 </div>
-                <div class="cs_testimonial_info">
-                  <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Jacob Jones</h3>
-                  <p class="cs_testimonial_subtitle cs_accent_color">Python Developer</p>
-                  <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
-                    tate velit esse cillum dolore eu fugiat nulla partr
-                    iatur sunt in culp qui officia deserunt mollit</p>
+                <div class="cs_star_container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
                 </div>
+              </div>
+              <div class="cs_testimonial_info">
+                <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Silverster Scoot</h3>
+                <p class="cs_testimonial_subtitle cs_accent_color">Sr. UX/UI Designer</p>
+                <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
+                  tate velit esse cillum dolore eu fugiat nulla partr
+                  iatur sunt in culp qui officia deserunt mollit</p>
+              </div>
+            </div>
+          </div>
+          <div class="slick_slide_in">
+            <div class="cs_testimonial cs_style_1">
+              <div class="cs_testimonial_heading">
+                <div class="cs_testimonial_thumb">
+                  <img src="assets/img/client1.png" alt="">
+                </div>
+                <div class="cs_star_container">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="cs_testimonial_info">
+                <h3 class="cs_testimonial_title cs_fs_24 cs_bold">Courtney Henry</h3>
+                <p class="cs_testimonial_subtitle cs_accent_color">Marketing Expert</p>
+                <p class="cs_testimonial_subtitle">Duis aute irure dolor in reprehenderit into volupjl
+                  tate velit esse cillum dolore eu fugiat nulla partr
+                  iatur sunt in culp qui officia deserunt mollit</p>
               </div>
             </div>
           </div>
@@ -1990,52 +1965,57 @@
   </section>
   <!-- End blog -->
   <!-- Start partners -->
-  <section class="cs_gray_bg">
-    <div class="cs_height_90 cs_height_lg_60"></div>
+  <section class="cs_gray_bg cs_slider cs_style_2">
+    <div class="cs_height_90 cs_height_lg_70"></div>
     <div class="container">
-      <div class="cs_partners_lists">
-        <div class="row text-center cs_news_message">
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo1.png" alt="Partner Logo">
+      <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="2000" data-center="0"
+        data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="1"
+        data-add-slides="5">
+        <div class="cs_slider_wrapper">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo1.png" alt="Partner Logo">
+            </div>
           </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo2.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo2.png" alt="Partner Logo">
+            </div>
           </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo3.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo3.png" alt="Partner Logo">
+            </div>
           </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo4.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo4.png" alt="Partner Logo">
+            </div>
           </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo5.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo5.png" alt="Partner Logo">
+            </div>
           </div>
-        </div>
-        <div class="row text-center cs_news_message">
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo1.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo1.png" alt="Partner Logo">
+            </div>
           </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo2.png" alt="Partner Logo">
-          </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo3.png" alt="Partner Logo">
-          </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo4.png" alt="Partner Logo">
-          </div>
-          <div class="cs_partner_logo">
-            <img src="assets/img/partner_logo5.png" alt="Partner Logo">
+          <div class="slick_slide_in">
+            <div class="cs_partner_logo">
+              <img src="assets/img/partner_logo2.png" alt="Partner Logo">
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="cs_height_90 cs_height_lg_60"></div>
+    <div class="cs_height_90 cs_height_lg_70"></div>
   </section>
   <!-- End partners -->
   <!--Start Footer Section -->
   <footer class="cs_site_footer cs_style_1 cs_sticky_footer" data-src="assets/img/footer_bg.svg">
-    <div class="cs_height_140 cs_height_lg_70"></div>
+    <div class="cs_height_100 cs_height_lg_80"></div>
     <div class="cs_main_footer">
       <div class="container">
         <div class="row">
@@ -2236,7 +2216,7 @@
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/gsap.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/jquery.slick.min.js"></script>
   <script src="assets/js/odometer.js"></script>
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/isotope.pkg.min.js"></script>

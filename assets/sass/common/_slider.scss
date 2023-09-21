@@ -1,37 +1,45 @@
-.cs_slider_1.swiper {
-  overflow-y: visible;
+.cs_slider.cs_style_1 {
+  .cs_slider_wrapper {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .slick_slide_in {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .slick-list {
+    padding-top: 50px;
+  }
 }
 
-.cs_swiper_btns {
+
+/*======================
+Slider arrow design
+=======================*/
+.cs_slider_arrows.cs_style_1 {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
   gap: 20px;
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: initial;
+  .cs_slider_arrow {
     width: 50px;
     height: 50px;
     border: 1px solid $accent;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $accent;
+    font-size: 20px;
+    font-weight: 900;
     transition: all .4s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background-color: $accent;
       color: $white;
     }
   }
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  width: 12.86px;
-  height: 20.573px;
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.swiper-button-next::after {
-  margin-left: 3px;
 }
