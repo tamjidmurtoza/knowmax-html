@@ -1,0 +1,180 @@
+.cs_about.cs_style_3 {
+  .cs_mission_title {
+    line-height: 1.167em;
+    margin-bottom: 5px;
+  }
+
+  .cs_about_subtitle {
+    margin-bottom: 20px;
+  }
+
+  .cs_mission {
+    margin-bottom: 17px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cs_about_shape1 {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .cs_about_shape2 {
+    position: absolute;
+    right: -20px;
+    top: 0;
+  }
+
+  .cs_about_shape3 {
+    position: absolute;
+    left: 56%;
+    bottom: -10px;
+  }
+}
+
+.cs_iconbox.cs_style_2 {
+  display: flex;
+  gap: 13px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .cs_iconbox_icon {
+    width: 32px;
+    height: 32px;
+    background-color: $accent;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs_iconbox_title {
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+}
+
+.cs_tranquil_right {
+  padding-left: 40px;
+  border-left: 2px dashed $accent;
+}
+
+.cs_iconbox.cs_style_3 {
+  border: 1px solid $border;
+  margin-bottom: 50px;
+  padding: 25px 22px;
+  background-color: $white;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-top: 1px solid $border;
+    border-left: 1px solid $border;
+    background-color: $white;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .cs_iconbox_icon {
+    display: inline-block;
+    background-color: $primary;
+    padding: 5px 40px;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+  }
+
+  .cs_iconbox_shape {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+
+    .cs_half_circle {
+      width: 50%;
+      height: 50%;
+      background-color: $primary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.cs_card.cs_style_4 {
+  .cs_card_thumb {
+    display: inline-block;
+    position: relative;
+
+    .cs_card_overlay {
+      width: 200px;
+      height: 200px;
+      border: 10px solid $white;
+      background: rgba(0, 41, 53, 0.2);
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      transform: translate(-50%, -50%) rotate(40deg);
+      border-radius: 5px;
+
+      &::after {
+        content: "";
+        width: 110%;
+        height: 110%;
+        border: 1px dashed $accent;
+        position: absolute;
+        top: -5%;
+        left: -5%;
+        border-radius: 5px;
+      }
+
+    }
+  }
+
+  .cs_card_badge {
+    width: 80px;
+    height: 80px;
+    background-color: #F5F9F9;
+    border: 2px dashed $accent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 5;
+    font-size: 26px;
+    line-height: 36px;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_card_title {
+    font-size: 26px;
+    line-height: 1.385em;
+    margin-top: 30px;
+  }
+
+  &:hover {
+    .cs_card_badge {
+      background-color: $accent;
+      color: $white;
+    }
+
+  }
+}

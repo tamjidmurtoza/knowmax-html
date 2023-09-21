@@ -2756,10 +2756,33 @@ Slider arrow design
 /*--------------------------------------------------------------
   9. Hero
 ----------------------------------------------------------------*/
-.cs_hero_inner {
+.cs_hero.cs_style_1 .cs_hero_inner {
   width: 100%;
   height: 900px;
   position: relative;
+}
+
+.cs_hero.cs_style_4 .cs_hero_inner {
+  width: 100%;
+  height: 400px;
+}
+.cs_hero.cs_style_4 .cs_hero_badge {
+  width: 100%;
+  max-width: 400px;
+  height: 53px;
+  padding: 14px 0 15px 30px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.cs_hero.cs_style_4 .breadcrumb-item {
+  line-height: 1.556em;
+}
+.cs_hero.cs_style_4 .breadcrumb-item a:hover {
+  color: #fff;
+}
+.cs_hero.cs_style_4 .breadcrumb-item::before {
+  color: #fff;
 }
 
 .cs_hero_overlay {
@@ -3578,3 +3601,181 @@ Slider arrow design
 /*===========================
   Animated text
 ============================*/
+.cs_about.cs_style_3 .cs_mission_title {
+  line-height: 1.167em;
+  margin-bottom: 5px;
+}
+.cs_about.cs_style_3 .cs_about_subtitle {
+  margin-bottom: 20px;
+}
+.cs_about.cs_style_3 .cs_mission {
+  margin-bottom: 17px;
+}
+.cs_about.cs_style_3 .cs_mission:last-child {
+  margin-bottom: 0;
+}
+.cs_about.cs_style_3 .cs_about_shape1 {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+}
+.cs_about.cs_style_3 .cs_about_shape2 {
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+.cs_about.cs_style_3 .cs_about_shape3 {
+  position: absolute;
+  left: 56%;
+  bottom: -10px;
+}
+
+.cs_iconbox.cs_style_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 13px;
+}
+.cs_iconbox.cs_style_2:not(:last-child) {
+  margin-bottom: 20px;
+}
+.cs_iconbox.cs_style_2 .cs_iconbox_icon {
+  width: 32px;
+  height: 32px;
+  background-color: #573cff;
+  color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cs_iconbox.cs_style_2 .cs_iconbox_title {
+  line-height: 29px;
+  margin-bottom: 5px;
+}
+
+.cs_tranquil_right {
+  padding-left: 40px;
+  border-left: 2px dashed #573cff;
+}
+
+.cs_iconbox.cs_style_3 {
+  border: 1px solid #dedede;
+  margin-bottom: 50px;
+  padding: 25px 22px;
+  background-color: #fff;
+  position: relative;
+}
+.cs_iconbox.cs_style_3::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  background-color: #fff;
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+.cs_iconbox.cs_style_3 .cs_iconbox_icon {
+  display: inline-block;
+  background-color: #002935;
+  padding: 5px 40px;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+.cs_iconbox.cs_style_3 .cs_iconbox_shape {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #002935;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cs_iconbox.cs_style_3 .cs_iconbox_shape .cs_half_circle {
+  width: 50%;
+  height: 50%;
+  background-color: #002935;
+  border-radius: 50%;
+}
+
+.cs_card.cs_style_4 .cs_card_thumb {
+  display: inline-block;
+  position: relative;
+}
+.cs_card.cs_style_4 .cs_card_thumb .cs_card_overlay {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #fff;
+  background: rgba(0, 41, 53, 0.2);
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  -webkit-transform: translate(-50%, -50%) rotate(40deg);
+          transform: translate(-50%, -50%) rotate(40deg);
+  border-radius: 5px;
+}
+.cs_card.cs_style_4 .cs_card_thumb .cs_card_overlay::after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  border: 1px dashed #573cff;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  border-radius: 5px;
+}
+.cs_card.cs_style_4 .cs_card_badge {
+  width: 80px;
+  height: 80px;
+  background-color: #F5F9F9;
+  border: 2px dashed #573cff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  z-index: 5;
+  font-size: 26px;
+  line-height: 36px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_card.cs_style_4 .cs_card_title {
+  font-size: 26px;
+  line-height: 1.385em;
+  margin-top: 30px;
+}
+.cs_card.cs_style_4:hover .cs_card_badge {
+  background-color: #573cff;
+  color: #fff;
+}
