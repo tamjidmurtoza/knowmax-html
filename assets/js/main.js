@@ -54,6 +54,7 @@
     //rippleInit();
     accordianInit();
     tabs();
+    select2Function();
     //hoverTab();
     //awardHover();
     //hoverActive();
@@ -403,6 +404,16 @@
   //     $('.cs_scrollup').removeClass('cs_scrollup_show');
   //   }
   // }
+  /*--------------------------------------------------------------
+    9. Select2 function
+  --------------------------------------------------------------*/
+  function select2Function() {
+    $('.cs_select1').select2({
+      placeholder: function () {
+        $(this).data('placeholder');
+      },
+    });
+  }
   /*--------------------------------------------------------------
     11. Dynamic contact form
   --------------------------------------------------------------*/

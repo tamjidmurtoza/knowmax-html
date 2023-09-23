@@ -169,3 +169,34 @@
 .cs_reviews_number {
   margin-left: 10px;
 }
+
+.cs_course_heading {
+  .cs_isotope_filter.cs_style_1 ul {
+    justify-content: flex-start;
+  }
+
+  .cs_filter_icon {
+    width: max-content;
+    border-radius: 2px;
+    border: 1px solid #F0F0F0;
+    background: $gray;
+    padding: 10px 15px;
+  }
+
+  .cs_filter_action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2px;
+    border: 1px solid #F0F0F0;
+    background: $gray;
+    padding: 10px 0;
+    padding-left: 15px;
+    position: relative;
+
+    select {
+      border: none;
+      outline: none;
+    }
+  }
+}

@@ -26,12 +26,14 @@
     position: absolute;
     right: -20px;
     top: 0;
+    animation: rotate-x 10s linear infinite;
   }
 
   .cs_about_shape3 {
     position: absolute;
     left: 56%;
     bottom: -10px;
+    animation: move-x 10s linear infinite;
   }
 }
 
@@ -119,17 +121,25 @@
 .cs_card.cs_style_4 {
   .cs_card_thumb {
     display: inline-block;
+    width: 200px;
+    height: 200px;
     position: relative;
+    transform: rotate(-45deg);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
 
     .cs_card_overlay {
-      width: 200px;
-      height: 200px;
-      border: 10px solid $white;
+      width: inherit;
+      height: inherit;
       background: rgba(0, 41, 53, 0.2);
       position: absolute;
-      left: 50%;
-      top: 46%;
-      transform: translate(-50%, -50%) rotate(40deg);
+      left: 0;
+      top: 0;
       border-radius: 5px;
 
       &::after {
@@ -146,6 +156,14 @@
     }
   }
 
+  .cs_card_arrow {
+    display: inline-block;
+    position: absolute;
+    top: 24%;
+    right: -70px;
+    transform: translateY(-24%);
+  }
+
   .cs_card_badge {
     width: 80px;
     height: 80px;
@@ -156,8 +174,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: 60px;
+    right: -65px;
     z-index: 5;
     font-size: 26px;
     line-height: 36px;
@@ -167,7 +185,7 @@
   .cs_card_title {
     font-size: 26px;
     line-height: 1.385em;
-    margin-top: 30px;
+    margin-top: 80px;
   }
 
   &:hover {
@@ -176,5 +194,116 @@
       color: $white;
     }
 
+  }
+}
+
+.cs_card.cs_style_5 {
+
+
+  .cs_card_thumb {
+    overflow: hidden;
+
+    .cs_hover_thumb {
+      position: absolute;
+      left: 0;
+      clip-path: inset(0 100% 0 0);
+      transition: all .4s ease-in-out;
+    }
+
+  }
+
+  .cs_card_badge {
+    padding: 8px 20px;
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transform: translateX(-135px);
+    transition: all .5s ease-in-out;
+  }
+
+  .cs_badge_btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    background-color: $accent;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2px;
+    right: -20px;
+    filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.20));
+
+    .fa-arrow-right-long {
+      transform: translateX(-40px);
+      transition: inherit;
+      opacity: 0;
+    }
+
+    .fa-plus {
+      transform: translateX(8px);
+      opacity: 1;
+      transition: inherit;
+    }
+  }
+
+  .cs_social_container {
+    padding-right: 30px;
+    display: flex;
+    gap: 20px;
+
+    i {
+      color: $white;
+    }
+  }
+
+  &:hover {
+    .cs_hover_thumb {
+      clip-path: inset(0 0 0 0);
+    }
+
+    .cs_card_badge {
+      background-color: $accent;
+      transform: translateX(0px);
+    }
+
+    .fa-arrow-right-long {
+      transform: translateX(-8px);
+      opacity: 1;
+    }
+
+    .fa-plus {
+      transform: translateX(30px);
+      opacity: 0;
+
+    }
+  }
+
+  .cs_card_info {
+    padding: 20px 30px 25px;
+    border-radius: 0px 0px 5px 5px;
+    background: $white;
+    box-shadow: 2px 3px 50px 0px rgba(188, 188, 188, 0.25);
+  }
+
+  .cs_card_title {
+    line-height: 34px;
+  }
+}
+
+@keyframes move-x {
+  50% {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes rotate-x {
+  50% {
+    transform: translateX(20px);
   }
 }

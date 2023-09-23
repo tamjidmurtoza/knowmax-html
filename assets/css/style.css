@@ -1684,6 +1684,66 @@ Slider arrow design
   color: #fff;
 }
 
+.select2-container .select2-container--default .select2-container--open {
+  left: 120.75px;
+}
+
+.select2-results {
+  width: 195px;
+  background-color: #fff;
+  margin-left: -88px;
+  margin-top: 10px;
+  border: 1px solid #F0F0F0;
+}
+
+.select2-selection__rendered {
+  border: none;
+}
+
+.select2-search--dropdown {
+  display: none !important;
+}
+
+.select2-container--open .select2-dropdown {
+  left: 0px;
+  width: 0;
+  height: 0;
+  border: none;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: transparent;
+  border: none;
+}
+
+.select2-container .select2-container--default .select2-container--open {
+  left: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 26px;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  width: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #573cff;
+}
+
+.select2-container--open .select2-selection__arrow {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 /*--------------------------------------------------------------
 7. Header
 ----------------------------------------------------------------*/
@@ -3066,6 +3126,42 @@ Slider arrow design
   margin-left: 10px;
 }
 
+.cs_course_heading .cs_isotope_filter.cs_style_1 ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.cs_course_heading .cs_filter_icon {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 2px;
+  border: 1px solid #F0F0F0;
+  background: #f8f9fa;
+  padding: 10px 15px;
+}
+.cs_course_heading .cs_filter_action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 2px;
+  border: 1px solid #F0F0F0;
+  background: #f8f9fa;
+  padding: 10px 0;
+  padding-left: 15px;
+  position: relative;
+}
+.cs_course_heading .cs_filter_action select {
+  border: none;
+  outline: none;
+}
+
 .cs_product.cs_style_1 {
   background: #fff;
 }
@@ -3623,11 +3719,15 @@ Slider arrow design
   position: absolute;
   right: -20px;
   top: 0;
+  -webkit-animation: rotate-x 10s linear infinite;
+          animation: rotate-x 10s linear infinite;
 }
 .cs_about.cs_style_3 .cs_about_shape3 {
   position: absolute;
   left: 56%;
   bottom: -10px;
+  -webkit-animation: move-x 10s linear infinite;
+          animation: move-x 10s linear infinite;
 }
 
 .cs_iconbox.cs_style_2 {
@@ -3722,18 +3822,26 @@ Slider arrow design
 
 .cs_card.cs_style_4 .cs_card_thumb {
   display: inline-block;
-  position: relative;
-}
-.cs_card.cs_style_4 .cs_card_thumb .cs_card_overlay {
   width: 200px;
   height: 200px;
-  border: 10px solid #fff;
+  position: relative;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.cs_card.cs_style_4 .cs_card_thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.cs_card.cs_style_4 .cs_card_thumb .cs_card_overlay {
+  width: inherit;
+  height: inherit;
   background: rgba(0, 41, 53, 0.2);
   position: absolute;
-  left: 50%;
-  top: 46%;
-  -webkit-transform: translate(-50%, -50%) rotate(40deg);
-          transform: translate(-50%, -50%) rotate(40deg);
+  left: 0;
+  top: 0;
   border-radius: 5px;
 }
 .cs_card.cs_style_4 .cs_card_thumb .cs_card_overlay::after {
@@ -3745,6 +3853,14 @@ Slider arrow design
   top: -5%;
   left: -5%;
   border-radius: 5px;
+}
+.cs_card.cs_style_4 .cs_card_arrow {
+  display: inline-block;
+  position: absolute;
+  top: 24%;
+  right: -70px;
+  -webkit-transform: translateY(-24%);
+          transform: translateY(-24%);
 }
 .cs_card.cs_style_4 .cs_card_badge {
   width: 80px;
@@ -3762,8 +3878,8 @@ Slider arrow design
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 0;
-  right: 5px;
+  top: 60px;
+  right: -65px;
   z-index: 5;
   font-size: 26px;
   line-height: 36px;
@@ -3773,9 +3889,139 @@ Slider arrow design
 .cs_card.cs_style_4 .cs_card_title {
   font-size: 26px;
   line-height: 1.385em;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 .cs_card.cs_style_4:hover .cs_card_badge {
   background-color: #573cff;
   color: #fff;
+}
+
+.cs_card.cs_style_5 .cs_card_thumb {
+  overflow: hidden;
+}
+.cs_card.cs_style_5 .cs_card_thumb .cs_hover_thumb {
+  position: absolute;
+  left: 0;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_card.cs_style_5 .cs_card_badge {
+  padding: 8px 20px;
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  -webkit-transform: translateX(-135px);
+          transform: translateX(-135px);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.cs_card.cs_style_5 .cs_badge_btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #573cff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -2px;
+  right: -20px;
+  -webkit-filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.2));
+          filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.2));
+}
+.cs_card.cs_style_5 .cs_badge_btn .fa-arrow-right-long {
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+  -webkit-transition: inherit;
+  transition: inherit;
+  opacity: 0;
+}
+.cs_card.cs_style_5 .cs_badge_btn .fa-plus {
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
+  opacity: 1;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.cs_card.cs_style_5 .cs_social_container {
+  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.cs_card.cs_style_5 .cs_social_container i {
+  color: #fff;
+}
+.cs_card.cs_style_5:hover .cs_hover_thumb {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+.cs_card.cs_style_5:hover .cs_card_badge {
+  background-color: #573cff;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+.cs_card.cs_style_5:hover .fa-arrow-right-long {
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+  opacity: 1;
+}
+.cs_card.cs_style_5:hover .fa-plus {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  opacity: 0;
+}
+.cs_card.cs_style_5 .cs_card_info {
+  padding: 20px 30px 25px;
+  border-radius: 0px 0px 5px 5px;
+  background: #fff;
+  -webkit-box-shadow: 2px 3px 50px 0px rgba(188, 188, 188, 0.25);
+          box-shadow: 2px 3px 50px 0px rgba(188, 188, 188, 0.25);
+}
+.cs_card.cs_style_5 .cs_card_title {
+  line-height: 34px;
+}
+
+@-webkit-keyframes move-x {
+  50% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+@keyframes move-x {
+  50% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+@-webkit-keyframes rotate-x {
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+@keyframes rotate-x {
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
 }
