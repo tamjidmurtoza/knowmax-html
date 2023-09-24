@@ -55,6 +55,7 @@
     accordianInit();
     tabs();
     select2Function();
+    catToggle();
     //hoverTab();
     //awardHover();
     //hoverActive();
@@ -324,7 +325,19 @@
       });
     }
   }
-
+  /*=================================
+  category Toggle function
+  ==================================*/
+  function catToggle() {
+    $('.cs_slide_toggle').click(function () {
+      $(this).find(".cs_hidden_text").slideToggle();
+      //$(".cs_hidden_text").slideToggle();
+    })
+    $('.cs_widget_title').click(function () {
+      $(this).siblings(".cs_widget_body").slideToggle();
+      $(this).toggleClass("active");
+    })
+  }
   /*--------------------------------------------------------------
     7. Parallax
   --------------------------------------------------------------*/

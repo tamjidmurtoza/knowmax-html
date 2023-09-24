@@ -52,10 +52,10 @@
   }
 }
 
-.cs_accordian.cs_style_2 {
+.cs_sidebar_widget.cs_style_1 {
   padding: 0 20px;
 
-  .cs_accordian_title {
+  .cs_widget_title {
     padding: 24px 0 20px;
     line-height: 1.3em;
     position: relative;
@@ -65,9 +65,15 @@
     border-bottom: 1px solid $border;
     z-index: 2;
     cursor: pointer;
+
+    &.active {
+      .cs_widget_toggle {
+        transform: rotateX(180deg);
+      }
+    }
   }
 
-  .cs_accordian_toggle {
+  .cs_widget_toggle {
     width: 25px;
     height: 25px;
     display: flex;
@@ -79,32 +85,43 @@
     font-size: 12px;
   }
 
-  .cs_accordian_body {
+  .cs_widget_body {
     line-height: 1.625em;
     padding-right: 6px;
+    display: none;
 
     ul li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       padding: 10px 0 0;
+      position: relative;
       cursor: pointer;
     }
   }
 
-  &.active {
-    .cs_accordian_title {
-      padding-bottom: 15px;
-    }
-
-    .cs_accordian_toggle i {
-      transform: rotateX(180deg);
-    }
+  .fa-plus {
+    position: absolute;
+    top: 20px;
+    right: 0;
   }
 
   .cs_list.cs_style_2 label {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+
+    input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .fa-star {
+      margin-right: 10px;
+      color: #FFC107;
+    }
+  }
+
+  .cs_hidden_text {
+    list-style: none;
+    display: none;
+    color: $primary;
   }
 }

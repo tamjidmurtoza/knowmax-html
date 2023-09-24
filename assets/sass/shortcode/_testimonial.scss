@@ -34,4 +34,8 @@
   .cs_testimonial_subtitle:not(:last-child) {
     margin-bottom: 23px;
   }
+
+  .cs_rating {
+    transform: scale(.83);
+  }
 }

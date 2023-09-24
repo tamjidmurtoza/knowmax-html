@@ -2,7 +2,6 @@
   width: 240px;
   height: 292px;
   position: relative;
-  //z-index: 3;
 
   &::after,
   &::before {
@@ -65,6 +64,82 @@
 
     .cs_iconbox_title {
       color: $accent;
+    }
+  }
+}
+
+.cs_iconbox.cs_style_2 {
+  display: flex;
+  gap: 13px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .cs_iconbox_icon {
+    width: 32px;
+    height: 32px;
+    background-color: $accent;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs_iconbox_title {
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+}
+
+.cs_iconbox.cs_style_3 {
+  border: 1px solid $border;
+  margin-bottom: 50px;
+  padding: 25px 22px;
+  background-color: $white;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-top: 1px solid $border;
+    border-left: 1px solid $border;
+    background-color: $white;
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .cs_iconbox_icon {
+    display: inline-block;
+    background-color: $primary;
+    padding: 5px 40px;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+  }
+
+  .cs_iconbox_shape {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+
+    .cs_half_circle {
+      width: 50%;
+      height: 50%;
+      background-color: $primary;
+      border-radius: 50%;
     }
   }
 }
