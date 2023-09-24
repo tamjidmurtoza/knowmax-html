@@ -1673,6 +1673,20 @@ odometer
 }
 .cs_accordian.cs_style_2 .cs_accordian_body {
   line-height: 1.625em;
+  padding-right: 6px;
+}
+.cs_accordian.cs_style_2 .cs_accordian_body ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0 0;
+  cursor: pointer;
 }
 .cs_accordian.cs_style_2.active .cs_accordian_title {
   padding-bottom: 15px;
@@ -1680,6 +1694,15 @@ odometer
 .cs_accordian.cs_style_2.active .cs_accordian_toggle i {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
+}
+.cs_accordian.cs_style_2 .cs_list.cs_style_2 label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
 }
 
 .cs_slider.cs_style_1 .cs_slider_wrapper {
