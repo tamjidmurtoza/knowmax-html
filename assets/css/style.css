@@ -1363,7 +1363,7 @@ hr {
 }
 
 .cs_bg_style_1 {
-  background-color: #EBEDF4;
+  background-color: #ebedf4;
 }
 
 .cs_mp0 {
@@ -1420,6 +1420,46 @@ hr {
           transform: scale(1.07);
 }
 
+/* Start Review */
+.cs_rating_percentage,
+.cs_rating {
+  overflow: hidden;
+}
+.cs_rating_percentage::before,
+.cs_rating::before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cs_rating {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 152px;
+  height: 24px;
+  position: relative;
+  color: #ffc107;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+.cs_rating::before {
+  font-weight: 400;
+}
+
+.cs_rating_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.cs_rating_percentage::before {
+  font-weight: 900;
+}
+
+/* End Review */
 /*=====================================
 odometer
 =====================================*/
@@ -2896,56 +2936,23 @@ Slider arrow design
   height: 900px;
   position: relative;
 }
-
-.cs_hero.cs_style_4 .cs_hero_inner {
-  width: 100%;
-  height: 400px;
-}
-.cs_hero.cs_style_4 .cs_hero_badge {
-  width: 100%;
-  max-width: 400px;
-  height: 53px;
-  padding: 14px 0 15px 30px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-.cs_hero.cs_style_4 .breadcrumb-item {
-  line-height: 1.556em;
-}
-.cs_hero.cs_style_4 .breadcrumb-item a:hover {
-  color: #fff;
-}
-.cs_hero.cs_style_4 .breadcrumb-item::before {
-  color: #fff;
-}
-
-.cs_hero_overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 41, 53, 0.45);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.cs_hero_text {
+.cs_hero.cs_style_1 .cs_hero_text {
   position: relative;
   z-index: 1;
 }
-.cs_hero_text .cs_hero_mini_title {
+.cs_hero.cs_style_1 .cs_hero_mini_title {
   line-height: 1.459em;
   margin-bottom: 30px;
 }
-.cs_hero_text .cs_hero_title {
+.cs_hero.cs_style_1 .cs_hero_title {
   line-height: 1.154em;
   margin-bottom: 25px;
 }
-.cs_hero_text .cs_hero_subtitle {
+.cs_hero.cs_style_1 .cs_hero_subtitle {
   line-height: 1.556em;
   margin-bottom: 42px;
 }
-.cs_hero_text .cs_button_group {
+.cs_hero.cs_style_1 .cs_button_group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2954,7 +2961,7 @@ Slider arrow design
           align-items: center;
   gap: 25px;
 }
-.cs_hero_text .cs_hero_btn2 {
+.cs_hero.cs_style_1 .cs_hero_btn2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2963,11 +2970,70 @@ Slider arrow design
           align-items: center;
   gap: 12px;
 }
-.cs_hero_text .cs_star_container {
-  color: #ffc107;
+.cs_hero.cs_style_1 .cs_rating {
+  margin-bottom: 5px;
 }
-.cs_hero_text .cs_rating_text {
+.cs_hero.cs_style_1 .cs_rating_text {
   line-height: 1.459em;
+}
+
+.cs_page_heading {
+  min-height: 400px;
+}
+.cs_page_heading .cs_page_title {
+  position: relative;
+  z-index: 2;
+}
+.cs_page_heading .cs_hero_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 41, 53, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs_page_heading .cs_breadcrumb_wrap {
+  width: 100%;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+}
+.cs_page_heading .cs_breadcrumb_in {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.cs_page_heading .breadcrumb {
+  padding: 11px 0 11px 30px;
+  position: relative;
+}
+.cs_page_heading .breadcrumb::before {
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #573cff;
+  position: absolute;
+  width: 100vw;
+}
+.cs_page_heading .breadcrumb > * {
+  position: relative;
+  z-index: 1;
+}
+.cs_page_heading .breadcrumb a:hover {
+  opacity: 0.75;
+}
+.cs_page_heading .breadcrumb-item {
+  line-height: 1.556em;
+}
+.cs_page_heading .breadcrumb-item a:hover {
+  color: #fff;
+}
+.cs_page_heading .breadcrumb-item::before {
+  color: #fff;
 }
 
 .cs_category_wrapper {
@@ -2991,6 +3057,7 @@ Slider arrow design
   transition: all 0.4s ease-in-out;
 }
 .cs_course.cs_style_1 .cs_course_thumb {
+  margin-bottom: 18px;
   position: relative;
 }
 .cs_course.cs_style_1 .cs_course_thumb img {
@@ -3091,18 +3158,6 @@ Slider arrow design
 .cs_course.cs_style_1:hover .cs_sourse_badge {
   background-color: #573cff;
   color: #fff;
-}
-
-.cs_course_thumb {
-  margin-bottom: 18px;
-  position: relative;
-}
-.cs_course_thumb img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .cs_badge_container {
@@ -3211,7 +3266,7 @@ Slider arrow design
   width: -moz-max-content;
   width: max-content;
   border-radius: 2px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
   background: #f8f9fa;
   padding: 10px 15px;
 }
@@ -3226,7 +3281,7 @@ Slider arrow design
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 2px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
   background: #f8f9fa;
   padding: 10px 0;
   padding-left: 15px;
@@ -4099,4 +4154,4 @@ Slider arrow design
     -webkit-transform: translateX(20px);
             transform: translateX(20px);
   }
-}
+}/*# sourceMappingURL=style.css.map */

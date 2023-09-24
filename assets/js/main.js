@@ -60,7 +60,7 @@
     //hoverActive();
     //progressBar();
     //roundPercentInit();
-    // review();
+    review();
     //ecommerce();
     if ($.exists('.wow')) {
       new WOW().init();
@@ -408,11 +408,13 @@
     9. Select2 function
   --------------------------------------------------------------*/
   function select2Function() {
-    $('.cs_select1').select2({
-      placeholder: function () {
-        $(this).data('placeholder');
-      },
-    });
+    if ($.exists('.cs_select1')) {
+      $('.cs_select1').select2({
+        placeholder: function () {
+          $(this).data('placeholder');
+        },
+      });
+    }
   }
   /*--------------------------------------------------------------
     11. Dynamic contact form
@@ -506,7 +508,11 @@
     $('.cs_accordian').children('.cs_accordian_body').hide();
     $('.cs_accordian.active').children('.cs_accordian_body').show();
     $('.cs_accordian_title').on('click', function () {
-      $(this).parent('.cs_accordian').siblings().children('.cs_accordian_body').slideUp(250);
+      $(this)
+        .parent('.cs_accordian')
+        .siblings()
+        .children('.cs_accordian_body')
+        .slideUp(250);
       $(this).siblings().slideDown(250);
       /* Accordian Active Class */
       $(this).parents('.cs_accordian').addClass('active');
@@ -578,13 +584,13 @@
   /*--------------------------------------------------------------
     7. Review
   --------------------------------------------------------------*/
-  // function review() {
-  //   $('.cs_rating').each(function () {
-  //     var review = $(this).data('rating');
-  //     var reviewVal = review * 20 + '%';
-  //     $(this).find('.cs_rating_percentage').css('width', reviewVal);
-  //   });
-  // }
+  function review() {
+    $('.cs_rating').each(function () {
+      var review = $(this).data('rating');
+      var reviewVal = review * 20 + '%';
+      $(this).find('.cs_rating_percentage').css('width', reviewVal);
+    });
+  }
   /*--------------------------------------------------------------
     5. Slick Slider
   --------------------------------------------------------------*/

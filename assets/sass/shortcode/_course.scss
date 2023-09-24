@@ -3,6 +3,7 @@
   transition: all 0.4s ease-in-out;
 
   .cs_course_thumb {
+    margin-bottom: 18px;
     position: relative;
 
     img {
@@ -89,18 +90,6 @@
   }
 }
 
-.cs_course_thumb {
-  margin-bottom: 18px;
-  position: relative;
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
 .cs_badge_container {
   width: calc(100% - 30px);
   display: flex;
@@ -178,7 +167,7 @@
   .cs_filter_icon {
     width: max-content;
     border-radius: 2px;
-    border: 1px solid #F0F0F0;
+    border: 1px solid #f0f0f0;
     background: $gray;
     padding: 10px 15px;
   }
@@ -188,7 +177,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 2px;
-    border: 1px solid #F0F0F0;
+    border: 1px solid #f0f0f0;
     background: $gray;
     padding: 10px 0;
     padding-left: 15px;
