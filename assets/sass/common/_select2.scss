@@ -3,9 +3,8 @@
 }
 
 .select2-results {
-  width: 195px;
+  min-width: 100%;
   background-color: $white;
-  margin-left: -88px;
   margin-top: 10px;
   border: 1px solid #F0F0F0;
 }

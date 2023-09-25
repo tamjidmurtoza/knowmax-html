@@ -246,6 +246,14 @@ hr {
   }
 }
 
+.cs_form_field {
+  width: 100%;
+  padding: 23px 20px;
+  outline: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
 /* Start Review */
 .cs_rating_percentage,
 .cs_rating {

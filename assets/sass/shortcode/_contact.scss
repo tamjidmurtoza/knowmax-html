@@ -1,0 +1,44 @@
+.cs_contact {
+  background-color: #F7F8FD;
+
+  .cs_form_field {
+    border: 1px solid #DDD;
+    background: $white;
+
+    &:focus {
+      border-color: $accent;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  label {
+    margin-bottom: 12px;
+  }
+
+  .cs_custom_select_wrap {
+    padding: 21px 0;
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow::after {
+      content: "\f0da";
+    }
+
+  }
+
+  .select2-container {
+    min-width: 100%;
+    padding: 0 15px;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: $secondary;
+  }
+}
+
+iframe {
+  width: 100%;
+  min-height: 650px;
+  filter: grayscale(0%) invert(40%) contrast(55%);
+}

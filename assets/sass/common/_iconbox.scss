@@ -143,3 +143,41 @@
     }
   }
 }
+
+.cs_iconbox.cs_style_4 {
+  .cs_iconbox_icon {
+    width: 120px;
+    height: 120px;
+    background-color: #FAF9FF;
+    border: 1px solid $accent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    img {
+      transition: all 1s cubic-bezier(0.28, 1.84, 0.55, -0.11);
+    }
+  }
+
+  .cs_iconbox_title {
+    line-height: 1.417em;
+    margin-bottom: 18px;
+  }
+
+  .cs_iconbox_subtitle {
+    line-height: 28px;
+  }
+
+  .cs_iconbox_subtitle.d-flex {
+    gap: 50px;
+  }
+
+  &:hover {
+    .cs_iconbox_icon img {
+      transform: scale(1.2);
+    }
+  }
+}

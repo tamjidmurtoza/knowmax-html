@@ -1,4 +1,4 @@
-.cs_btn_style_1 {
+.cs_btn.cs_style_1 {
   min-width: 190px;
   padding: 16px 25px;
   display: inline-flex;
@@ -16,6 +16,10 @@
     background-color: $white;
     color: $accent;
   }
+}
+
+button.cs_btn.cs_style_1 {
+  border: none;
 }
 
 .cs_card_btn {

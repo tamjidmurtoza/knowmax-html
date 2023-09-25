@@ -329,8 +329,10 @@
   category Toggle function
   ==================================*/
   function catToggle() {
-    $('.cs_slide_toggle').click(function () {
-      $(this).find(".cs_hidden_text").slideToggle();
+    $('.cs_category_toggle').click(function () {
+      $(this).toggleClass("active");
+      $(this).siblings(".cs_hidden_text").slideToggle();
+      //$(this).siblings("i").removeClass("fa-solid fa-plus");
       //$(".cs_hidden_text").slideToggle();
     })
     $('.cs_widget_title').click(function () {
@@ -424,7 +426,7 @@
     if ($.exists('.cs_select1')) {
       $('.cs_select1').select2({
         placeholder: function () {
-          $(this).data('placeholder');
+          $(this).data('placeholder')
         },
       });
     }
