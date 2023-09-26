@@ -78,3 +78,137 @@
     transition: all .4s ease-in-out;
   }
 }
+
+.cs_post.cs_style_2 {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .cs_post_thumb {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .cs_play_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    i {
+      font-size: 35px;
+    }
+
+    &::after {
+      content: "";
+      width: 110px;
+      height: 110px;
+      border: 2px dashed $white;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(.8);
+      opacity: .3;
+      animation: scale-anim 30s cubic-bezier(0, 0.04, 1, 0.99) infinite;
+    }
+  }
+
+  .cs_post_title {
+    line-height: 1.5em;
+    margin: 18px 0;
+
+  }
+
+  .cs_post_subtitle {
+    margin-bottom: 28px;
+  }
+
+  .cs_btn.cs_style_1:hover {
+    background-color: $accent;
+    color: $white;
+  }
+
+  /* Slider Arrow Styling*/
+  .cs_slider {
+    position: relative;
+    margin-bottom: -6px;
+  }
+
+  .cs_slider_arrows {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cs_slider_arrow {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  /* Bootstrap Component styling*/
+  .breadcrumb-item+.breadcrumb-item::before {
+    color: $primary;
+    font-weight: 500;
+  }
+}
+
+@keyframes scale-anim {
+  50% {
+    transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.cs_post.cs_style_3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .cs_post_thumb {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cs_post_info {
+    flex: 1;
+  }
+
+  .cs_post_meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+  }
+
+  .cs_post_author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cs_post_title {
+    line-height: 1.556em;
+  }
+}

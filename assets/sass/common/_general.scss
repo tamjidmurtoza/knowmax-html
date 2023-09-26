@@ -95,6 +95,10 @@
   border-radius: 3px;
 }
 
+.cs_radius_4 {
+  border-radius: 4px;
+}
+
 .cs_radius_5 {
   border-radius: 5px;
 }
@@ -294,3 +298,46 @@ hr {
 }
 
 /* End Review */
+/* Bootstrap Component styling*/
+
+.pagination {
+  margin: 50px 0 0;
+
+  .page-item {
+    margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .page-link {
+      width: 41px;
+      height: 41px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #C8C8C8;
+      border: 1px solid #C8C8C8;
+      transition: all .4s ease-in-out;
+
+      &:focus {
+        box-shadow: none;
+        background-color: $accent;
+        border-color: $accent;
+        color: $white;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $accent;
+        color: $white;
+        border-color: $accent;
+      }
+    }
+  }
+}
