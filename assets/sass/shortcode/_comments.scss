@@ -1,0 +1,78 @@
+.cs_reply_title {
+  display: inline-block;
+  line-height: 1.5em;
+
+  &::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: $accent;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+  }
+}
+
+
+.cs_comment_list {
+  padding-right: 80px;
+  padding-bottom: 15px;
+}
+
+.cs_comment_body {
+  display: flex;
+  gap: 15px;
+  padding: 30px 0;
+
+  &:nth-child(even) {
+    border-top: 1px solid #E4E4E4;
+    padding-left: 50px;
+  }
+
+  .cs_comment_thumb {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .cs_comment_info {
+    flex: 1;
+  }
+
+  .cs_comment_title {
+    line-height: 1.4em;
+    margin-bottom: 14px;
+  }
+
+  .cs_comment_meta {
+    margin-bottom: 9px;
+  }
+
+  .cs_reply_btn {
+    background: #EFEFEF;
+    padding: 8px 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.cs_form_field {
+  padding: 14px 17px;
+  border: 1px solid #DDD;
+  background: #F8F8F8;
+  transition: all .4s ease-in-out;
+
+  &::placeholder {
+    color: #B1B1B1;
+  }
+
+  &:focus {
+    border-color: $accent;
+  }
+}
+
+textarea {
+  resize: none;
+}
