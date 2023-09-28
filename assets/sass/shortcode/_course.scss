@@ -63,18 +63,6 @@
     line-height: 1.455em;
   }
 
-  .cs_course_instructor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .cs_instructor_info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
   .cs_rating {
     transform: scale(.5);
     margin-right: -35px;
@@ -90,6 +78,47 @@
       color: $white;
     }
   }
+}
+
+.cs_course.cs_style_2 {
+  .cs_course_thumb {
+    margin-bottom: 37px;
+  }
+
+  .cs_course_badge {
+    padding: 8px 16px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .cs_course_instructor {
+    margin-bottom: 20px;
+  }
+
+  .cs_rating {
+    transform: scale(.5);
+    margin-right: -35px;
+    letter-spacing: 8px;
+    width: 170px;
+  }
+
+  .cs_course_title {
+    line-height: 65px;
+  }
+
+}
+
+.cs_course_instructor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs_instructor_bio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Start course page design*/

@@ -62,8 +62,46 @@
   }
 }
 
+.cs_tab_links.cs_style_1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #F6F4FF;
+  margin-bottom: 35px;
+
+  .cs_tab_title {
+    display: inline-block;
+    padding: 16px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: $accent;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: all .4s ease-in-out;
+    }
+
+    &:hover,
+    &.active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Tab styling*/
 .cs_tab {
   display: none;
+
+  .cs_title {
+    line-height: 1.333em;
+    margin-bottom: 9px;
+  }
 
   &.active {
     display: block;

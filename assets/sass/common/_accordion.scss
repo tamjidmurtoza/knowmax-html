@@ -14,6 +14,7 @@
     position: relative;
     z-index: 2;
     cursor: pointer;
+    transition: all .4s ease-in-out;
   }
 
   .cs_accordian_toggle {
@@ -49,5 +50,72 @@
         transform: rotateX(180deg);
       }
     }
+  }
+}
+
+.cs_accordian.cs_style_2 {
+  .cs_accordian_title {
+    padding: 20px 40px;
+    line-height: 1.3em;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_accordian_toggle {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+
+    i {
+      transition: all 0.4s ease-in-out;
+      font-size: 16px;
+    }
+  }
+
+  &.active {
+    .cs_accordian_title {
+      padding-bottom: 15px;
+    }
+
+    .cs_accordian_toggle i {
+      transform: rotateX(180deg);
+    }
+  }
+
+  .cs_curriculum_title {
+    color: $primary;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+  }
+
+  .cs_curriculum_icon {
+    color: $secondary;
+    font-weight: 400;
+  }
+
+  .cs_accordian_body {
+    padding: 10px 40px 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $primary;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .cs_curriculum_left,
+  .cs_curriculum_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }

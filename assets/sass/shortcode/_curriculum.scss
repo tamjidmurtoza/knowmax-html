@@ -1,0 +1,106 @@
+#curriculum {
+  border: 1px solid #F6F4FF;
+}
+
+#instructor {
+  padding: 0 40px;
+
+  .cs_instructor_bio {
+    padding: 40px 20px;
+  }
+
+  .cs_instructor_info {
+    border: 1px solid $border;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .cs_title.cs_type_1 {
+      padding: 20px;
+      background-color: #F6F4FF;
+      border-bottom: 1px solid $border;
+    }
+  }
+
+  .cs_instructor_desc {
+    padding: 0 20px 30px;
+  }
+
+  .cs_instructor_thumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    span {
+      display: inline-block;
+      padding: 2px 6px;
+      background-color: #F6F4FF;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+  }
+
+  .cs_instructor_level {
+    border: 1px solid $border;
+    border-radius: 3px;
+    padding: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    li {
+      gap: 40px;
+      padding: 5px 0;
+
+      div {
+        gap: 5px;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+#reviews {
+  padding: 0 40px;
+
+  .cs_review_content {
+    padding: 40px;
+    border: 1px solid $border;
+    border-radius: 10px;
+  }
+
+  .cs_progress_bars {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cs_progress_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cs_review_count_box {
+    background-color: $white;
+    box-shadow: 0 6px 21px rgba(21, 3, 89, .08);
+    padding: 32px;
+  }
+
+  .cs_progress_line {
+    flex: 1;
+    height: 7px;
+    background-color: rgba($color: $secondary, $alpha: .15);
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+
+  .cs_rating_value {
+    margin-bottom: 5px;
+  }
+
+  .cs_rating {
+    transform: scale(.5);
+    margin-left: -20px;
+  }
+}

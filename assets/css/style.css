@@ -1160,6 +1160,10 @@ textarea {
 /*--------------------------------------------------------------
   4. General
 ----------------------------------------------------------------*/
+.cs_fs_14 {
+  font-size: 14px;
+}
+
 .cs_fs_16 {
   font-size: 16px;
 }
@@ -1456,6 +1460,22 @@ hr {
           transform: scale(1.07);
 }
 
+.cs_list.cs_style_3 li {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_list.cs_style_3 li:last-child {
+  margin-bottom: 0;
+}
+
 .cs_form_field {
   width: 100%;
   padding: 23px 20px;
@@ -1618,6 +1638,8 @@ button.cs_btn.cs_style_1 {
   position: relative;
   z-index: 2;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .cs_accordian.cs_style_1 .cs_accordian_toggle {
   width: 56px;
@@ -1653,6 +1675,74 @@ button.cs_btn.cs_style_1 {
 .cs_accordian.cs_style_1.active .cs_accordian_toggle img {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
+}
+
+.cs_accordian.cs_style_2 .cs_accordian_title {
+  padding: 20px 40px;
+  line-height: 1.3em;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_accordian.cs_style_2 .cs_accordian_toggle {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cs_accordian.cs_style_2 .cs_accordian_toggle i {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-size: 16px;
+}
+.cs_accordian.cs_style_2.active .cs_accordian_title {
+  padding-bottom: 15px;
+}
+.cs_accordian.cs_style_2.active .cs_accordian_toggle i {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+.cs_accordian.cs_style_2 .cs_curriculum_title {
+  color: #002935;
+  font-weight: 500;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_accordian.cs_style_2 .cs_curriculum_icon {
+  color: #747474;
+  font-weight: 400;
+}
+.cs_accordian.cs_style_2 .cs_accordian_body {
+  padding: 10px 40px 20px;
+}
+.cs_accordian.cs_style_2 .cs_accordian_body a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #002935;
+  cursor: pointer;
+}
+.cs_accordian.cs_style_2 .cs_accordian_body a:not(:last-child) {
+  margin-bottom: 15px;
+}
+.cs_accordian.cs_style_2 .cs_curriculum_left,
+.cs_accordian.cs_style_2 .cs_curriculum_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
 .cs_slider.cs_style_1 .cs_slider_wrapper {
@@ -4142,26 +4232,6 @@ odometer
 .cs_course.cs_style_1 .cs_course_title {
   line-height: 1.455em;
 }
-.cs_course.cs_style_1 .cs_course_instructor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.cs_course.cs_style_1 .cs_instructor_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
 .cs_course.cs_style_1 .cs_rating {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
@@ -4176,6 +4246,51 @@ odometer
 .cs_course.cs_style_1:hover .cs_sourse_badge {
   background-color: #573cff;
   color: #fff;
+}
+
+.cs_course.cs_style_2 .cs_course_thumb {
+  margin-bottom: 37px;
+}
+.cs_course.cs_style_2 .cs_course_badge {
+  padding: 8px 16px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.cs_course.cs_style_2 .cs_course_instructor {
+  margin-bottom: 20px;
+}
+.cs_course.cs_style_2 .cs_rating {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  margin-right: -35px;
+  letter-spacing: 8px;
+  width: 170px;
+}
+.cs_course.cs_style_2 .cs_course_title {
+  line-height: 65px;
+}
+
+.cs_course_instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cs_instructor_bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 
 /* Start course page design*/
@@ -4216,6 +4331,118 @@ odometer
 }
 
 /* End course page design*/
+#curriculum {
+  border: 1px solid #F6F4FF;
+}
+
+#instructor {
+  padding: 0 40px;
+}
+#instructor .cs_instructor_bio {
+  padding: 40px 20px;
+}
+#instructor .cs_instructor_info {
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#instructor .cs_instructor_info .cs_title.cs_type_1 {
+  padding: 20px;
+  background-color: #F6F4FF;
+  border-bottom: 1px solid #dedede;
+}
+#instructor .cs_instructor_desc {
+  padding: 0 20px 30px;
+}
+#instructor .cs_instructor_thumb {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+#instructor .cs_instructor_thumb span {
+  display: inline-block;
+  padding: 2px 6px;
+  background-color: #F6F4FF;
+  font-size: 14px;
+  border-radius: 3px;
+}
+#instructor .cs_instructor_level {
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#instructor .cs_instructor_level li {
+  gap: 40px;
+  padding: 5px 0;
+}
+#instructor .cs_instructor_level li div {
+  gap: 5px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#reviews {
+  padding: 0 40px;
+}
+#reviews .cs_review_content {
+  padding: 40px;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+#reviews .cs_progress_bars {
+  padding-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+#reviews .cs_progress_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#reviews .cs_review_count_box {
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 21px rgba(21, 3, 89, 0.08);
+          box-shadow: 0 6px 21px rgba(21, 3, 89, 0.08);
+  padding: 32px;
+}
+#reviews .cs_progress_line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 7px;
+  background-color: rgba(116, 116, 116, 0.15);
+  border-radius: 10px;
+  margin-right: 15px;
+}
+#reviews .cs_rating_value {
+  margin-bottom: 5px;
+}
+#reviews .cs_rating {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  margin-left: -20px;
+}
+
 .cs_product.cs_style_1 {
   background: #fff;
 }
@@ -4519,8 +4746,46 @@ odometer
   z-index: 1;
 }
 
+.cs_tab_links.cs_style_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #F6F4FF;
+  margin-bottom: 35px;
+}
+.cs_tab_links.cs_style_1 .cs_tab_title {
+  display: inline-block;
+  padding: 16px 0;
+  position: relative;
+}
+.cs_tab_links.cs_style_1 .cs_tab_title::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #573cff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_tab_links.cs_style_1 .cs_tab_title:hover::after, .cs_tab_links.cs_style_1 .cs_tab_title.active::after {
+  width: 100%;
+}
+
+/* Tab styling*/
 .cs_tab {
   display: none;
+}
+.cs_tab .cs_title {
+  line-height: 1.333em;
+  margin-bottom: 9px;
 }
 .cs_tab.active {
   display: block;
@@ -4845,24 +5110,6 @@ odometer
 .cs_post.cs_style_4 .cs_post_meta i {
   margin-right: 7px;
 }
-.cs_post.cs_style_4 .cs_list.cs_style_3 li {
-  margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 18px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.cs_post.cs_style_4 .cs_list.cs_style_3 li:last-child {
-  margin-bottom: 0;
-}
-.cs_post.cs_style_4 .cs_list.cs_style_3 li:hover {
-  color: #573cff;
-}
 .cs_post.cs_style_4 .cs_post_gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5141,7 +5388,7 @@ textarea {
   margin-bottom: 12px;
 }
 .cs_contact .cs_custom_select_wrap {
-  padding: 21px 0;
+  padding: 13px 0;
 }
 .cs_contact .cs_custom_select_wrap .select2-container--default .select2-selection--single .select2-selection__arrow::after {
   content: "\f0da";
