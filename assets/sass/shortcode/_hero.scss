@@ -8,15 +8,6 @@
     position: relative;
   }
 
-  .cs_hero_overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 41, 53, 0.45);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   .cs_hero_text {
     position: relative;
     z-index: 1;
@@ -57,6 +48,52 @@
     line-height: 1.459em;
   }
 }
+
+.cs_hero.cs_style_2 {
+  height: 100%;
+  min-height: 850px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 120px 0;
+  position: relative;
+
+  .cs_hero_mini_title {
+    line-height: 1.458em;
+    margin-bottom: 30px;
+  }
+
+  .cs_hero_title {
+    line-height: 1.154em;
+    margin-bottom: 26px;
+  }
+
+  .cs_hero_subtitle {
+    line-height: 1.556em;
+    margin-bottom: 42px;
+  }
+
+  .cs_btn.cs_style_1 {
+    position: relative;
+    z-index: 3;
+  }
+
+  .cs_hero_text {
+    position: relative;
+    z-index: 3;
+    transform: translateY(-50px);
+    transition: all .6s ease-in-out;
+  }
+}
+
+.slick-active {
+  .cs_hero.cs_style_2 .cs_hero_text {
+    transform: translateY(0px);
+  }
+}
+
 
 .cs_page_heading {
   min-height: 400px;

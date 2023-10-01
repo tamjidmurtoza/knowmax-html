@@ -15,9 +15,9 @@
 }
 
 
-/*======================
+/*----------------------
 Slider arrow design
-=======================*/
+------------------------*/
 .cs_slider_arrows.cs_style_1 {
   display: flex;
   align-items: center;
@@ -41,5 +41,38 @@ Slider arrow design
       background-color: $accent;
       color: $white;
     }
+  }
+}
+
+.cs_slider.cs_style_2 {
+  .cs_slider_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $white;
+    border: none;
+    width: 80px;
+    height: 80px;
+
+    i {
+      font-size: 28px;
+    }
+
+    &::before {
+      content: "";
+      width: 120%;
+      height: 120%;
+      border: 2px solid $accent;
+      border-radius: 50%;
+      position: absolute;
+    }
+  }
+
+  .cs_left_arrow {
+    left: 60px;
+  }
+
+  .cs_right_arrow {
+    right: 60px;
   }
 }

@@ -48,6 +48,7 @@
     //swiperInit();
     modalVideo();
     isotopInit();
+    lightGallery();
     slickInit();
     //parallaxEffect();
     //scrollUp();
@@ -321,6 +322,19 @@
         });
       });
     }
+  }
+  /*--------------------------------------------------------------
+   17. Light Gallery
+ --------------------------------------------------------------*/
+  function lightGallery() {
+    $('.cs_lightgallery').each(function () {
+      $(this).lightGallery({
+        selector: '.cs_lightbox_item',
+        subHtmlSelectorRelative: false,
+        thumbnail: false,
+        mousewheel: true
+      });
+    });
   }
   /*=================================
   category Toggle function

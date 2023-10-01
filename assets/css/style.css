@@ -1442,6 +1442,15 @@ hr {
   margin-bottom: 15px;
 }
 
+.cs_hero_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 41, 53, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .cs_star_container i {
   font-size: 12px;
   color: #ffc107;
@@ -1757,9 +1766,9 @@ button.cs_btn.cs_style_1 {
   padding-top: 50px;
 }
 
-/*======================
+/*----------------------
 Slider arrow design
-=======================*/
+------------------------*/
 .cs_slider_arrows.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1793,6 +1802,34 @@ Slider arrow design
 .cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover {
   background-color: #573cff;
   color: #fff;
+}
+
+.cs_slider.cs_style_2 .cs_slider_arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  width: 80px;
+  height: 80px;
+}
+.cs_slider.cs_style_2 .cs_slider_arrow i {
+  font-size: 28px;
+}
+.cs_slider.cs_style_2 .cs_slider_arrow::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  border: 2px solid #573cff;
+  border-radius: 50%;
+  position: absolute;
+}
+.cs_slider.cs_style_2 .cs_left_arrow {
+  left: 60px;
+}
+.cs_slider.cs_style_2 .cs_right_arrow {
+  right: 60px;
 }
 
 .select2-container .select2-container--default .select2-container--open {
@@ -3833,6 +3870,59 @@ odometer
     padding-bottom: 3px;
   }
 }
+.cs_lightgallery.cs_style_1 .cs_gallery_thumb::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(231, 56, 39, 0)), color-stop(29%, rgba(31, 32, 72, 0.29)), color-stop(49%, rgba(31, 32, 72, 0.49)), color-stop(50%, rgba(31, 32, 72, 0.5)), to(rgb(31, 32, 72)));
+  background: linear-gradient(to bottom, rgba(231, 56, 39, 0) 0%, rgba(31, 32, 72, 0.29) 29%, rgba(31, 32, 72, 0.49) 49%, rgba(31, 32, 72, 0.5) 50%, rgb(31, 32, 72) 100%);
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+.cs_lightgallery.cs_style_1 .cs_gallery_thumb:hover::after {
+  height: 100%;
+}
+.cs_lightgallery.cs_style_1 .cs_gallery_thumb:hover .cs_gallery_text {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+}
+.cs_lightgallery.cs_style_1 .cs_gallery_text {
+  position: absolute;
+  width: 314px;
+  height: 178px;
+  left: 50%;
+  bottom: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 5px;
+  background-color: rgba(13, 94, 242, 0.8);
+  -webkit-box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25);
+  padding: 23px 0 28px 28px;
+  -webkit-clip-path: inset(100% 0 0 0);
+          clip-path: inset(100% 0 0 0);
+  z-index: 2;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_lightgallery.cs_style_1 .cs_gallery_text .cs_gallery_subtitle {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 3em;
+  z-index: 3;
+}
+.cs_lightgallery.cs_style_1 .cs_gallery_text .cs_gallery_title {
+  line-height: 1.417em;
+  z-index: 9;
+}
+
 .cs_iconbox.cs_style_1 {
   width: 240px;
   height: 292px;
@@ -4025,6 +4115,49 @@ odometer
           transform: scale(1.2);
 }
 
+.cs_iconbox.cs_style_5 {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .cs_iconbox.cs_style_5 {
+    margin-bottom: 30px;
+  }
+}
+.cs_iconbox.cs_style_5 .cs_category_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#002935), to(rgba(0, 41, 53, 0)));
+  background: linear-gradient(0deg, #002935 0%, rgba(0, 41, 53, 0) 100%);
+  z-index: 1;
+}
+.cs_iconbox.cs_style_5 .cs_iconbox_thumb img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_iconbox.cs_style_5 .cs_iconbox_text {
+  width: 100%;
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+.cs_iconbox.cs_style_5 .cs_iconbox_title {
+  line-height: 1.458em;
+  margin-bottom: 7px;
+}
+.cs_iconbox.cs_style_5 .cs_iconbox_btn {
+  color: #fff;
+  line-height: 1.556em;
+}
+
 /*--------------------------------------------------------------
   9. Hero
 ----------------------------------------------------------------*/
@@ -4032,14 +4165,6 @@ odometer
   width: 100%;
   height: 900px;
   position: relative;
-}
-.cs_hero.cs_style_1 .cs_hero_overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 41, 53, 0.45);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .cs_hero.cs_style_1 .cs_hero_text {
   position: relative;
@@ -4080,6 +4205,51 @@ odometer
 }
 .cs_hero.cs_style_1 .cs_rating_text {
   line-height: 1.459em;
+}
+
+.cs_hero.cs_style_2 {
+  height: 100%;
+  min-height: 850px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 120px 0;
+  position: relative;
+}
+.cs_hero.cs_style_2 .cs_hero_mini_title {
+  line-height: 1.458em;
+  margin-bottom: 30px;
+}
+.cs_hero.cs_style_2 .cs_hero_title {
+  line-height: 1.154em;
+  margin-bottom: 26px;
+}
+.cs_hero.cs_style_2 .cs_hero_subtitle {
+  line-height: 1.556em;
+  margin-bottom: 42px;
+}
+.cs_hero.cs_style_2 .cs_btn.cs_style_1 {
+  position: relative;
+  z-index: 3;
+}
+.cs_hero.cs_style_2 .cs_hero_text {
+  position: relative;
+  z-index: 3;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+
+.slick-active .cs_hero.cs_style_2 .cs_hero_text {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .cs_page_heading {
@@ -4141,7 +4311,7 @@ odometer
   color: #fff;
 }
 
-.cs_category_wrapper {
+.cs_category.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
