@@ -1,9 +1,9 @@
 .cs_sidebar.cs_style_1 {
-  border: 1px solid $border;
+  border: 1px solid #dddddd;
   padding: 0 20px 20px;
 
   .cs_widget_title {
-    padding: 24px 0 0;
+    padding: 24px 0 16px;
     line-height: 1.3em;
     position: relative;
     display: flex;
@@ -13,9 +13,7 @@
     cursor: pointer;
 
     &.active {
-      padding-bottom: 20px;
-      border-bottom: 1px solid $border;
-
+      border-bottom: 1px solid #dddddd;
       .cs_widget_toggle i {
         transform: rotateX(180deg);
       }
@@ -76,7 +74,6 @@
     line-height: 1.625em;
     padding-right: 6px;
     display: none;
-
     ul li {
       padding: 10px 0 0;
       position: relative;

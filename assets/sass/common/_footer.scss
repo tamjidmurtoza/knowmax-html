@@ -33,13 +33,19 @@
   width: 100%;
   background-color: #0E1013;
   border: 1px solid $accent;
+  outline: none;
   padding: 14px 20px;
   margin-bottom: 20px;
   margin-top: 17px;
-
+color: #c1c1c1;
+transition: all .4s ease;
   &::placeholder {
     color: #c1c1c1;
   }
+  &:focus{
+    border-color: $white;
+  }
+
 }
 
 .cs_social_btn.cs_style1 {

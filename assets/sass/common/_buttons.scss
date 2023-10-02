@@ -6,15 +6,32 @@
   justify-content: center;
   font-size: 18px;
   line-height: 1.5em;
-  transition: all 0.4s ease-in-out;
-
+  position: relative;
+    color: $white;
+  overflow: hidden;
+  &::after{
+    content:"";
+    width:100%;
+    height:100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+    background-color:rgba(0,0,0,0);
+z-index: 1;
+transition: all 0.4s ease;
+  }
+span{
+  position: relative;
+  z-index: 2;
+}
   svg {
+    position: relative;
+      z-index: 2;
     margin-left: 7px;
   }
 
-  &:hover {
-    background-color: $white;
-    color: $accent;
+  &:hover::after{
+    background-color: rgba(0, 0, 0, .3);
   }
 }
 
@@ -28,13 +45,13 @@ button.cs_btn.cs_style_1 {
   transition: all .4s ease-in-out;
 }
 
-.cs_card_btn.cs_style_1 {
+.cs_card_btn.cs_type_1 {
   background: #EBE8FE;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 
-.cs_card_btn.cs_style_2 {
+.cs_card_btn.cs_type_2 {
   padding: 10px 38px;
   background-color: $accent;
   color: $white;

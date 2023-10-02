@@ -29,8 +29,12 @@
       margin-bottom: 8px;
     }
 
-    .cs_btn cs_style_1 {
+    .cs_btn.cs_style_1 {
       margin-top: 13px;
+      color: $accent;
+      &:hover::after{
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
   }
 }

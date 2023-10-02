@@ -2,8 +2,14 @@
   background: $white;
 
   .cs_product_thumb {
-    display: inline-block;
+    display: flex;
+    height: 274px;
+    background-color: #EBEDF4;
     position: relative;
+    transition: all .4s ease;
+    &:hover{
+      background-color: #F3F3F3;
+    }
   }
 
   .cs_product_badge {
@@ -26,7 +32,6 @@
   .cs_product_price {
     line-height: 0.941em;
     margin-bottom: 20px;
-
     s {
       margin-right: 4px;
     }
@@ -42,7 +47,7 @@
     width: 80%;
     text-align: center;
     line-height: 1.445em;
-    padding: 7px 0;
+    padding: 7px 15px;
   }
 
   .cs_cart_icon {

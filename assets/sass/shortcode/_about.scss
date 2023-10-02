@@ -1,5 +1,33 @@
 .cs_about.cs_style_3 {
   .cs_mission_title {
+      line-height: 1.167em;
+      margin-bottom: 5px;
+    }
+    .cs_about_subtitle {
+      margin-bottom: 20px;
+    }  
+    .cs_mission {
+      margin-bottom: 17px;
+  
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  .cs_about_shape1 {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .cs_about_shape2 {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    animation: rotate-x 10s linear infinite;
+  }
+}
+.cs_about.cs_style_4 {
+  .cs_mission_title {
     line-height: 1.167em;
     margin-bottom: 5px;
   }
@@ -38,13 +66,10 @@
 }
 
 
-
 .cs_tranquil_right {
   padding-left: 40px;
   border-left: 2px dashed $accent;
 }
-
-
 
 @keyframes move-x {
   50% {

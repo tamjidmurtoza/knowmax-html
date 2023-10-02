@@ -185,14 +185,6 @@
 
   .cs_card_thumb {
     overflow: hidden;
-
-    .cs_hover_thumb {
-      position: absolute;
-      left: 0;
-      clip-path: inset(0 100% 0 0);
-      transition: all .4s ease-in-out;
-    }
-
   }
 
   .cs_card_badge {

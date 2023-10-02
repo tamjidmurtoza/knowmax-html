@@ -1406,6 +1406,10 @@ hr {
   background-color: #ebedf4;
 }
 
+.cs_bg_style_2 {
+  background: rgba(0, 122, 112, 0.05);
+}
+
 .cs_mp0 {
   list-style: none;
   margin: 0;
@@ -1451,22 +1455,27 @@ hr {
   left: 0;
 }
 
-.cs_star_container i {
-  font-size: 12px;
-  color: #ffc107;
-}
-
 .cs_zoom {
   position: relative;
   overflow: hidden;
 }
 .cs_zoom .cs_zoom_in {
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cs_zoom:hover .cs_zoom_in {
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+}
+
+.cs_scale i {
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.cs_scale i:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .cs_list.cs_style_3 li {
@@ -1592,15 +1601,33 @@ hr {
           justify-content: center;
   font-size: 18px;
   line-height: 1.5em;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.cs_btn.cs_style_1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_btn.cs_style_1 span {
+  position: relative;
+  z-index: 2;
 }
 .cs_btn.cs_style_1 svg {
+  position: relative;
+  z-index: 2;
   margin-left: 7px;
 }
-.cs_btn.cs_style_1:hover {
-  background-color: #fff;
-  color: #573cff;
+.cs_btn.cs_style_1:hover::after {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 button.cs_btn.cs_style_1 {
@@ -1614,19 +1641,19 @@ button.cs_btn.cs_style_1 {
   transition: all 0.4s ease-in-out;
 }
 
-.cs_card_btn.cs_style_1 {
+.cs_card_btn.cs_type_1 {
   background: #EBE8FE;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 
-.cs_card_btn.cs_style_2 {
+.cs_card_btn.cs_type_2 {
   padding: 10px 38px;
   background-color: #573cff;
   color: #fff;
   line-height: 30px;
 }
-.cs_card_btn.cs_style_2:hover {
+.cs_card_btn.cs_type_2:hover {
   background-color: #EBE8FE;
   color: #002935;
 }
@@ -1884,6 +1911,16 @@ Slider arrow design
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #573cff;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #f8f9fa;
+  color: #002935;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #573cff;
+  color: #fff;
 }
 
 .select2-container--open .select2-selection__arrow {
@@ -2178,14 +2215,6 @@ odometer
 
 .cs_card.cs_style_4 .cs_card_thumb {
   overflow: hidden;
-}
-.cs_card.cs_style_4 .cs_card_thumb .cs_hover_thumb {
-  position: absolute;
-  left: 0;
-  -webkit-clip-path: inset(0 100% 0 0);
-          clip-path: inset(0 100% 0 0);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 .cs_card.cs_style_4 .cs_card_badge {
   padding: 8px 20px;
@@ -3192,9 +3221,13 @@ odometer
   width: 100%;
   background-color: #0E1013;
   border: 1px solid #573cff;
+  outline: none;
   padding: 14px 20px;
   margin-bottom: 20px;
   margin-top: 17px;
+  color: #c1c1c1;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cs_footer_widget input::-webkit-input-placeholder {
   color: #c1c1c1;
@@ -3210,6 +3243,9 @@ odometer
 }
 .cs_footer_widget input::placeholder {
   color: #c1c1c1;
+}
+.cs_footer_widget input:focus {
+  border-color: #fff;
 }
 
 .cs_social_btn.cs_style1 {
@@ -3345,11 +3381,11 @@ odometer
 }
 
 .cs_sidebar.cs_style_1 {
-  border: 1px solid #dedede;
+  border: 1px solid #dddddd;
   padding: 0 20px 20px;
 }
 .cs_sidebar.cs_style_1 .cs_widget_title {
-  padding: 24px 0 0;
+  padding: 24px 0 16px;
   line-height: 1.3em;
   position: relative;
   display: -webkit-box;
@@ -3365,8 +3401,7 @@ odometer
   cursor: pointer;
 }
 .cs_sidebar.cs_style_1 .cs_widget_title.active {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #dddddd;
 }
 .cs_sidebar.cs_style_1 .cs_widget_title.active .cs_widget_toggle i {
   -webkit-transform: rotateX(180deg);
@@ -3924,85 +3959,15 @@ odometer
 }
 
 .cs_iconbox.cs_style_1 {
-  width: 240px;
-  height: 292px;
-  position: relative;
-}
-.cs_iconbox.cs_style_1::after, .cs_iconbox.cs_style_1::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.cs_iconbox.cs_style_1::after {
-  border: 2px solid rgba(0, 41, 53, 0.1);
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  z-index: -2;
-}
-.cs_iconbox.cs_style_1::before {
-  background: #fff;
-  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-  z-index: -1;
-}
-.cs_iconbox.cs_style_1 .cs_iconbox_inner {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.cs_iconbox.cs_style_1 .cs_iconbox_icon {
-  width: 75px;
-  height: 75px;
-  margin-bottom: 44px;
-}
-.cs_iconbox.cs_style_1 .cs_iconbox_title {
-  line-height: 1.5em;
-  margin-bottom: 15px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.cs_iconbox.cs_style_1 .cs_iconbox_btn {
-  line-height: 1.556em;
-  color: #747474;
-}
-.cs_iconbox.cs_style_1 .cs_iconbox_btn svg {
-  margin-left: 7px;
-}
-.cs_iconbox.cs_style_1:hover::after {
-  background-color: #573cff;
-  border-color: #573cff;
-}
-.cs_iconbox.cs_style_1:hover .cs_iconbox_title {
-  color: #573cff;
-}
-
-.cs_iconbox.cs_style_2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 13px;
 }
-.cs_iconbox.cs_style_2:not(:last-child) {
+.cs_iconbox.cs_style_1:not(:last-child) {
   margin-bottom: 20px;
 }
-.cs_iconbox.cs_style_2 .cs_iconbox_icon {
+.cs_iconbox.cs_style_1 .cs_iconbox_icon {
   width: 32px;
   height: 32px;
   background-color: #573cff;
@@ -4018,19 +3983,19 @@ odometer
       -ms-flex-pack: center;
           justify-content: center;
 }
-.cs_iconbox.cs_style_2 .cs_iconbox_title {
+.cs_iconbox.cs_style_1 .cs_iconbox_title {
   line-height: 29px;
   margin-bottom: 5px;
 }
 
-.cs_iconbox.cs_style_3 {
+.cs_iconbox.cs_style_2 {
   border: 1px solid #dedede;
   margin-bottom: 50px;
   padding: 25px 22px;
   background-color: #fff;
   position: relative;
 }
-.cs_iconbox.cs_style_3::after {
+.cs_iconbox.cs_style_2::after {
   content: "";
   width: 16px;
   height: 16px;
@@ -4043,7 +4008,7 @@ odometer
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
 }
-.cs_iconbox.cs_style_3 .cs_iconbox_icon {
+.cs_iconbox.cs_style_2 .cs_iconbox_icon {
   display: inline-block;
   background-color: #002935;
   padding: 5px 40px;
@@ -4051,7 +4016,7 @@ odometer
   top: -20px;
   left: 10px;
 }
-.cs_iconbox.cs_style_3 .cs_iconbox_shape {
+.cs_iconbox.cs_style_2 .cs_iconbox_shape {
   width: 16px;
   height: 16px;
   border: 2px solid #002935;
@@ -4071,14 +4036,14 @@ odometer
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.cs_iconbox.cs_style_3 .cs_iconbox_shape .cs_half_circle {
+.cs_iconbox.cs_style_2 .cs_iconbox_shape .cs_half_circle {
   width: 50%;
   height: 50%;
   background-color: #002935;
   border-radius: 50%;
 }
 
-.cs_iconbox.cs_style_4 .cs_iconbox_icon {
+.cs_iconbox.cs_style_3 .cs_iconbox_icon {
   width: 120px;
   height: 120px;
   background-color: #FAF9FF;
@@ -4096,66 +4061,23 @@ odometer
   margin: 0 auto;
   margin-bottom: 27px;
 }
-.cs_iconbox.cs_style_4 .cs_iconbox_icon img {
+.cs_iconbox.cs_style_3 .cs_iconbox_icon img {
   -webkit-transition: all 1s cubic-bezier(0.28, 1.84, 0.55, -0.11);
   transition: all 1s cubic-bezier(0.28, 1.84, 0.55, -0.11);
 }
-.cs_iconbox.cs_style_4 .cs_iconbox_title {
+.cs_iconbox.cs_style_3 .cs_iconbox_title {
   line-height: 1.417em;
   margin-bottom: 18px;
 }
-.cs_iconbox.cs_style_4 .cs_iconbox_subtitle {
+.cs_iconbox.cs_style_3 .cs_iconbox_subtitle {
   line-height: 28px;
 }
-.cs_iconbox.cs_style_4 .cs_iconbox_subtitle.d-flex {
+.cs_iconbox.cs_style_3 .cs_iconbox_subtitle.d-flex {
   gap: 50px;
 }
-.cs_iconbox.cs_style_4:hover .cs_iconbox_icon img {
+.cs_iconbox.cs_style_3:hover .cs_iconbox_icon img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.cs_iconbox.cs_style_5 {
-  overflow: hidden;
-}
-@media (max-width: 767px) {
-  .cs_iconbox.cs_style_5 {
-    margin-bottom: 30px;
-  }
-}
-.cs_iconbox.cs_style_5 .cs_category_overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#002935), to(rgba(0, 41, 53, 0)));
-  background: linear-gradient(0deg, #002935 0%, rgba(0, 41, 53, 0) 100%);
-  z-index: 1;
-}
-.cs_iconbox.cs_style_5 .cs_iconbox_thumb img {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.cs_iconbox.cs_style_5 .cs_iconbox_text {
-  width: 100%;
-  position: absolute;
-  bottom: 27px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 2;
-}
-.cs_iconbox.cs_style_5 .cs_iconbox_title {
-  line-height: 1.458em;
-  margin-bottom: 7px;
-}
-.cs_iconbox.cs_style_5 .cs_iconbox_btn {
-  color: #fff;
-  line-height: 1.556em;
 }
 
 /*--------------------------------------------------------------
@@ -4311,7 +4233,7 @@ odometer
   color: #fff;
 }
 
-.cs_category.cs_style_1 {
+.cs_category_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4324,6 +4246,119 @@ odometer
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   row-gap: 30px;
+}
+
+.cs_category.cs_style_1 {
+  width: 240px;
+  height: 292px;
+  position: relative;
+}
+.cs_category.cs_style_1::after, .cs_category.cs_style_1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs_category.cs_style_1::after {
+  border: 2px solid rgba(0, 41, 53, 0.1);
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  z-index: -2;
+}
+.cs_category.cs_style_1::before {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+.cs_category.cs_style_1 .cs_category_inner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs_category.cs_style_1 .cs_category_icon {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 44px;
+}
+.cs_category.cs_style_1 .cs_category_title {
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.cs_category.cs_style_1 .cs_category_btn {
+  line-height: 1.556em;
+  color: #747474;
+}
+.cs_category.cs_style_1 .cs_category_btn svg {
+  margin-left: 7px;
+}
+.cs_category.cs_style_1:hover::after {
+  background-color: #573cff;
+  border-color: #573cff;
+}
+.cs_category.cs_style_1:hover .cs_category_title {
+  color: #573cff;
+}
+
+.cs_category.cs_style_2 {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .cs_category.cs_style_2 {
+    margin-bottom: 30px;
+  }
+}
+.cs_category.cs_style_2 .cs_category_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#002935), to(rgba(0, 41, 53, 0)));
+  background: linear-gradient(0deg, #002935 0%, rgba(0, 41, 53, 0) 100%);
+  z-index: 1;
+}
+.cs_category.cs_style_2 .cs_category_thumb img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_category.cs_style_2 .cs_category_text {
+  width: 100%;
+  position: absolute;
+  bottom: 27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+.cs_category.cs_style_2 .cs_category_title {
+  line-height: 1.458em;
+  margin-bottom: 7px;
+}
+.cs_category.cs_style_2 .cs_category_btn {
+  color: #fff;
+  line-height: 1.556em;
 }
 
 .cs_course.cs_style_1 {
@@ -4418,17 +4453,82 @@ odometer
   color: #fff;
 }
 
+.cs_course.cs_style_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  border-radius: 0 3px 3px 0;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+}
 .cs_course.cs_style_2 .cs_course_thumb {
-  margin-bottom: 37px;
+  position: relative;
 }
-.cs_course.cs_style_2 .cs_course_badge {
-  padding: 8px 16px;
+.cs_course.cs_style_2 .cs_badge_container {
+  width: calc(100% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  left: 15px;
+  top: 15px;
 }
-.cs_course.cs_style_2 .cs_course_instructor {
+.cs_course.cs_style_2 .cs_sourse_badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 3px 16px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.cs_course.cs_style_2 .cs_course_cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.cs_course.cs_style_2 .cs_course_info {
+  padding: 20px 20px 26px;
+}
+.cs_course.cs_style_2 .cs_separator {
+  width: 100%;
+  max-width: 363px;
+  height: 1px;
+  background: #e9e9e9;
+  margin-top: 25px;
   margin-bottom: 20px;
+}
+.cs_course.cs_style_2 .cs_course_meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 18px;
+}
+.cs_course.cs_style_2 .cs_course_meta span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.cs_course.cs_style_2 .cs_course_title {
+  line-height: 1.455em;
 }
 .cs_course.cs_style_2 .cs_rating {
   -webkit-transform: scale(0.5);
@@ -4437,8 +4537,13 @@ odometer
   letter-spacing: 8px;
   width: 170px;
 }
-.cs_course.cs_style_2 .cs_course_title {
-  line-height: 65px;
+.cs_course.cs_style_2:hover {
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+}
+.cs_course.cs_style_2:hover .cs_sourse_badge {
+  background-color: #573cff;
+  color: #fff;
 }
 
 .cs_course_instructor {
@@ -4451,6 +4556,7 @@ odometer
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .cs_instructor_bio {
@@ -4501,6 +4607,29 @@ odometer
 }
 
 /* End course page design*/
+.cs_course_details.cs_style_1 .cs_course_thumb {
+  margin-bottom: 37px;
+}
+.cs_course_details.cs_style_1 .cs_course_badge {
+  padding: 8px 16px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.cs_course_details.cs_style_1 .cs_rating {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  margin-right: -35px;
+  letter-spacing: 8px;
+  width: 170px;
+}
+.cs_course_details.cs_style_1 .cs_course_title {
+  line-height: 65px;
+}
+.cs_course_details.cs_style_1 .cs_course_instructor {
+  margin-bottom: 20px;
+}
+
 #curriculum {
   border: 1px solid #F6F4FF;
 }
@@ -4617,8 +4746,17 @@ odometer
   background: #fff;
 }
 .cs_product.cs_style_1 .cs_product_thumb {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 274px;
+  background-color: #EBEDF4;
   position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_product.cs_style_1 .cs_product_thumb:hover {
+  background-color: #F3F3F3;
 }
 .cs_product.cs_style_1 .cs_product_badge {
   position: absolute;
@@ -4654,7 +4792,7 @@ odometer
   width: 80%;
   text-align: center;
   line-height: 1.445em;
-  padding: 7px 0;
+  padding: 7px 15px;
 }
 .cs_product.cs_style_1 .cs_cart_icon {
   width: 20%;
@@ -4701,8 +4839,12 @@ odometer
   line-height: 1.45em;
   margin-bottom: 8px;
 }
-.cs_faq.cs_style_1 .cs_faq_contact_box .cs_btn cs_style_1 {
+.cs_faq.cs_style_1 .cs_faq_contact_box .cs_btn.cs_style_1 {
   margin-top: 13px;
+  color: #573cff;
+}
+.cs_faq.cs_style_1 .cs_faq_contact_box .cs_btn.cs_style_1:hover::after {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .cs_card_wrapper {
@@ -4826,33 +4968,33 @@ odometer
   color: #573cff;
   margin-right: 15px;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1 {
+.cs_pricing_table .cs_card_btn.cs_type_1 {
   background-color: #002935;
   color: #fff;
   margin-top: 30px;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1:hover {
+.cs_pricing_table .cs_card_btn.cs_type_1:hover {
   background-color: #573cff;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1:hover svg:first-child {
+.cs_pricing_table .cs_card_btn.cs_type_1:hover svg:first-child {
   -webkit-transform: translate(30px, -25px);
           transform: translate(30px, -25px);
   visibility: hidden;
   opacity: 0;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1:hover svg:last-child {
+.cs_pricing_table .cs_card_btn.cs_type_1:hover svg:last-child {
   -webkit-transform: translate(-15px, -3px);
           transform: translate(-15px, -3px);
   visibility: visible;
   opacity: 1;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1 svg:first-child {
+.cs_pricing_table .cs_card_btn.cs_type_1 svg:first-child {
   -webkit-transform: translate(5px, -3px);
           transform: translate(5px, -3px);
   -webkit-transition: inherit;
   transition: inherit;
 }
-.cs_pricing_table .cs_card_btn.cs_style_1 svg:last-child {
+.cs_pricing_table .cs_card_btn.cs_type_1 svg:last-child {
   -webkit-transform: translate(-35px, 20px);
           transform: translate(-35px, 20px);
   visibility: hidden;
@@ -5107,6 +5249,9 @@ odometer
 .cs_post.cs_style_2:last-child {
   margin-bottom: 0;
 }
+.cs_post.cs_style_2 .cs_btn.cs_style_1:hover::after {
+  background-color: #573cff;
+}
 .cs_post.cs_style_2 .cs_post_thumb {
   display: inline-block;
   margin-bottom: 30px;
@@ -5198,21 +5343,6 @@ odometer
   font-weight: 500;
 }
 
-@-webkit-keyframes scale-anim {
-  50% {
-    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
-            transform: translate(-50%, -50%) scale(1) rotate(360deg);
-    opacity: 1;
-  }
-}
-
-@keyframes scale-anim {
-  50% {
-    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
-            transform: translate(-50%, -50%) scale(1) rotate(360deg);
-    opacity: 1;
-  }
-}
 .cs_post.cs_style_3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5260,27 +5390,32 @@ odometer
   line-height: 1.556em;
 }
 
-.cs_post.cs_style_4 .cs_post_thumb {
+@-webkit-keyframes scale-anim {
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-anim {
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(360deg);
+            transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+.cs_post_details.cs_style_1 .cs_post_thumb {
   margin-bottom: 30px;
 }
-.cs_post.cs_style_4 .cs_post_title {
-  margin-bottom: 18px;
-}
-.cs_post.cs_style_4 .cs_post_title.cs_type_1 {
-  line-height: 1.5em;
-  margin-bottom: 10px;
-}
-.cs_post.cs_style_4 .cs_post_title.cs_type_2 {
-  line-height: 1.067em;
-}
-.cs_post.cs_style_4 .cs_post_meta {
+.cs_post_details.cs_style_1 .cs_post_meta {
   gap: 35px;
   margin-bottom: 24px;
 }
-.cs_post.cs_style_4 .cs_post_meta i {
+.cs_post_details.cs_style_1 .cs_post_meta i {
   margin-right: 7px;
 }
-.cs_post.cs_style_4 .cs_post_gallery {
+.cs_post_details.cs_style_1 .cs_post_gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5289,7 +5424,7 @@ odometer
           align-items: center;
   gap: 35px;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags {
+.cs_post_details.cs_style_1 .cs_sidebar_tags {
   padding: 40px 0;
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
@@ -5297,10 +5432,10 @@ odometer
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags .cs_sidebar_title {
+.cs_post_details.cs_style_1 .cs_sidebar_tags .cs_sidebar_title {
   margin-right: 30px;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags .cs_tag_list {
+.cs_post_details.cs_style_1 .cs_sidebar_tags .cs_tag_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5308,22 +5443,22 @@ odometer
      -moz-column-gap: 20px;
           column-gap: 20px;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags .cs_tag_link {
+.cs_post_details.cs_style_1 .cs_sidebar_tags .cs_tag_link {
   display: inline-block;
   width: 112px;
   padding: 10px 0;
   background: #F8F8F8;
   text-align: center;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags .cs_tag_link:hover {
+.cs_post_details.cs_style_1 .cs_sidebar_tags .cs_tag_link:hover {
   background-color: #573cff;
   color: #fff;
 }
-.cs_post.cs_style_4 .cs_sidebar_tags .cs_social_btn.cs_style1 a {
+.cs_post_details.cs_style_1 .cs_sidebar_tags .cs_social_btn.cs_style1 a {
   border: 1px solid #573cff;
   border-radius: 50%;
 }
-.cs_post.cs_style_4 .cs_author_bio {
+.cs_post_details.cs_style_1 .cs_author_bio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5331,24 +5466,24 @@ odometer
   padding: 46px 0 41px;
   border-bottom: 1px solid #E3E3E3;
 }
-.cs_post.cs_style_4 .cs_author_bio .cs_author_desc {
+.cs_post_details.cs_style_1 .cs_author_bio .cs_author_desc {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-.cs_post.cs_style_4 .cs_author_bio .cs_author_thumb {
+.cs_post_details.cs_style_1 .cs_author_bio .cs_author_thumb {
   overflow: hidden;
 }
-.cs_post.cs_style_4 .cs_author_bio .cs_social_btn.cs_style1 a {
+.cs_post_details.cs_style_1 .cs_author_bio .cs_social_btn.cs_style1 a {
   border-radius: 50px;
   border: 1px solid #E7E7E7;
   background-color: #F8FAFA;
 }
-.cs_post.cs_style_4 .cs_author_bio .cs_social_btn.cs_style1 a:hover {
+.cs_post_details.cs_style_1 .cs_author_bio .cs_social_btn.cs_style1 a:hover {
   background-color: #573cff;
   border-color: #573cff;
 }
-.cs_post.cs_style_4 .cs_single_post_nav {
+.cs_post_details.cs_style_1 .cs_single_post_nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5356,30 +5491,30 @@ odometer
   background: #F8F8F8;
   padding: 37px 27px;
 }
-.cs_post.cs_style_4 .cs_single_post_nav.cs_next_post {
+.cs_post_details.cs_style_1 .cs_single_post_nav.cs_next_post {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.cs_post.cs_style_4 .cs_single_post_nav.cs_next_post .cs_post_content {
+.cs_post_details.cs_style_1 .cs_single_post_nav.cs_next_post .cs_post_content {
   text-align: right;
 }
-.cs_post.cs_style_4 .cs_single_post_nav .cs_post_thumb {
+.cs_post_details.cs_style_1 .cs_single_post_nav .cs_post_thumb {
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 0;
 }
-.cs_post.cs_style_4 .cs_single_post_nav .cs_title {
+.cs_post_details.cs_style_1 .cs_single_post_nav .cs_title {
   line-height: 1.474em;
   margin-top: 5px;
 }
-.cs_post.cs_style_4 .cs_single_post_nav .cs_post_content {
+.cs_post_details.cs_style_1 .cs_single_post_nav .cs_post_content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
-.cs_post.cs_style_4 .cs_single_post_nav .cs_post_btn {
+.cs_post_details.cs_style_1 .cs_single_post_nav .cs_post_btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5498,12 +5633,38 @@ textarea {
 }
 .cs_about.cs_style_3 .cs_about_shape2 {
   position: absolute;
+  right: -100px;
+  top: 0;
+  -webkit-animation: rotate-x 10s linear infinite;
+          animation: rotate-x 10s linear infinite;
+}
+
+.cs_about.cs_style_4 .cs_mission_title {
+  line-height: 1.167em;
+  margin-bottom: 5px;
+}
+.cs_about.cs_style_4 .cs_about_subtitle {
+  margin-bottom: 20px;
+}
+.cs_about.cs_style_4 .cs_mission {
+  margin-bottom: 17px;
+}
+.cs_about.cs_style_4 .cs_mission:last-child {
+  margin-bottom: 0;
+}
+.cs_about.cs_style_4 .cs_about_shape1 {
+  position: absolute;
+  left: 20px;
+  bottom: 30px;
+}
+.cs_about.cs_style_4 .cs_about_shape2 {
+  position: absolute;
   right: -20px;
   top: 0;
   -webkit-animation: rotate-x 10s linear infinite;
           animation: rotate-x 10s linear infinite;
 }
-.cs_about.cs_style_3 .cs_about_shape3 {
+.cs_about.cs_style_4 .cs_about_shape3 {
   position: absolute;
   left: 56%;
   bottom: -10px;
