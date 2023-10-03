@@ -13,6 +13,29 @@
     padding-top: 50px;
   }
 }
+.cs_slider.cs_style_3 {
+  .cs_slider_wrapper {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+  .slick_slide_in {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .slick-dots{
+    margin-bottom: 0;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    li{
+font-size: 0;
+line-height: 0;
+    }
+  }
+}
 
 
 /*----------------------
@@ -21,7 +44,7 @@ Slider arrow design
 .cs_slider_arrows.cs_style_1 {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 
   .cs_slider_arrow {
     width: 50px;

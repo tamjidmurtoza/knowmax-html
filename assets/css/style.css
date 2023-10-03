@@ -1420,9 +1420,19 @@ hr {
   overflow: visible;
 }
 
-/*================================
+.cs_gap_y_24 {
+  gap: 24px 0;
+}
+
+@media (max-width: 1199px) {
+  br {
+    display: none;
+  }
+}
+
+/*--------------------------------------
  common component styling
-=================================*/
+--------------------------------------*/
 .cs_section_heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1438,7 +1448,7 @@ hr {
   row-gap: 30px;
 }
 
-.cs_section_heading_in.cs_style_1 .cs_section_subtitle {
+.cs_section_heading_in .cs_section_subtitle {
   display: block;
   line-height: 1.556em;
   letter-spacing: 2.7px;
@@ -1503,7 +1513,9 @@ hr {
   border-radius: 5px;
 }
 
-/* Start Review */
+/*-----------------------------------
+ Start Review 
+ ------------------------------------*/
 .cs_rating_percentage,
 .cs_rating {
   overflow: hidden;
@@ -1542,8 +1554,12 @@ hr {
   font-weight: 900;
 }
 
-/* End Review */
-/* Bootstrap Component styling*/
+/*----------------------- 
+End Review
+--------------------------*/
+/*---------------------------------
+ Bootstrap Component styling
+-----------------------------------*/
 .pagination {
   margin: 50px 0 0;
 }
@@ -1793,6 +1809,33 @@ button.cs_btn.cs_style_1 {
   padding-top: 50px;
 }
 
+.cs_slider.cs_style_3 .cs_slider_wrapper {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.cs_slider.cs_style_3 .slick_slide_in {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.cs_slider.cs_style_3 .slick-dots {
+  margin-bottom: 0;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+}
+.cs_slider.cs_style_3 .slick-dots li {
+  font-size: 0;
+  line-height: 0;
+}
+
 /*----------------------
 Slider arrow design
 ------------------------*/
@@ -1803,7 +1846,7 @@ Slider arrow design
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 .cs_slider_arrows.cs_style_1 .cs_slider_arrow {
   width: 50px;
@@ -3675,7 +3718,7 @@ odometer
 .cs_isotope.cs_has_gutter_24 {
   margin-left: -12px;
   margin-right: -12px;
-  margin-bottom: -24px;
+  margin-bottom: -48px;
 }
 .cs_isotope.cs_has_gutter_24 .cs_isotope_item {
   padding: 0 12px;
@@ -4361,6 +4404,149 @@ odometer
   line-height: 1.556em;
 }
 
+.cs_feature.cs_style_1 {
+  padding: 46px 30px;
+  -webkit-box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 55px 0px rgba(0, 0, 0, 0.1);
+}
+.cs_feature.cs_style_1 .cs_feature_icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.cs_feature.cs_style_1 .cs_feature_icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_feature.cs_style_1 .cs_feature_title {
+  line-height: 1.458em;
+  position: relative;
+  margin-bottom: 36px;
+}
+.cs_feature.cs_style_1 .cs_feature_title::after {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #002935;
+  position: absolute;
+  left: 42px;
+  bottom: -17px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_feature.cs_style_1 .cs_feature_title::before {
+  content: "";
+  width: 38px;
+  height: 2px;
+  background-color: #573cff;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_feature.cs_style_1 .cs_feature_subtitle {
+  margin-bottom: 30px;
+}
+.cs_feature.cs_style_1 .cs_feature_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 22px;
+}
+.cs_feature.cs_style_1 .cs_feature_btn i {
+  margin-top: 7px;
+}
+.cs_feature.cs_style_1:hover .cs_feature_title::after {
+  background-color: #573cff;
+}
+.cs_feature.cs_style_1:hover .cs_feature_title:before {
+  background-color: #002935;
+}
+
+.cs_video.cs_style_1 {
+  min-height: 500px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs_video.cs_style_1 .cs_play_btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 88px;
+  height: 88px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 32px;
+}
+.cs_video.cs_style_1 .cs_play_btn img {
+  position: absolute;
+  z-index: 1;
+}
+.cs_video.cs_style_1 .cs_play_btn span {
+  display: block;
+  width: 90px;
+  height: 90px;
+  background-color: #573cff;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-radius: 50%;
+}
+.cs_video.cs_style_1 .cs_play_btn span::after {
+  content: "";
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  z-index: -1;
+  -webkit-animation: pulse-border 5s linear infinite;
+          animation: pulse-border 5s linear infinite;
+}
+.cs_video.cs_style_1 .cs_video_title {
+  line-height: 1.125em;
+  position: relative;
+  z-index: 2;
+}
+
+@-webkit-keyframes pulse-border {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes pulse-border {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.05);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
 .cs_course.cs_style_1 {
   width: 100%;
   -webkit-transition: all 0.4s ease-in-out;
@@ -4457,14 +4643,39 @@ odometer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0 3px 3px 0;
+  border-radius: 3px;
   background: #fff;
   -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
 }
+.cs_course.cs_style_2.cs_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media (max-width: 575px) {
+  .cs_course.cs_style_2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .cs_course.cs_style_2 .cs_course_thumb {
   display: inline-block;
+  width: 100%;
+  max-width: 230px;
   position: relative;
+}
+@media (max-width: 575px) {
+  .cs_course.cs_style_2 .cs_course_thumb {
+    min-width: 100%;
+  }
+}
+.cs_course.cs_style_2 .cs_course_thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .cs_course.cs_style_2 .cs_sourse_badge {
   position: absolute;
@@ -4473,13 +4684,16 @@ odometer
   padding: 3px 16px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  border-radius: 0 0 2px 0;
 }
 .cs_course.cs_style_2 .cs_course_info {
-  padding: 20px 20px 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 20px;
 }
 .cs_course.cs_style_2 .cs_separator {
   width: 100%;
-  max-width: 363px;
   height: 1px;
   background: #e9e9e9;
   margin-top: 25px;
@@ -4521,8 +4735,11 @@ odometer
           box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
 }
 .cs_course.cs_style_2:hover .cs_sourse_badge {
-  background-color: #573cff;
-  color: #fff;
+  background-color: #fff;
+  color: #573cff;
+}
+.cs_course.cs_style_2 .cs_course_instructor {
+  margin-bottom: 0;
 }
 
 .cs_course_instructor {
@@ -4542,10 +4759,12 @@ odometer
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 10px;
+}
+.cs_instructor_bio .cs_instructor_thumb {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 /* Start course page design*/
@@ -5130,6 +5349,58 @@ odometer
           transform: scale(0.83);
 }
 
+.cs_testimonial.cs_style_2 {
+  padding: 44px 60px;
+}
+.cs_testimonial.cs_style_2 .cs_testimonial_shape {
+  position: absolute;
+  top: 63px;
+  right: 16px;
+}
+.cs_testimonial.cs_style_2 .cs_instructor_thumb {
+  width: 85px;
+  height: 85px;
+}
+.cs_testimonial.cs_style_2 .cs_instructor_thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_testimonial.cs_style_2 q {
+  display: block;
+  margin-bottom: 15px;
+}
+.cs_testimonial.cs_style_2 .cs_testimonial_subtitle {
+  margin-bottom: 40px;
+}
+.cs_testimonial.cs_style_2 .cs_testimonial_instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+}
+.cs_testimonial.cs_style_2 .cs_instructor_bio {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.cs_testimonial.cs_style_2 .cs_instructor_name {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3px;
+}
+.cs_testimonial.cs_style_2 .cs_rating {
+  -webkit-transform: scale(0.83);
+          transform: scale(0.83);
+}
+
 .cs_post.cs_style_1 {
   background: #fff;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
@@ -5606,9 +5877,7 @@ textarea {
   margin-bottom: 0;
 }
 .cs_about.cs_style_3 .cs_about_shape1 {
-  position: absolute;
-  left: 20px;
-  bottom: 30px;
+  margin-top: 50px;
 }
 .cs_about.cs_style_3 .cs_about_shape2 {
   position: absolute;
@@ -5632,9 +5901,7 @@ textarea {
   margin-bottom: 0;
 }
 .cs_about.cs_style_4 .cs_about_shape1 {
-  position: absolute;
-  left: 20px;
-  bottom: 30px;
+  margin-top: 50px;
 }
 .cs_about.cs_style_4 .cs_about_shape2 {
   position: absolute;

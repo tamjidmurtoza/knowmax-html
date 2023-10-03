@@ -1,0 +1,57 @@
+.cs_video.cs_style_1{
+min-height: 500px;
+position: relative;
+display: flex;
+align-items: center;
+.cs_play_btn{
+  display: inline-flex;
+  align-items: center;
+  width: 88px;
+  height: 88px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 32px;
+  img{
+  position: absolute;
+  z-index: 1;
+}
+span{
+display: block;
+width: 90px;
+  height: 90px;
+  background-color: $accent;
+position: absolute;
+left: -1px;top: -1px;
+border-radius: 50%;
+  &::after{
+      content:"";
+      width: 120%;
+      height:120%;
+      border-radius: 50%;
+      background-color: rgba($color: $white, $alpha: .2);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+  z-index: -1;
+  animation: pulse-border 5s linear infinite;
+    }
+}
+
+}
+.cs_video_title{
+  line-height: 1.125em;
+  position: relative;
+  z-index: 2;
+}
+}
+@keyframes pulse-border {
+  0% {
+    background-color: rgba($color: $white, $alpha: .2);
+  }
+
+  50% {
+  background-color: rgba($color: $white, $alpha: 0.05);
+  transform: scale(1.5);
+  }
+}
