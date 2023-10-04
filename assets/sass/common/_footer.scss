@@ -48,7 +48,7 @@ transition: all .4s ease;
 
 }
 
-.cs_social_btn.cs_style1 {
+.cs_social_btn.cs_style_1 {
   display: flex;
   gap: 10px;
 
@@ -125,7 +125,6 @@ transition: all .4s ease;
     top: 0;
     left: 0;
   }
-
   .cs_facility_options {
     display: flex;
     align-items: center;
@@ -187,3 +186,90 @@ transition: all .4s ease;
 //     position: initial;
 //   }
 // }
+.cs_footer.cs_style_2{
+  width: 100%;
+  min-height: 620px;
+  .cs_hero_overlay{
+    background: rgba(0, 41, 53, 0.90);
+  }
+     hr {
+       height: 1px;
+      background: rgba(219, 219, 219, 0.15);
+     }
+  .cs_footer_top{
+    padding: 25px 0;
+    .cs_brand {
+        position: relative;
+        z-index: 2;
+      }
+    
+      .cs_social_btn.cs_style_1 {
+        display: flex;
+        gap: 10px;
+    
+        a {
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          background-color: #4C5D77;
+          color: $white;
+    
+          &:hover {
+            background-color: $accent;
+            color: $white;
+          }
+        }
+      }
+    
+      .cs_footer_top_nav {
+        gap: 55px;
+        align-items: flex-end;
+      }
+    
+      .cs_facility_options {
+        display: flex;
+        gap: 45px;
+      }
+  }
+ .cs_footer_center{
+  padding: 90px 0;
+  .cs_footer_widget_title{
+    margin-bottom: 35px;
+  }
+  .cs_schedule_nav{
+    display: flex;
+    flex-direction: column;
+    a{
+      display: inline-block;
+      padding: 8px 0;
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+  .cs_post_separator{
+    width: 100%;
+    height: 1px;
+    background: rgba(221, 221, 221, 0.20);
+    margin: 20px 0;
+  }
+  .cs_post.cs_style_3{
+    align-items: flex-start;
+    margin-bottom: 0;
+    .cs_post_meta {
+        margin-bottom: 6px;
+      }    
+      .cs_post_thumb {
+        width: 85px;
+        height: 85px;
+      }
+  } 
+  input{
+    background-color: transparent;
+    border-color: rgba($color: $white, $alpha: .6);
+  } 
+ }
+ .cs_footer_bottom{
+  padding: 18px 0;
+ }
+}

@@ -1818,8 +1818,7 @@ button.cs_btn.cs_style_1 {
   padding-right: 12px;
 }
 .cs_slider.cs_style_3 .slick-dots {
-  margin-bottom: 0;
-  margin-top: 60px;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1829,11 +1828,49 @@ button.cs_btn.cs_style_1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  list-style: none;
+  gap: 15px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+.cs_slider.cs_style_3 .slick-dots button {
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 .cs_slider.cs_style_3 .slick-dots li {
-  font-size: 0;
-  line-height: 0;
+  overflow: hidden;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #573cff;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 0px;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+.cs_slider.cs_style_3 .slick-dots li::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #573cff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_slider.cs_style_3 .slick-dots .slick-active::after {
+  opacity: 1;
 }
 
 /*----------------------
@@ -3291,13 +3328,13 @@ odometer
   border-color: #fff;
 }
 
-.cs_social_btn.cs_style1 {
+.cs_social_btn.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-.cs_social_btn.cs_style1 a {
+.cs_social_btn.cs_style_1 a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3315,7 +3352,7 @@ odometer
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.cs_social_btn.cs_style1 a:hover {
+.cs_social_btn.cs_style_1 a:hover {
   background-color: #573cff;
   color: #fff;
 }
@@ -3421,6 +3458,102 @@ odometer
   .cs_footer_shape1 {
     display: none;
   }
+}
+
+.cs_footer.cs_style_2 {
+  width: 100%;
+  min-height: 620px;
+}
+.cs_footer.cs_style_2 .cs_hero_overlay {
+  background: rgba(0, 41, 53, 0.9);
+}
+.cs_footer.cs_style_2 hr {
+  height: 1px;
+  background: rgba(219, 219, 219, 0.15);
+}
+.cs_footer.cs_style_2 .cs_footer_top {
+  padding: 25px 0;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_brand {
+  position: relative;
+  z-index: 2;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_social_btn.cs_style_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_social_btn.cs_style_1 a {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: #4C5D77;
+  color: #fff;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_social_btn.cs_style_1 a:hover {
+  background-color: #573cff;
+  color: #fff;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_footer_top_nav {
+  gap: 55px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.cs_footer.cs_style_2 .cs_footer_top .cs_facility_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+}
+.cs_footer.cs_style_2 .cs_footer_center {
+  padding: 90px 0;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_footer_widget_title {
+  margin-bottom: 35px;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_schedule_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_schedule_nav a {
+  display: inline-block;
+  padding: 8px 0;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_schedule_nav a:last-child {
+  padding-bottom: 0;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_post_separator {
+  width: 100%;
+  height: 1px;
+  background: rgba(221, 221, 221, 0.2);
+  margin: 20px 0;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_post.cs_style_3 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 0;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_post.cs_style_3 .cs_post_meta {
+  margin-bottom: 6px;
+}
+.cs_footer.cs_style_2 .cs_footer_center .cs_post.cs_style_3 .cs_post_thumb {
+  width: 85px;
+  height: 85px;
+}
+.cs_footer.cs_style_2 .cs_footer_center input {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.cs_footer.cs_style_2 .cs_footer_bottom {
+  padding: 18px 0;
 }
 
 .cs_sidebar.cs_style_1 {
@@ -5078,7 +5211,7 @@ odometer
   right: 45px;
 }
 
-.cs_funfact.cs_style1 {
+.cs_funfact.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5087,7 +5220,7 @@ odometer
           align-items: center;
   gap: 38px;
 }
-.cs_funfact.cs_style1 .cs_funfact_icon {
+.cs_funfact.cs_style_1 .cs_funfact_icon {
   height: 90px;
   width: 90px;
   display: -webkit-box;
@@ -5100,12 +5233,34 @@ odometer
       -ms-flex-pack: center;
           justify-content: center;
 }
-.cs_funfact.cs_style1 .cs_funfact_number {
+.cs_funfact.cs_style_1 .cs_funfact_number {
   line-height: 1.182em;
   margin-bottom: 2px;
 }
-.cs_funfact.cs_style1 .cs_funfact_title {
+.cs_funfact.cs_style_1 .cs_funfact_title {
   line-height: 1.364em;
+}
+
+.cs_funfact.cs_style_2 {
+  width: 100%;
+  min-height: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs_funfact.cs_style_2 .cs_funfact_bg {
+  width: 83.4vw;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+.cs_funfact.cs_style_2 .cs_funfact_wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
 }
 
 .cs_pricing_table .cs_pricing_in {
@@ -5355,7 +5510,7 @@ odometer
 .cs_testimonial.cs_style_2 .cs_testimonial_shape {
   position: absolute;
   top: 63px;
-  right: 16px;
+  right: 58px;
 }
 .cs_testimonial.cs_style_2 .cs_instructor_thumb {
   width: 85px;
@@ -5638,6 +5793,80 @@ odometer
 }
 .cs_post.cs_style_3 .cs_post_title {
   line-height: 1.556em;
+}
+
+.cs_post.cs_style_4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 5px 50px 0px rgba(234, 234, 234, 0.7);
+          box-shadow: 0px 5px 50px 0px rgba(234, 234, 234, 0.7);
+}
+.cs_post.cs_style_4.cs_reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.cs_post.cs_style_4.cs_lg_vertical .cs_post_content {
+  padding: 30px;
+}
+.cs_post.cs_style_4.cs_lg_vertical .cs_post_title {
+  margin-bottom: 17px;
+}
+.cs_post.cs_style_4 .cs_post_thumb {
+  display: inline-block;
+}
+.cs_post.cs_style_4 .cs_post_title {
+  line-height: 1.308em;
+  margin-bottom: 25px;
+}
+.cs_post.cs_style_4 .cs_post_subtitle {
+  margin-bottom: 24px;
+}
+.cs_post.cs_style_4 .cs_post_content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 50px;
+}
+.cs_post.cs_style_4 .cs_post_meta {
+  margin-bottom: 14px;
+}
+.cs_post.cs_style_4 .cs_post_meta i {
+  margin-right: 7px;
+}
+.cs_post.cs_style_4 .cs_post_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.cs_post_grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(auto-fit, 260px);
+  grid-auto-rows: 260px;
+  gap: 30px;
+}
+.cs_post_grid .cs_lg_horizontal {
+  grid-column: 1/span 8;
+}
+.cs_post_grid .cs_lg_vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-column: 9/span 4;
+  grid-row: 1/3;
 }
 
 @-webkit-keyframes scale-anim {
