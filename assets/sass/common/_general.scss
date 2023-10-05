@@ -206,6 +206,9 @@ hr {
 .cs_accent_color {
   color: $accent;
 }
+.cs_accent_color2 {
+  color: $accent2;
+}
 
 .cs_gray_color {
   color: $gray;
@@ -217,6 +220,9 @@ hr {
 
 .cs_accent_bg {
   background-color: $accent;
+}
+.cs_accent_bg2 {
+  background-color: $accent2;
 }
 
 .cs_gray_bg {
@@ -236,6 +242,9 @@ hr {
 }
 .cs_bg_style_2 {
   background: rgba(0, 122, 112, 0.05);
+}
+.cs_bg_style_3 {
+background: #EBF4F4;
 }
 
 .cs_mp0 {
@@ -277,6 +286,9 @@ br{
     letter-spacing: 2.7px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    img{
+      margin-right: 7px;
+    }
   }
 }
 
@@ -288,7 +300,16 @@ br{
   top: 0;
   left: 0;
 }
-
+.cs_course_thumb_overlay{
+background: rgba(0, 41, 53, 0.10);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 1;
+}
 .cs_zoom {
   position: relative;
   overflow: hidden;

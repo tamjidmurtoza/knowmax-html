@@ -21,9 +21,10 @@
     position: absolute;
     left: 15px;
     top: 15px;
+    z-index: 3;
   }
 
-  .cs_sourse_badge {
+  .cs_course_badge {
     padding: 3px 16px;
     transition: all 0.4s ease-in-out;
   }
@@ -73,7 +74,7 @@
   &:hover {
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
 
-    .cs_sourse_badge {
+    .cs_course_badge {
       background-color: $accent;
       color: $white;
     }
@@ -112,6 +113,7 @@
       padding: 3px 16px;
       transition: all 0.4s ease-in-out;
       border-radius: 0 0 2px 0;
+      z-index: 3;
     }
   
     .cs_course_info {
@@ -158,9 +160,77 @@
         color: $accent;
       }
     }
-        .cs_course_instructor{
-          margin-bottom: 0;
+  .cs_course_instructor{
+     margin-bottom: 0;
+  }
+}
+.cs_course.cs_style_3{
+  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+  .cs_course_thumb{
+    display: inline-block;
+  }
+  .cs_course_thumb_overlay{
+    transform: scale(0);
+    transition: all .6s ease;
+  }
+    .cs_sourse_badge {
+      position: absolute;
+      left: 20px;
+      bottom: -10px;
+      padding: 3px 16px;
+      transition: all .4s ease;
+      z-index: 3;
+    }
+  .cs_course_cart{
+    position: absolute;
+    top: 17px;
+    right: 32px;
+    font-size: 20px;
+    z-index: 3;
+  }
+    .cs_course_info {
+      flex: 1;
+      padding: 30px 20px;
+    }
+  
+    .cs_separator {
+      width: 100%;
+      height: 1px;
+      background: #e9e9e9;
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+  
+    .cs_course_meta {
+      margin-bottom: 18px;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    } 
+    .cs_course_title{
+      line-height: 1.455em;
+    }
+    .cs_rating {
+      transform: scale(.5);
+      margin-right: -35px;
+      letter-spacing: 8px;
+      width: 170px;
+    }
+  
+    &:hover {
+      .cs_course_thumb_overlay {
+          transform: scale(1);
         }
+      .cs_sourse_badge {
+        background-color: $accent;
+      }
+    }
+  
+    .cs_course_instructor {
+      margin-bottom: 0;
+    }
 }
 .cs_course_instructor {
   display: flex;

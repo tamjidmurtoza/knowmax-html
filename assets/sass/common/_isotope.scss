@@ -1,3 +1,62 @@
+/*------------------------------
+Isotop Menu Style1
+-------------------------------*/
+.cs_isotope_filter.cs_style_1 {
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 5px;
+
+    a {
+      padding: 7px 15px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    &:hover,
+    &.active {
+      color: $accent;
+    }
+  }
+}
+
+.cs_isotope_filter.cs_style_2 {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  li {
+    margin: 0 5px;
+
+    a {
+      padding: 7px 25px 7px 15px;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all .4s ease;
+    }
+
+    &:hover,
+    &.active {
+      a {
+        background-color: $accent;
+        color: $white;
+        clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
+      }
+    }
+  }
+}
+
 /*--------------------------------------------------------------
 8. Isotopee
 ----------------------------------------------------------------*/
@@ -129,33 +188,6 @@
 .cs_isotope_col_1 .cs-w100 {
   width: 100%;
 }
-
-/*Isotop Menu Style1*/
-.cs_isotope_filter.cs_style_1 {
-
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  li {
-    margin: 0 5px;
-
-    a {
-      padding: 7px 15px;
-      display: inline-block;
-      font-weight: 600;
-    }
-
-    &:hover,
-    &.active {
-      color: $accent;
-    }
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .cs_isotope.cs_has_gutter_100 .cs_isotope_item {
     padding: 0 15px;
