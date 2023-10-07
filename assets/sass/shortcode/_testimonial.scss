@@ -81,3 +81,16 @@
     transform: scale(.83);
   }
 }
+.cs_testimonial.cs_style_3{
+  border: 1px solid $accent;
+  padding: 20px 25px 40px;
+  .cs_instructor_bio{
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  .cs_testimonial_shape{
+    position: absolute;
+    top: 22px;
+    right: 27px;
+  }
+}

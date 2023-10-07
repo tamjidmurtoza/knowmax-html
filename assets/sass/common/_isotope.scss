@@ -43,16 +43,21 @@ Isotop Menu Style1
       display: inline-block;
       font-size: 18px;
       font-weight: 500;
+      clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
       transition: all .4s ease;
     }
-
+&:last-child a {
+  padding: 7px 15px 7px 25px;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
+}
     &:hover,
     &.active {
       a {
         background-color: $accent;
         color: $white;
-        clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
+        
       }
+      
     }
   }
 }

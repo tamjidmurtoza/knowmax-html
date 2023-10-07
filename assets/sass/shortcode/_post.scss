@@ -271,7 +271,32 @@
     grid-row: 1 / 3;
   }
 }
-
+.cs_post.cs_style_5{
+  .cs_post_thumb{
+    display: inline-block;
+    //position: relative;
+  }
+  .cs_post_thumb_overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  background: linear-gradient(180deg, rgba(8, 11, 27, 0.00) 0%, rgba(8, 12, 38, 0.44) 100%);
+  }
+  .cs_post_content{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+  }
+  .cs_post_meta{
+    position: relative;
+   gap: 25px;
+  }
+  .cs_post_author,.cs_post_category{
+    gap: 7px;
+  }
+}
 @keyframes scale-anim {
   50% {
     transform: translate(-50%, -50%) scale(1) rotate(360deg);
