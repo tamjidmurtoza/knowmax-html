@@ -42,11 +42,28 @@
         color: $white;
       }
     }
-
-    .cs_social_btn.cs_style1 a {
+.cs_social_btn.cs_style_1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  a {
+      width: 45px;
+      height: 45px;
       border: 1px solid $accent;
       border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $accent;
+      transition: all .4s ease;
+  
+      &:hover {
+        background-color: $accent;
+        color: $white;
+      }
     }
+}
+
   }
 
   .cs_author_bio {
@@ -62,16 +79,29 @@
     .cs_author_thumb {
       overflow: hidden;
     }
-    .cs_social_btn.cs_style1 a {
-      border-radius: 50px;
-      border: 1px solid #E7E7E7;
-      background-color: #F8FAFA;
-
-      &:hover {
-        background-color: $accent;
-        border-color: $accent;
-      }
-    }
+        .cs_social_btn.cs_style_1 {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          a {
+              width: 45px;
+              height: 45px;
+              border: 1px solid #E7E7E7;
+              background-color: #F8FAFA;
+              border-radius: 50%;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              color: $accent;
+              transition: all .4s ease;
+          
+              &:hover {
+                background-color: $accent;
+                color: $white;
+                border-color: $accent;
+              }
+            }
+        }      
   }
   .cs_single_post_nav {
     display: flex;
