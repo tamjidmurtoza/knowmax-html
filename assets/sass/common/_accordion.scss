@@ -14,7 +14,7 @@
     position: relative;
     z-index: 2;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .cs_accordian_toggle {
@@ -27,22 +27,16 @@
     position: absolute;
     top: 0;
     right: 0;
-
     img {
       transition: all 0.4s ease-in-out;
     }
   }
-
   .cs_accordian_body {
-    padding: 10px 30px 20px 30px;
+    padding: 0 30px 20px 30px;
     line-height: 1.625em;
   }
 
   &.active {
-    .cs_accordian_title {
-      padding-bottom: 15px;
-    }
-
     .cs_accordian_toggle {
       background-color: $accent;
 
@@ -60,7 +54,7 @@
     position: relative;
     z-index: 2;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .cs_accordian_toggle {
@@ -88,7 +82,7 @@
   .cs_curriculum_title {
     color: $primary;
     font-weight: 500;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .cs_curriculum_icon {

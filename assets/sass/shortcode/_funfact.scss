@@ -19,7 +19,6 @@
   min-height: 750px;
 }
 
-
 .cs_funfact_col {
   position: relative;
 
@@ -28,7 +27,7 @@
       content: "";
       width: 1px;
       height: 160px;
-      background: rgba(221, 221, 221, 0.30);
+      background: rgba(221, 221, 221, 0.3);
       position: absolute;
       top: 0;
       right: 45px;
@@ -41,8 +40,6 @@
   align-items: center;
   gap: 38px;
 
-
-
   .cs_funfact_icon {
     height: 90px;
     width: 90px;
@@ -53,27 +50,27 @@
 
   .cs_funfact_number {
     line-height: 1.182em;
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 
   .cs_funfact_title {
     line-height: 1.364em;
   }
 }
-.cs_funfact.cs_style_2{
+.cs_funfact.cs_style_2 {
   width: 100%;
   min-height: 370px;
   display: flex;
   align-items: center;
-  .cs_funfact_bg{
+  .cs_funfact_bg {
     width: 83.4vw;
-    height:100%;
+    height: 100%;
     position: absolute;
     left: 0;
   }
-  .cs_funfact_wrapper{
+  .cs_funfact_wrapper {
     width: 100%;
-    height:100%;
+    height: 100%;
     background-color: aquamarine;
   }
 }

@@ -1,14 +1,14 @@
 .cs_pricing_table {
   .cs_pricing_in {
     border-radius: 3px;
-    background: #FFF;
-    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+    background: #fff;
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
     padding: 27px 25px 30px;
   }
 
   .cs_pricing_heading {
     border-radius: 3px 3px 0 0;
-    padding: 12px 18px 12px 30px;
+    padding: 13px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,7 +30,7 @@
 
   .cs_pricing_info {
     .cs_pricing_title {
-      margin-bottom: 7px;
+      margin-bottom: 10px;
     }
 
     .cs_pricing_subtitle {
@@ -47,6 +47,8 @@
   }
 
   .cs_list.cs_style_1 li {
+    position: relative;
+    padding-left: 30px;
     margin-bottom: 15px;
 
     &:last-child {
@@ -55,9 +57,10 @@
 
     i {
       color: $accent;
-      margin-right: 15px;
+      position: absolute;
+      left: 0;
+      top: 2px;
     }
-
   }
 
   .cs_card_btn.cs_type_1 {
@@ -72,7 +75,6 @@
         transform: translate(30px, -25px);
         visibility: hidden;
         opacity: 0;
-
       }
 
       svg:last-child {
@@ -85,7 +87,6 @@
     svg:first-child {
       transform: translate(5px, -3px);
       transition: inherit;
-
     }
 
     svg:last-child {

@@ -4,9 +4,6 @@
 .cs_footer.cs_style_1 {
   background-color: $primary;
   .cs_footer_widget_title {
-    //color: $white;
-    //font-size: 21px;
-    //font-weight: 600;
     line-height: 1.523em;
     margin-bottom: 32px;
     @media (max-width: 991px) {
@@ -18,7 +15,7 @@
   }
 
   .cs_footer_logo {
-    margin-bottom: 35px;
+    margin-bottom: 39px;
 
     @media (max-width: 991px) {
       margin-bottom: 15px;
@@ -58,15 +55,16 @@
       }
     }
   }
-
   .cs_footer_widget + .cs_footer_widget {
     margin-top: 35px;
   }
 
   .cs_footer_widget_nav {
     li {
-      margin-bottom: 13px;
+      margin-bottom: 10px;
       color: $white;
+      font-size: 17px;
+      font-weight: 500;
 
       &:last-child {
         margin-bottom: 0;
@@ -92,7 +90,9 @@
   .cs_footer_widget_address li {
     display: flex;
     gap: 20px;
-
+    &:last-child {
+      margin-bottom: 0;
+    }
     h4 {
       margin-bottom: 10px;
     }
@@ -161,9 +161,6 @@
 }
 
 .cs_footer.cs_style_2 {
-  a:hover {
-    color: rgba($color: $white, $alpha: 0.6);
-  }
   .cs_footer_top {
     padding: 40px 0;
     position: relative;
@@ -184,7 +181,9 @@
 
   .cs_footer_center {
     padding: 72px 0;
-
+    a:hover {
+      color: rgba($color: $white, $alpha: 0.75);
+    }
     .cs_footer_widget_title {
       margin-bottom: 35px;
     }
@@ -259,6 +258,9 @@
   .cs_footer_bottom {
     padding: 24px 0;
     position: relative;
+    a:hover {
+      color: rgba($color: $white, $alpha: 0.75);
+    }
     .cs_facility_options {
       display: flex;
       align-items: center;
@@ -283,6 +285,9 @@
 .cs_footer.cs_style_3 {
   width: 100%;
   min-height: 620px;
+  a:hover {
+    color: rgba($color: $white, $alpha: 0.75);
+  }
   .cs_hero_overlay {
     background: rgba(0, 41, 53, 0.9);
   }
@@ -365,6 +370,9 @@
       &:focus {
         border-color: $white;
       }
+    }
+    .cs_btn.cs_style_1:hover {
+      color: $white;
     }
   }
   .cs_footer_bottom {
