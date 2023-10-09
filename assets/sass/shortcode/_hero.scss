@@ -48,29 +48,29 @@
     line-height: 1.459em;
   }
 }
-.cs_hero.cs_style_2{
+.cs_hero.cs_style_2 {
   padding-top: 65px;
-  .cs_hero_title{
+  .cs_hero_title {
     line-height: 1.313em;
     margin-bottom: 23px;
   }
-  .cs_hero_subtitle{
+  .cs_hero_subtitle {
     line-height: 1.556em;
     margin-bottom: 49px;
   }
-  .cs_hero_thumb img{
+  .cs_hero_thumb img {
     position: relative;
     z-index: 3;
   }
-  .cs_hero_shape1{
-  top: 0;
-  right: 30px;
+  .cs_hero_shape1 {
+    top: 0;
+    right: 30px;
   }
-  .cs_hero_shape2{
-  bottom: 60px;
-  right: 150px;
+  .cs_hero_shape2 {
+    bottom: 60px;
+    right: 150px;
   }
-  .cs_hero_shape3{
+  .cs_hero_shape3 {
     top: 50%;
     left: -34px;
     z-index: 0;
@@ -85,36 +85,36 @@
     bottom: 0;
     z-index: 0;
   }
-  .cs_hero_btn_group{
+  .cs_hero_btn_group {
     gap: 20px;
   }
-  .cs_client_info_btn{
+  .cs_client_info_btn {
     padding-left: 150px;
-    img:hover{
+    img:hover {
       z-index: 1;
-      transform:translateY(-50%) scale(1.1);
+      transform: translateY(-50%) scale(1.1);
     }
   }
-  .cs_icon1{
-   position: absolute;
-   left: 0;
-   top: 50%;
-   transform: translateY(-50%);
-    transition: all .4s ease;
+  .cs_icon1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
   }
-  .cs_icon2{
-  position: absolute;
+  .cs_icon2 {
+    position: absolute;
     left: 36px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
-  .cs_icon3{
-  position: absolute;
+  .cs_icon3 {
+    position: absolute;
     left: 72px;
     top: 50%;
     transform: translateY(-50%);
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
 }
 
@@ -153,7 +153,7 @@
     position: relative;
     z-index: 3;
     transform: translateY(-50px);
-    transition: all .6s ease-in-out;
+    transition: all 0.6s ease-in-out;
   }
 }
 
@@ -162,7 +162,6 @@
     transform: translateY(0px);
   }
 }
-
 
 .cs_page_heading {
   min-height: 400px;
@@ -198,7 +197,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       height: 100%;
       left: 0;
       top: 0;
@@ -207,7 +206,7 @@
       width: 100vw;
     }
 
-    >* {
+    > * {
       position: relative;
       z-index: 1;
     }
@@ -218,10 +217,8 @@
       }
     }
   }
-
   .breadcrumb-item {
     line-height: 1.556em;
-
     a:hover {
       color: $white;
     }
@@ -229,5 +226,8 @@
     &::before {
       color: $white;
     }
+  }
+  .breadcrumb-item[aria-current="page"] {
+    color: rgba($color: $white, $alpha: 0.75);
   }
 }

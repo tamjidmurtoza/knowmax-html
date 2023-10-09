@@ -7,31 +7,31 @@
   font-size: 18px;
   line-height: 1.5em;
   position: relative;
-    color: $white;
+  color: $white;
   overflow: hidden;
-  &::after{
-    content:"";
-    width:100%;
-    height:100%;
-    position:absolute;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
     left: 0;
     top: 0;
-    background-color:rgba(0,0,0,0);
-z-index: 1;
-transition: all 0.4s ease;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    transition: all 0.4s ease;
   }
-span{
-  position: relative;
-  z-index: 2;
-}
+  span {
+    position: relative;
+    z-index: 2;
+  }
   svg {
     position: relative;
-      z-index: 2;
+    z-index: 2;
     margin-left: 7px;
   }
 
-  &:hover::after{
-    background-color: rgba(0, 0, 0, .3);
+  &:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -42,11 +42,11 @@ button.cs_btn.cs_style_1 {
 .cs_card_btn {
   display: inline-block;
   text-align: center;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .cs_card_btn.cs_type_1 {
-  background: #EBE8FE;
+  background: #ebe8fe;
   width: 100%;
   padding: 10px 20px;
 }
@@ -58,7 +58,22 @@ button.cs_btn.cs_style_1 {
   line-height: 30px;
 
   &:hover {
-    background-color: #EBE8FE;
+    background-color: #ebe8fe;
     color: $primary;
+  }
+}
+/*---------------------------
+ Social Button Design
+-----------------------------*/
+.cs_social_btn.cs_style_1 {
+  display: flex;
+  gap: 10px;
+
+  li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.4s ease-in-out;
   }
 }

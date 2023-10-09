@@ -42,7 +42,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
     }
 
@@ -63,11 +63,10 @@
     border-radius: 50%;
     color: $accent;
     font-size: 12px;
-
   }
 
   .cs_widget_toggle i {
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .cs_widget_body {
@@ -93,7 +92,7 @@
 
     .fa-star {
       margin-right: 10px;
-      color: #FFC107;
+      color: #ffc107;
     }
   }
 
@@ -119,7 +118,7 @@
 }
 
 .cs_sidebar.cs_style_2 {
-  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.1);
 
   .cs_sidebar_widget.cs_style_2 {
     padding: 30px 24px 50px;
@@ -162,18 +161,13 @@
     align-items: center;
     gap: 30px;
     .cs_social_btn.cs_style_1 {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 0;
-      color: $accent;
-      li a:hover{
-        display: inline-block;
-       color: $accent;
-       transition: all 1s cubic-bezier(0.28, 1.84, 0.55, -0.11);
-      &:hover {
-          color: rgba($color: $accent, $alpha: .8);
-          transform: scale(1.3);
+      gap: 20px;
+      a {
+        background-color: transparent;
+        color: $accent;
+        transition: all 1s cubic-bezier(0.28, 1.84, 0.55, -0.11);
+        &:hover {
+          transform: scale(1.2);
         }
       }
     }
@@ -193,7 +187,7 @@
     &.cs_search {
       padding: 22px 30px;
       margin-bottom: 25px;
-      background: #F5F5F5;
+      background: #f5f5f5;
     }
   }
 
@@ -233,8 +227,6 @@
       }
     }
 
-
-
     .cs_search_icon {
       width: 20%;
       height: 100%;
@@ -254,7 +246,6 @@
       }
     }
   }
-
 
   .cs_tag_list {
     display: flex;

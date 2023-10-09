@@ -1,97 +1,246 @@
 /*--------------------------------------------------------------
 33. Footer
 ----------------------------------------------------------------*/
-.cs_footer.cs_style_1{
-    background-color: $primary;
+.cs_footer.cs_style_1 {
+  background-color: $primary;
   .cs_footer_widget_title {
-    color: $white;
-    font-size: 21px;
-    font-weight: 600;
+    //color: $white;
+    //font-size: 21px;
+    //font-weight: 600;
     line-height: 1.523em;
-    margin-bottom: 32px;  
-      @media (max-width: 991px) {
-        margin-bottom: 15px;
-      }
+    margin-bottom: 32px;
+    @media (max-width: 991px) {
+      margin-bottom: 15px;
     }
-    .cs_main_footer {
-      position: relative;
+  }
+  .cs_main_footer {
+    position: relative;
+  }
+
+  .cs_footer_logo {
+    margin-bottom: 35px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 15px;
     }
-  
-    .cs_footer_logo {
-      margin-bottom: 35px;
-  
-      @media (max-width: 991px) {
-        margin-bottom: 15px;
-      }
-    }
-  
-    .cs_footer_widget input {
-      width: 100%;
-      background-color: #0E1013;
-      border: 1px solid $accent;
-      outline: none;
-      padding: 14px 20px;
-      margin-bottom: 20px;
-      margin-top: 17px;
+  }
+
+  .cs_footer_widget input {
+    width: 100%;
+    background-color: #0e1013;
+    border: 1px solid $accent;
+    outline: none;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    margin-top: 17px;
+    color: #c1c1c1;
+    transition: all 0.4s ease;
+
+    &::placeholder {
       color: #c1c1c1;
-      transition: all .4s ease;
-  
-      &::placeholder {
-        color: #c1c1c1;
-      }
-  
-      &:focus {
-        border-color: $white;
-      }
-  
     }
-  
-    .cs_social_btn.cs_style_1 {
-      display: flex;
-      gap: 10px;
-  
+
+    &:focus {
+      border-color: $white;
+    }
+  }
+
+  .cs_social_btn.cs_style_1 {
+    a {
+      border-radius: 2px;
+      height: 42px;
+      width: 42px;
+      background-color: $white;
+      color: $accent;
+      &:hover {
+        background-color: $accent;
+        color: $white;
+      }
+    }
+  }
+
+  .cs_footer_widget + .cs_footer_widget {
+    margin-top: 35px;
+  }
+
+  .cs_footer_widget_nav {
+    li {
+      margin-bottom: 13px;
+      color: $white;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      svg {
+        transition: all 0.4s ease;
+        margin-right: 7px;
+      }
+
       a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 2px;
-        height: 42px;
-        width: 42px;
-        background-color: $white;
-        color: $accent;
-        transition: all .4s ease-in-out;
-  
-        &:hover {
-          background-color: $accent;
-          color: $white;
+        color: $white;
+      }
+
+      &:hover {
+        svg {
+          color: $accent;
         }
       }
     }
-  
-    .cs_footer_widget+.cs_footer_widget {
-      margin-top: 35px;
+  }
+
+  .cs_footer_widget_address li {
+    display: flex;
+    gap: 20px;
+
+    h4 {
+      margin-bottom: 10px;
     }
-  
+  }
+
+  .cs_copyright_wrap {
+    background-color: $primary;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      opacity: 0.3;
+      background: $border;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .cs_facility_options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .cs_copyright_text {
+    padding: 20px 0;
+  }
+
+  .cs_newsletter {
+    .cs_btn.cs_style_1 {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      transform: translateY(-50%);
+      padding: 6px 20px;
+
+      // &:hover {
+      //   color: $white;
+      // }
+    }
+
+    @media (max-width: 991px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .cs_footer_shape1 {
+    position: absolute;
+    bottom: 140px;
+    right: 130px;
+
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+}
+
+.cs_footer.cs_style_2 {
+  a:hover {
+    color: rgba($color: $white, $alpha: 0.6);
+  }
+  .cs_footer_top {
+    padding: 40px 0;
+    position: relative;
+    .cs_footer_title {
+      line-height: 1.3em;
+    }
+    .cs_inputbox {
+      gap: 24px;
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 15px 20px;
+        border: 1px solid rgba(234, 24, 38, 0.25);
+      }
+    }
+  }
+
+  .cs_footer_center {
+    padding: 72px 0;
+
+    .cs_footer_widget_title {
+      margin-bottom: 35px;
+    }
+    .cs_footer_subtitle {
+      margin-bottom: 30px;
+    }
+    .cs_footer_title.cs_type_1 {
+      line-height: 1.2em;
+      margin-bottom: 7px;
+    }
+    .cs_schedule_nav {
+      display: inline-flex;
+      flex-direction: column;
+      a {
+        padding: 8px 0;
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .cs_post_separator {
+      width: 100%;
+      height: 1px;
+      background: rgba(221, 221, 221, 0.2);
+      margin: 20px 0;
+    }
+
+    .cs_post.cs_style_3 {
+      align-items: flex-start;
+      margin-bottom: 0;
+
+      .cs_post_meta {
+        margin-bottom: 6px;
+      }
+
+      .cs_post_thumb {
+        width: 85px;
+        height: 85px;
+      }
+    }
     .cs_footer_widget_nav {
-  
       li {
         margin-bottom: 13px;
         color: $white;
-  
-  
         &:last-child {
           margin-bottom: 0;
         }
-  
         svg {
-          transition: all .4s ease-in-out;
+          transition: all 0.4s ease-in-out;
           margin-right: 7px;
         }
-  
         a {
           color: $white;
         }
-  
         &:hover {
           svg {
             color: $accent;
@@ -99,303 +248,126 @@
         }
       }
     }
-  
+    .cs_img_gallery {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  .cs_footer_bottom {
+    padding: 24px 0;
+    position: relative;
+    .cs_facility_options {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      @media (max-width: 991px) {
+        justify-content: start;
+        gap: 20px;
+      }
+    }
+  }
+  .cs_footer_overlay_shape {
+    width: 38vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: calc(0vw - 32px);
+  }
+}
+
+.cs_footer.cs_style_3 {
+  width: 100%;
+  min-height: 620px;
+  .cs_hero_overlay {
+    background: rgba(0, 41, 53, 0.9);
+  }
+  .cs_footer_top {
+    padding: 25px 0;
+    .cs_brand {
+      position: relative;
+      z-index: 2;
+    }
+    .cs_social_btn.cs_style_1 a {
+      height: 40px;
+      width: 40px;
+      background-color: #4c5d77;
+      color: $white;
+      &:hover {
+        background-color: $accent;
+        color: $white;
+      }
+    }
+    .cs_footer_top_nav {
+      gap: 55px;
+    }
+    .cs_facility_options {
+      display: flex;
+      gap: 45px;
+    }
+  }
+  .cs_footer_center {
+    padding: 90px 0;
+    .cs_footer_widget_title {
+      margin-bottom: 35px;
+    }
     .cs_footer_widget_address li {
       display: flex;
       gap: 20px;
-  
-      h4 {
-        margin-bottom: 10px;
-      }
     }
-  
-    .cs_copyright_wrap {
-      background-color: $primary;
-      position: relative;
-  
-      &::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        opacity: 0.3;
-        background: $border;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-  
-      .cs_facility_options {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-  
-    .cs_copyright_text {
-      padding: 20px 0;
-    }
-  
-    .cs_newsletter {
-      .cs_btn.cs_style1 {
-        display: inline-flex;
-        align-items: center;
-        gap: 7px;
-        position: absolute;
-        top: 50%;
-        right: 6px;
-        transform: translateY(-50%);
-        padding: 6px 20px;
-  
-        &:hover {
-          color: $white;
-  
-          // &::after {
-          //   background-color: $light_green;
-          // }
+    .cs_schedule_nav {
+      display: flex;
+      flex-direction: column;
+      a {
+        display: inline-block;
+        padding: 8px 0;
+        &:last-child {
+          padding-bottom: 0;
         }
       }
-  
-      @media (max-width: 991px) {
-        width: 50%;
-      }
-  
-      @media (max-width: 767px) {
-        width: 100%;
-      }
     }
-  
-    .cs_footer_shape1 {
-      position: absolute;
-      bottom: 140px;
-      right: 130px;
-  
-      @media (max-width: 1199px) {
-        display: none;
-      }
+    .cs_post_separator {
+      width: 100%;
+      height: 1px;
+      background: rgba(221, 221, 221, 0.2);
+      margin: 20px 0;
     }
-}
-
-.cs_footer.cs_style_2{
-  a:hover{
-    color: rgba($color: $white, $alpha: .6);
-  }
-    .cs_footer_top {
-      padding: 40px 0;
-      position: relative;
-      .cs_footer_title{
-        line-height: 1.3em;
-      }
-      .cs_inputbox {
-          gap: 24px;      
-          input {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 15px 20px;
-            border: 1px solid rgba(234, 24, 38, 0.25);
-          }
-        }
-    }
-  
-    .cs_footer_center {
-      padding: 72px 0;
-  
-      .cs_footer_widget_title {
-        margin-bottom: 35px;
-      }
-  .cs_footer_subtitle{
-    margin-bottom: 30px;
-  }
-  .cs_footer_title.cs_type_1{
-    line-height: 1.2em;
-    margin-bottom: 7px;
-  }
-      .cs_schedule_nav {
-        display: inline-flex;
-        flex-direction: column; 
-        a {
-          padding: 8px 0;
-  
-          &:last-child {
-            padding-bottom: 0;
-          }
-        }
-      }
-  
-      .cs_post_separator {
-        width: 100%;
-        height: 1px;
-        background: rgba(221, 221, 221, 0.20);
-        margin: 20px 0;
-      }
-  
-      .cs_post.cs_style_3 {
-        align-items: flex-start;
-        margin-bottom: 0;
-  
-        .cs_post_meta {
-          margin-bottom: 6px;
-        }
-  
-        .cs_post_thumb {
-          width: 85px;
-          height: 85px;
-        }
-      }
-          .cs_footer_widget_nav {
-               li {
-                 margin-bottom: 13px;
-                 color: $white;
-                 &:last-child {
-                   margin-bottom: 0;
-                 }     
-                 svg {
-                   transition: all .4s ease-in-out;
-                   margin-right: 7px;
-                 }      
-                 a {
-                   color: $white;
-                 }      
-                 &:hover {
-                   svg {
-                     color: $accent;
-                   }
-                 }
-               }
-             }
-      .cs_img_gallery {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-    }
-  
-    .cs_footer_bottom {
-      padding: 24px 0;
-      position: relative;
-      .cs_facility_options {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 40px;
-          @media (max-width:991px) {
-            justify-content: start;
-            gap: 20px;
-
-          }
-        }
-    }
-    .cs_footer_overlay_shape{
-      width: 38vw;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      margin-left: calc(0vw - 32px);
-    }
-}
-
-.cs_footer.cs_style_3{
-  width: 100%;
-  min-height: 620px;
-  .cs_hero_overlay{
-    background: rgba(0, 41, 53, 0.90);
-  }
-  .cs_footer_top{
-    padding: 25px 0;
-    .cs_brand {
-        position: relative;
-        z-index: 2;
-      }    
-      .cs_social_btn.cs_style_1 {
-        display: flex;
-        gap: 10px;
-    
-        a {
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #4C5D77;
-          color: $white;   
-          &:hover {
-            background-color: $accent;
-            color: $white;
-          }
-        }
-      }   
-      .cs_footer_top_nav {
-        gap: 55px;
-        align-items: flex-end;
-      }    
-      .cs_facility_options {
-        display: flex;
-        gap: 45px;
-      }
-  }
- .cs_footer_center{
-  padding: 90px 0;
-  .cs_footer_widget_title{
-    margin-bottom: 35px;
-  }
-  .cs_footer_widget_address li{
-    display: flex;
-    gap: 20px;
-  }
-  .cs_schedule_nav{
-    display: flex;
-    flex-direction: column;
-    a{
-      display: inline-block;
-      padding: 8px 0;
-      &:last-child{
-        padding-bottom: 0;
-      }
-    }
-  }
-  .cs_post_separator{
-    width: 100%;
-    height: 1px;
-    background: rgba(221, 221, 221, 0.20);
-    margin: 20px 0;
-  }
-  .cs_post.cs_style_3{
-    align-items: flex-start;
-    margin-bottom: 0;
-    .cs_post_meta {
+    .cs_post.cs_style_3 {
+      align-items: flex-start;
+      margin-bottom: 0;
+      .cs_post_meta {
         margin-bottom: 6px;
-      }    
+      }
       .cs_post_thumb {
         width: 85px;
         height: 85px;
       }
+    }
+    .cs_footer_widget input {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid rgba($color: $white, $alpha: 0.8);
+      outline: none;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      margin-top: 17px;
+      color: #c1c1c1;
+      transition: all 0.4s ease;
+
+      &::placeholder {
+        color: #c1c1c1;
+      }
+
+      &:focus {
+        border-color: $white;
+      }
+    }
   }
-     .cs_footer_widget input {
-       width: 100%;
-       background-color: transparent;
-        border:1px solid rgba($color: $white, $alpha: .8);
-       outline: none;
-       padding: 14px 20px;
-       margin-bottom: 20px;
-       margin-top: 17px;
-       color: #c1c1c1;
-       transition: all .4s ease;
-  
-       &::placeholder {
-         color: #c1c1c1;
-       }
-  
-       &:focus {
-         border-color: $white;
-       }
-  
-     }
- }
- .cs_footer_bottom{
-  padding: 18px 0;
- }
-   
+  .cs_footer_bottom {
+    padding: 18px 0;
+  }
 }
