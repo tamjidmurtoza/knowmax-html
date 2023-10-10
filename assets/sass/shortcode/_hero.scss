@@ -52,11 +52,11 @@
   padding-top: 65px;
   .cs_hero_title {
     line-height: 1.313em;
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
   .cs_hero_subtitle {
     line-height: 1.556em;
-    margin-bottom: 49px;
+    margin-bottom: 50px;
   }
   .cs_hero_thumb img {
     position: relative;
@@ -65,15 +65,34 @@
   .cs_hero_shape1 {
     top: 0;
     right: 30px;
+    animation: moving_xy 10s linear infinite;
+  }
+
+  @keyframes moving_xy {
+    50% {
+      transform: translateX(30px) rotate(15deg);
+    }
   }
   .cs_hero_shape2 {
     bottom: 60px;
     right: 150px;
+    animation: moving_x 20s linear infinite;
+  }
+  @keyframes moving_x {
+    50% {
+      transform: translateX(100px);
+    }
   }
   .cs_hero_shape3 {
-    top: 50%;
+    top: 51%;
     left: -34px;
     z-index: 0;
+    animation: moving_y 15s linear infinite;
+  }
+  @keyframes moving_y {
+    50% {
+      transform: translateY(-70px);
+    }
   }
   .cs_hero_hidden {
     width: 100%;
@@ -90,31 +109,24 @@
   }
   .cs_client_info_btn {
     padding-left: 150px;
-    img:hover {
-      z-index: 1;
-      transform: translateY(-50%) scale(1.1);
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .cs_btn_text {
+      line-height: 26px;
     }
   }
   .cs_icon1 {
-    position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.4s ease;
   }
   .cs_icon2 {
-    position: absolute;
     left: 36px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.4s ease;
   }
   .cs_icon3 {
-    position: absolute;
     left: 72px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.4s ease;
   }
 }
 
@@ -136,12 +148,12 @@
 
   .cs_hero_title {
     line-height: 1.154em;
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 
   .cs_hero_subtitle {
     line-height: 1.556em;
-    margin-bottom: 42px;
+    margin-bottom: 43px;
   }
 
   .cs_btn.cs_style_1 {

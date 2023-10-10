@@ -2,7 +2,6 @@
 Isotop Menu Style1
 -------------------------------*/
 .cs_isotope_filter.cs_style_1 {
-
   ul {
     display: flex;
     align-items: center;
@@ -32,32 +31,30 @@ Isotop Menu Style1
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   li {
     margin: 0 5px;
 
     a {
-      padding: 7px 25px 7px 15px;
+      padding: 6px 30px 9px 12px;
       display: inline-block;
       font-size: 18px;
       font-weight: 500;
       clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
-      transition: all .4s ease;
+      transition: all 0.4s ease;
     }
-&:last-child a {
-  padding: 7px 15px 7px 25px;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
-}
+    &:last-child a {
+      padding: 6px 12px 9px 32px;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
+    }
     &:hover,
     &.active {
       a {
         background-color: $accent;
         color: $white;
-        
       }
-      
     }
   }
 }
@@ -223,7 +220,6 @@ Isotop Menu Style1
 }
 
 @media screen and (max-width: 991px) {
-
   .cs_isotope_col_4 .cs_grid_sizer,
   .cs_isotope_col_4 .cs_isotope_item {
     width: 50%;
@@ -245,7 +241,6 @@ Isotop Menu Style1
 }
 
 @media screen and (max-width: 767px) {
-
   .cs_isotope_col_5 .cs-w50,
   .cs_isotope_col_4 .cs-w50,
   .cs_isotope_col_3 .cs-w50,

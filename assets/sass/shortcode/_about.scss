@@ -1,37 +1,51 @@
-.cs_about.cs_style_2{
-  .cs_iconbox.cs_style_4{
+.cs_about.cs_style_2 {
+  .cs_section_title {
+    line-height: 1.222em;
+  }
+  .cs_section_subtitle {
+    margin-bottom: 22px;
+  }
+  .cs_iconbox.cs_style_4 {
     padding: 17px 40px;
-    gap: 15px;
+    position: relative;
     margin-bottom: 30px;
-    .cs_iconbox_title{
+    .cs_iconbox_icon {
+      position: absolute;
+      left: 40px;
+      top: 20px;
+    }
+    .cs_iconbox_text {
+      padding-left: 65px;
+    }
+    .cs_iconbox_title {
       line-height: 28px;
     }
   }
-  q{
+  q {
     line-height: 1.5em;
   }
 }
 
 .cs_about.cs_style_3 {
+  .cs_section_title {
+    line-height: 1.146em;
+  }
   .cs_mission_title {
-      line-height: 1.167em;
-      margin-bottom: 5px;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+  }
+  .cs_about_subtitle {
+    margin-bottom: 20px;
+  }
+  .cs_mission {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
-    .cs_about_subtitle {
-      margin-bottom: 20px;
-    }  
-    .cs_mission {
-      margin-bottom: 17px;
-  
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+  }
   .cs_about_shape1 {
-    margin-top: 50px;
-    // position: absolute;
-    // left: 20px;
-    // bottom: 30px;
+    margin-top: 30px;
   }
 
   .cs_about_shape2 {
@@ -81,7 +95,6 @@
   }
 }
 
-
 .cs_tranquil_right {
   padding-left: 40px;
   border-left: 2px dashed $accent;
@@ -95,6 +108,6 @@
 
 @keyframes rotate-x {
   50% {
-    transform: translateX(20px);
+    transform: translateX(30px) rotate(10deg);
   }
 }

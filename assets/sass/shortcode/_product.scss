@@ -115,7 +115,7 @@
     border: 1px solid $border;
     border-top: 0;
     border-radius: 0 0 5px 5px;
-    padding: 20px 36px;
+    padding: 24px 36px 20px;
     margin-top: -4px;
     display: flex;
     flex-direction: column;
@@ -125,9 +125,9 @@
       margin-bottom: 6px;
     }
     .cs_rating {
-      transform: scale(0.7);
+      transform: scale(0.66);
       letter-spacing: 13px;
-      width: 192px;
+      width: 194px;
       margin-bottom: 6px;
     }
   }
