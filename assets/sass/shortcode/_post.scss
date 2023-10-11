@@ -91,7 +91,6 @@
     display: inline-block;
     margin-bottom: 30px;
   }
-
   .cs_play_btn {
     position: absolute;
     top: 50%;
@@ -122,22 +121,21 @@
       animation: scale-anim 30s cubic-bezier(0, 0.04, 1, 0.99) infinite;
     }
   }
-
   .cs_post_title {
-    line-height: 1.5em;
-    margin: 18px 0;
+    line-height: 1.286em;
+    margin-top: 20px;
   }
-
   .cs_post_subtitle {
     margin-bottom: 28px;
   }
-
   .cs_btn.cs_style_1:hover {
     background-color: $accent;
     color: $white;
   }
 
-  /* Slider Arrow Styling*/
+  /*---------------------------
+   Slider Arrow Styling
+   ---------------------------*/
   .cs_slider {
     position: relative;
     margin-bottom: -6px;
@@ -170,11 +168,10 @@
 }
 
 .cs_post.cs_style_3 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  min-height: 110px;
+  padding-left: 130px;
   margin-bottom: 20px;
-
+  position: relative;
   &:last-child {
     margin-bottom: 0;
   }
@@ -182,6 +179,9 @@
   .cs_post_thumb {
     width: 110px;
     height: 110px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .cs_post_info {

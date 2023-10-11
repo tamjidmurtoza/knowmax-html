@@ -74,7 +74,6 @@
 
   &:hover {
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-
     .cs_course_badge {
       background-color: $accent;
       color: $white;
@@ -242,19 +241,26 @@
 }
 
 .cs_instructor_bio {
-  display: flex;
-  gap: 10px;
+  position: relative;
+  padding-left: 50px;
   .cs_instructor_thumb {
-    flex: none;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
 }
 
-/* Start course page design*/
+/*-----------------------------------
+ Start course page design
+ -----------------------------------*/
 .cs_course_heading {
   .cs_isotope_filter.cs_style_1 ul {
     justify-content: flex-start;
   }
-
+  h3 {
+    line-height: 1.4em;
+  }
   .cs_filter_icon {
     width: max-content;
     border-radius: 2px;

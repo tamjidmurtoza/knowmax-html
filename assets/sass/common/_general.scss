@@ -264,13 +264,9 @@ hr {
 .cs_remove_overflow {
   overflow: visible;
 }
-// .cs_reverse{
-//   flex-direction:row-reverse;
-//   gap:0;
-// }
-// .cs_mb_10 {
-//   margin-bottom: 10px;
-// }
+.cs_gap_y_20 {
+  gap: 20px 0;
+}
 .cs_gap_y_24 {
   gap: 24px 0;
 }
@@ -282,6 +278,9 @@ hr {
 }
 .cs_gap_y_50 {
   gap: 50px 0;
+}
+.cs_gap_y_70 {
+  gap: 70px 0;
 }
 br {
   @media (max-width: 1199px) {
@@ -356,10 +355,13 @@ br {
 }
 .cs_list.cs_style_3 li {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  transition: all 0.4s ease-in-out;
+  position: relative;
+  padding-left: 40px;
+  span:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -417,6 +419,37 @@ br {
 /*----------------------- 
 End Review
 --------------------------*/
+/*---------------------------------
+ Scroll To Top btn styling
+-----------------------------------*/
+.cs_scrollup {
+  width: 50px;
+  height: 50px;
+  background-color: $accent;
+  color: $white;
+  position: relative;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  transform: scale(0);
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  &.cs_scrollup_show {
+    transform: scale(1);
+  }
+  i {
+    transform: translateY(40%);
+    animation: scaleFull 2s linear infinite;
+  }
+}
+@keyframes scaleFull {
+  50% {
+    transform: translateY(30%);
+  }
+}
 /*---------------------------------
  Bootstrap Component styling
 -----------------------------------*/

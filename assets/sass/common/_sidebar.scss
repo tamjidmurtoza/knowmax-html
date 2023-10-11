@@ -4,7 +4,7 @@
 
   .cs_widget_title {
     padding: 24px 0 16px;
-    line-height: 1.3em;
+    line-height: 1.444em;
     position: relative;
     display: flex;
     align-items: center;
@@ -79,7 +79,14 @@
       cursor: pointer;
     }
   }
-
+  .cs_list.cs_style_1 {
+    a {
+      transition: all 0.3s ease;
+      &.dark {
+        color: $accent;
+      }
+    }
+  }
   .cs_list.cs_style_2 label {
     display: flex;
     align-items: center;
@@ -96,22 +103,21 @@
     }
   }
 
-  .cs_hidden_text {
-    color: $primary;
-    display: none;
-  }
-
   .cs_list.cs_style_2 {
     margin-top: 10px;
-
+    &.cs_hidden_text {
+      color: $primary;
+      display: none;
+    }
     a {
       display: block;
       padding: 5px;
-      background: $gray;
       font-weight: 500;
-
       &:not(:last-child) {
         margin-bottom: 5px;
+      }
+      &:hover {
+        color: rgba($primary, $alpha: 0.7);
       }
     }
   }

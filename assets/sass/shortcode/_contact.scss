@@ -1,8 +1,10 @@
 .cs_contact {
-  background-color: #F7F8FD;
-
+  background-color: #f7f8fd;
+  h2 {
+    line-height: 1em;
+  }
   .cs_form_field {
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     background: $white;
 
     &:focus {
@@ -12,19 +14,21 @@
 
   textarea {
     resize: none;
+    margin-bottom: 20px;
   }
 
   label {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .cs_custom_select_wrap {
     padding: 13px 0;
 
-    .select2-container--default .select2-selection--single .select2-selection__arrow::after {
+    .select2-container--default
+      .select2-selection--single
+      .select2-selection__arrow::after {
       content: "\f0da";
     }
-
   }
 
   .select2-container {
@@ -32,7 +36,9 @@
     padding: 0 15px;
   }
 
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
     color: $secondary;
   }
 }

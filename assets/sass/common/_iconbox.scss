@@ -1,9 +1,8 @@
 .cs_iconbox.cs_style_1 {
-  display: flex;
-  gap: 13px;
-
+  position: relative;
+  padding-left: 45px;
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   .cs_iconbox_icon {
@@ -15,8 +14,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-
   .cs_iconbox_title {
     line-height: 29px;
     margin-bottom: 5px;
@@ -25,20 +26,22 @@
 
 .cs_iconbox.cs_style_2 {
   border: 1px solid $border;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   padding: 25px 22px;
   background-color: $white;
   position: relative;
-
+  &:last-child {
+    margin-bottom: 0;
+  }
   &::after {
     content: "";
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     border-top: 1px solid $border;
     border-left: 1px solid $border;
     background-color: $white;
     position: absolute;
-    left: -8px;
+    left: -8.3px;
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
   }

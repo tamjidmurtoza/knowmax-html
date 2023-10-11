@@ -47,6 +47,12 @@
   .cs_rating_text {
     line-height: 1.459em;
   }
+  .cs_hero_shape {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 0;
+  }
 }
 .cs_hero.cs_style_2 {
   padding-top: 65px;

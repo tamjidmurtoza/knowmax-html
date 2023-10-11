@@ -1444,6 +1444,10 @@ hr {
   overflow: visible;
 }
 
+.cs_gap_y_20 {
+  gap: 20px 0;
+}
+
 .cs_gap_y_24 {
   gap: 24px 0;
 }
@@ -1458,6 +1462,10 @@ hr {
 
 .cs_gap_y_50 {
   gap: 50px 0;
+}
+
+.cs_gap_y_70 {
+  gap: 70px 0;
 }
 
 @media (max-width: 1199px) {
@@ -1543,15 +1551,13 @@ hr {
 
 .cs_list.cs_style_3 li {
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 18px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  position: relative;
+  padding-left: 40px;
+}
+.cs_list.cs_style_3 li span:first-child {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .cs_list.cs_style_3 li:last-child {
   margin-bottom: 0;
@@ -1610,6 +1616,55 @@ hr {
 /*----------------------- 
 End Review
 --------------------------*/
+/*---------------------------------
+ Scroll To Top btn styling
+-----------------------------------*/
+.cs_scrollup {
+  width: 50px;
+  height: 50px;
+  background-color: #573cff;
+  color: #fff;
+  position: relative;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.cs_scrollup.cs_scrollup_show {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.cs_scrollup i {
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  -webkit-animation: scaleFull 2s linear infinite;
+          animation: scaleFull 2s linear infinite;
+}
+
+@-webkit-keyframes scaleFull {
+  50% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+}
+
+@keyframes scaleFull {
+  50% {
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
+  }
+}
 /*---------------------------------
  Bootstrap Component styling
 -----------------------------------*/
@@ -1872,15 +1927,15 @@ button.cs_btn.cs_style_1 {
   gap: 10px;
 }
 
-.cs_slider.cs_style_1 .cs_slider_wrapper {
+.cs_slider.cs_style_2 .cs_slider_wrapper {
   margin-left: -12px;
   margin-right: -12px;
 }
-.cs_slider.cs_style_1 .slick_slide_in {
+.cs_slider.cs_style_2 .slick_slide_in {
   padding-left: 12px;
   padding-right: 12px;
 }
-.cs_slider.cs_style_1 .slick-list {
+.cs_slider.cs_style_2 .slick-list {
   padding-top: 50px;
 }
 
@@ -1951,7 +2006,20 @@ button.cs_btn.cs_style_1 {
 /*----------------------
 Slider arrow design
 ------------------------*/
-.cs_slider_arrows.cs_style_1 {
+.cs_hero.cs_style_1 .cs_slider_arrow {
+  background-color: #fff;
+  color: #573cff;
+  position: absolute;
+  bottom: 200px;
+}
+.cs_hero.cs_style_1 .cs_left_arrow {
+  right: 0;
+}
+.cs_hero.cs_style_1 .cs_right_arrow {
+  right: 100px;
+}
+
+.cs_slider_arrows.cs_style_2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1960,7 +2028,7 @@ Slider arrow design
           align-items: center;
   gap: 15px;
 }
-.cs_slider_arrows.cs_style_1 .cs_slider_arrow {
+.cs_slider_arrows.cs_style_2 .cs_slider_arrow {
   width: 50px;
   height: 50px;
   border: 1px solid #573cff;
@@ -1981,37 +2049,86 @@ Slider arrow design
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-.cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover {
+.cs_slider_arrows.cs_style_2 .cs_slider_arrow:hover {
   background-color: #573cff;
   color: #fff;
 }
 
-.cs_slider.cs_style_2 .cs_slider_arrow {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+.cs_slider_arrows.cs_style_3 .cs_slider_arrow,
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow {
   background-color: #fff;
+  color: #573cff;
   border: none;
   width: 80px;
   height: 80px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.cs_slider.cs_style_2 .cs_slider_arrow i {
-  font-size: 28px;
-}
-.cs_slider.cs_style_2 .cs_slider_arrow::before {
+.cs_slider_arrows.cs_style_3 .cs_slider_arrow::before,
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow::before {
   content: "";
   width: 120%;
   height: 120%;
   border: 2px solid #573cff;
   border-radius: 50%;
   position: absolute;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.cs_slider.cs_style_2 .cs_left_arrow {
-  left: 60px;
+.cs_slider_arrows.cs_style_3 .cs_slider_arrow:hover,
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover {
+  background-color: #573cff;
+  color: #fff;
 }
-.cs_slider.cs_style_2 .cs_right_arrow {
-  right: 60px;
+.cs_slider_arrows.cs_style_3 .cs_slider_arrow:hover::before,
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover::before {
+  border-color: #fff;
+}
+.cs_slider_arrows.cs_style_3 i,
+.cs_slider_arrows.cs_style_1 i {
+  font-size: 28px;
+}
+
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow {
+  position: absolute;
+  z-index: 1;
+}
+.cs_slider_arrows.cs_style_1 .cs_slider_arrow:hover::before {
+  border-color: #573cff;
+}
+.cs_slider_arrows.cs_style_1 .cs_right_arrow {
+  right: 68px;
+  bottom: 68px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+.cs_slider_arrows.cs_style_1 .cs_left_arrow {
+  right: 195px;
+  bottom: 85px;
+}
+
+.cs_slider_arrows.cs_style_3 .cs_slider_arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.cs_slider_arrows.cs_style_3 .cs_right_arrow {
+  right: 100px;
+}
+.cs_slider_arrows.cs_style_3 .cs_left_arrow {
+  left: 100px;
 }
 
 .select2-container .select2-container--default .select2-container--open {
@@ -2022,7 +2139,7 @@ Slider arrow design
   min-width: 100%;
   background-color: #fff;
   margin-top: 10px;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
 }
 
 .select2-selection__rendered {
@@ -2049,25 +2166,26 @@ Slider arrow design
   left: 0;
 }
 
-.select2-selection__arrow {
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: inline-block;
   height: 26px;
   position: absolute;
   top: 1px;
-  right: 2px;
+  right: 10px;
   width: 20px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.select2-selection__arrow::before {
-  content: "\f0d7";
+.select2-container--default .select2-selection--single .select2-selection__arrow::before {
+  content: "\f078";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #573cff;
 }
-.select2-selection__arrow::after {
+.select2-container--default .select2-selection--single .select2-selection__arrow::after {
   display: none;
 }
-.select2-selection__arrow b {
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
   display: none;
 }
 
@@ -3590,9 +3708,7 @@ odometer
   margin: 20px 0;
 }
 .cs_footer.cs_style_2 .cs_footer_center .cs_post.cs_style_3 {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  padding-left: 105px;
   margin-bottom: 0;
 }
 .cs_footer.cs_style_2 .cs_footer_center .cs_post.cs_style_3 .cs_post_meta {
@@ -3793,7 +3909,7 @@ odometer
 }
 .cs_sidebar.cs_style_1 .cs_widget_title {
   padding: 24px 0 16px;
-  line-height: 1.3em;
+  line-height: 1.444em;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3874,6 +3990,13 @@ odometer
   position: relative;
   cursor: pointer;
 }
+.cs_sidebar.cs_style_1 .cs_list.cs_style_1 a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.cs_sidebar.cs_style_1 .cs_list.cs_style_1 a.dark {
+  color: #573cff;
+}
 .cs_sidebar.cs_style_1 .cs_list.cs_style_2 label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3891,21 +4014,23 @@ odometer
   margin-right: 10px;
   color: #ffc107;
 }
-.cs_sidebar.cs_style_1 .cs_hidden_text {
-  color: #002935;
-  display: none;
-}
 .cs_sidebar.cs_style_1 .cs_list.cs_style_2 {
   margin-top: 10px;
+}
+.cs_sidebar.cs_style_1 .cs_list.cs_style_2.cs_hidden_text {
+  color: #002935;
+  display: none;
 }
 .cs_sidebar.cs_style_1 .cs_list.cs_style_2 a {
   display: block;
   padding: 5px;
-  background: #f8f9fa;
   font-weight: 500;
 }
 .cs_sidebar.cs_style_1 .cs_list.cs_style_2 a:not(:last-child) {
   margin-bottom: 5px;
+}
+.cs_sidebar.cs_style_1 .cs_list.cs_style_2 a:hover {
+  color: rgba(0, 41, 53, 0.7);
 }
 
 .cs_sidebar.cs_style_2 {
@@ -4419,13 +4544,11 @@ Isotop Menu Style1
 }
 
 .cs_iconbox.cs_style_1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 13px;
+  position: relative;
+  padding-left: 45px;
 }
 .cs_iconbox.cs_style_1:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_icon {
   width: 32px;
@@ -4442,6 +4565,9 @@ Isotop Menu Style1
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_title {
   line-height: 29px;
@@ -4450,20 +4576,23 @@ Isotop Menu Style1
 
 .cs_iconbox.cs_style_2 {
   border: 1px solid #dedede;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   padding: 25px 22px;
   background-color: #fff;
   position: relative;
 }
+.cs_iconbox.cs_style_2:last-child {
+  margin-bottom: 0;
+}
 .cs_iconbox.cs_style_2::after {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-top: 1px solid #dedede;
   border-left: 1px solid #dedede;
   background-color: #fff;
   position: absolute;
-  left: -8px;
+  left: -8.3px;
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
@@ -4659,6 +4788,12 @@ Isotop Menu Style1
 }
 .cs_hero.cs_style_1 .cs_rating_text {
   line-height: 1.459em;
+}
+.cs_hero.cs_style_1 .cs_hero_shape {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: 0;
 }
 
 .cs_hero.cs_style_2 {
@@ -5434,22 +5569,26 @@ Isotop Menu Style1
 }
 
 .cs_instructor_bio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 10px;
+  position: relative;
+  padding-left: 50px;
 }
 .cs_instructor_bio .cs_instructor_thumb {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-/* Start course page design*/
+/*-----------------------------------
+ Start course page design
+ -----------------------------------*/
 .cs_course_heading .cs_isotope_filter.cs_style_1 ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+.cs_course_heading h3 {
+  line-height: 1.4em;
 }
 .cs_course_heading .cs_filter_icon {
   width: -webkit-max-content;
@@ -5503,7 +5642,17 @@ Isotop Menu Style1
   line-height: 65px;
 }
 .cs_course_details.cs_style_1 .cs_course_instructor {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.cs_course_details.cs_style_1 .cs_course_instructor .cs_instructor_bio {
+  padding-left: 60px;
+}
+.cs_course_details.cs_style_1 .cs_course_instructor .cs_instructor_name {
+  line-height: 1.444em;
+}
+.cs_course_details.cs_style_1 .cs_course_instructor .cs_instructor_thumb {
+  width: 50px;
+  height: 50px;
 }
 
 #curriculum {
@@ -6011,7 +6160,7 @@ Isotop Menu Style1
   height: 50px;
   width: 134px;
   border-radius: 45px;
-  background: #EBE8FE;
+  background: #ebe8fe;
   margin: 0 25px;
 }
 .cs_pricing_control .cs_switch::before {
@@ -6054,12 +6203,12 @@ Isotop Menu Style1
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background: #F6F4FF;
+  background: #f6f4ff;
   margin-bottom: 35px;
 }
 .cs_tab_links.cs_style_1 .cs_tab_title {
   display: inline-block;
-  padding: 16px 0;
+  padding: 17px 0;
   position: relative;
 }
 .cs_tab_links.cs_style_1 .cs_tab_title::after {
@@ -6069,7 +6218,7 @@ Isotop Menu Style1
   background-color: #573cff;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -6077,13 +6226,15 @@ Isotop Menu Style1
   width: 100%;
 }
 
-/* Tab styling*/
+/*--------------------------------
+ Tab styling
+ -------------------------------*/
 .cs_tab {
   display: none;
 }
 .cs_tab .cs_title {
   line-height: 1.333em;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 .cs_tab.active {
   display: block;
@@ -6295,7 +6446,9 @@ Isotop Menu Style1
 
 .cs_post.cs_style_2 {
   margin-bottom: 40px;
-  /* Slider Arrow Styling*/
+  /*---------------------------
+   Slider Arrow Styling
+   ---------------------------*/
   /* Bootstrap Component styling*/
 }
 .cs_post.cs_style_2:last-child {
@@ -6346,8 +6499,8 @@ Isotop Menu Style1
           animation: scale-anim 30s cubic-bezier(0, 0.04, 1, 0.99) infinite;
 }
 .cs_post.cs_style_2 .cs_post_title {
-  line-height: 1.5em;
-  margin: 18px 0;
+  line-height: 1.286em;
+  margin-top: 20px;
 }
 .cs_post.cs_style_2 .cs_post_subtitle {
   margin-bottom: 28px;
@@ -6396,14 +6549,10 @@ Isotop Menu Style1
 }
 
 .cs_post.cs_style_3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
+  min-height: 110px;
+  padding-left: 130px;
   margin-bottom: 20px;
+  position: relative;
 }
 .cs_post.cs_style_3:last-child {
   margin-bottom: 0;
@@ -6411,6 +6560,9 @@ Isotop Menu Style1
 .cs_post.cs_style_3 .cs_post_thumb {
   width: 110px;
   height: 110px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .cs_post.cs_style_3 .cs_post_info {
   -webkit-box-flex: 1;
@@ -6650,14 +6802,12 @@ Isotop Menu Style1
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  gap: 20px;
 }
 .cs_post_details.cs_style_1 .cs_sidebar_tags .cs_tag_link {
   display: inline-block;
   width: 112px;
-  padding: 10px 0;
+  padding: 10px;
   background: #f8f8f8;
   text-align: center;
 }
@@ -6885,6 +7035,9 @@ textarea {
           animation: rotate-x 10s linear infinite;
 }
 
+.cs_about.cs_style_4 .cs_section_title {
+  line-height: 1.146em;
+}
 .cs_about.cs_style_4 .cs_mission_title {
   line-height: 1.167em;
   margin-bottom: 5px;
@@ -6893,13 +7046,13 @@ textarea {
   margin-bottom: 20px;
 }
 .cs_about.cs_style_4 .cs_mission {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
 .cs_about.cs_style_4 .cs_mission:last-child {
   margin-bottom: 0;
 }
 .cs_about.cs_style_4 .cs_about_shape1 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .cs_about.cs_style_4 .cs_about_shape2 {
   position: absolute;
@@ -6916,7 +7069,13 @@ textarea {
           animation: move-x 10s linear infinite;
 }
 
-.cs_tranquil_right {
+.cs_tranquil.cs_style_1 .cs_tranquil_heading {
+  line-height: 1.45em;
+}
+.cs_tranquil.cs_style_1 .cs_tranquil_subtitle {
+  margin-bottom: 45px;
+}
+.cs_tranquil.cs_style_1 .cs_tranquil_right {
   padding-left: 40px;
   border-left: 2px dashed #573cff;
 }
@@ -6947,10 +7106,13 @@ textarea {
   }
 }
 .cs_contact {
-  background-color: #F7F8FD;
+  background-color: #f7f8fd;
+}
+.cs_contact h2 {
+  line-height: 1em;
 }
 .cs_contact .cs_form_field {
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   background: #fff;
 }
 .cs_contact .cs_form_field:focus {
@@ -6958,9 +7120,10 @@ textarea {
 }
 .cs_contact textarea {
   resize: none;
+  margin-bottom: 20px;
 }
 .cs_contact label {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .cs_contact .cs_custom_select_wrap {
   padding: 13px 0;
