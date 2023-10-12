@@ -36,7 +36,7 @@
   };
 
   $(window).on('load', function () {
-    // preloader();
+    preloader();
     isotopInit();
   });
 
@@ -55,17 +55,35 @@
     select2Function();
     catToggle();
     review();
-    if ($.exists('.wow')) {
-      new WOW().init();
-    }
+    animationInit();
   });
 
   $(window).on('scroll', function () {
     showScrollUp();
+    //animationInit();
   });
-
+/*--------------------------------------------------------------
+    1. Preloader
+  --------------------------------------------------------------*/
+  function preloader() {
+    setInterval(() => {
+     $('.cs_preloader').addClass("hide");
+    }, calculateWindowLoadTime());
+  }
+  /*-----------------------------------------------------------
+  Window load time calculation
+  --------------------------------------------------------------*/
+   function calculateWindowLoadTime() {
+    if (window.performance && window.PerformanceNavigationTiming) {
+      const timing = window.PerformanceNavigationTiming;
+      const loadTime = timing.navigationStart - timing.loadEventEnd;
+      return loadTime;
+    } else {
+      console.log('Performance API is not supported in this browser.');
+    }
+  }
   /*--------------------------------------------------------------
-    1. Mobile Menu
+    2. Mobile Menu
   --------------------------------------------------------------*/
   // function mainNav() {
   //   $('.cs_nav').append('<span class="cs_menu_toggle"><span></span></span>');
@@ -109,7 +127,7 @@
   // }
 
   /*--------------------------------------------------------------
-    2. Sticky Header
+    3. Sticky Header
   --------------------------------------------------------------*/
   // function stickyHeader() {
   //   var $window = $(window);
@@ -140,7 +158,7 @@
   // }
 
   /*--------------------------------------------------------------
-    3. Dynamic Background
+    4. Dynamic Background
   --------------------------------------------------------------*/
   function dynamicBackground() {
     $('[data-src]').each(function () {
@@ -152,7 +170,7 @@
   }
 
   /*--------------------------------------------------------------
-    4. Modal Video
+    5. Modal Video
   --------------------------------------------------------------*/
   function modalVideo() {
     if ($.exists('.cs_video_open')) {
@@ -192,7 +210,7 @@
     }
   }
   /*--------------------------------------------------------------
-    5. Isotop Initialize
+    6. Isotop Initialize
   --------------------------------------------------------------*/
   function isotopInit() {
     if ($.exists('.cs_isotope')) {
@@ -220,7 +238,7 @@
     }
   }
   /*--------------------------------------------------------------
-   6. Light Gallery
+   7. Light Gallery
  --------------------------------------------------------------*/
   function lightGallery() {
     $('.cs_lightgallery').each(function () {
@@ -233,7 +251,7 @@
     });
   }
   /*----------------------------------------------------------
-  7. category Toggle function
+  8. category Toggle function
   -----------------------------------------------------------*/
   function catToggle() {
     $('.cs_category_toggle').click(function () {
@@ -248,7 +266,7 @@
   }
 
   /*-----------------------------------------------------------
-    8. Scroll Up
+    9. Scroll Up
   ------------------------------------------------------------*/
   function scrollUp() {
     $('.cs_scrollup').on('click', function (e) {
@@ -271,7 +289,7 @@
     }
   }
   /*----------------------------------------------------------
-    9. Select2 function
+    10. Select2 function
   ----------------------------------------------------------*/
   function select2Function() {
     if ($.exists('.cs_select1')) {
@@ -284,7 +302,7 @@
   }
  
   /*---------------------------------------------------------
-    10. Counter Animation
+    11. Counter Animation
   ----------------------------------------------------------*/
   function counterInit() {
     if ($.exists('.odometer')) {
@@ -306,7 +324,7 @@
     }
   }
   /*---------------------------------------------------------
-    11. Accordian
+    12. Accordian
   ---------------------------------------------------------*/
   function accordianInit() {
     var $this = $(this);
@@ -325,7 +343,7 @@
     });
   }
   /*---------------------------------------------------------
-  12. Tabs
+  13. Tabs
   ------------------------------------------------------------*/
   function tabs() {
     $('.cs_tab_links a').on('click', function (e) {
@@ -339,7 +357,7 @@
     });
   }
   /*-----------------------------------------------------------
-    13. Review
+    14. Review
   --------------------------------------------------------------*/
   function review() {
     $('.cs_rating').each(function () {
@@ -349,7 +367,7 @@
     });
   }
   /*-----------------------------------------------------------
-    14. Slick Slider
+    15. Slick Slider
   --------------------------------------------------------------*/
   function slickInit() {
     if ($.exists('.cs_slider')) {
@@ -460,6 +478,14 @@
       centerMode: true,
       focusOnSelect: true,
       variableWidth: true,
+    });
+  }
+  /*-----------------------------------------------------------
+    16. Animate function
+  --------------------------------------------------------------*/
+  function animationInit(){
+    new WOW().init({
+      once:true,
     });
   }
   

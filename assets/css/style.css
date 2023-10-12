@@ -1627,8 +1627,8 @@ End Review
   position: relative;
   border-radius: 5px;
   position: fixed;
-  bottom: 100px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   -webkit-transform: scale(0);
           transform: scale(0);
   display: -webkit-box;
@@ -1665,6 +1665,43 @@ End Review
             transform: translateY(30%);
   }
 }
+/*--------------------------------------------------------------
+  2. Preloader
+----------------------------------------------------------------*/
+.cs_preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background: #002935;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.cs_preloader.hide {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.cs_preloader_text {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 200px;
+  letter-spacing: 3px;
+}
+
 /*---------------------------------
  Bootstrap Component styling
 -----------------------------------*/
@@ -4936,15 +4973,15 @@ Isotop Menu Style1
 .cs_hero.cs_style_3 .cs_hero_text {
   position: relative;
   z-index: 3;
-  -webkit-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
 
 .slick-active .cs_hero.cs_style_3 .cs_hero_text {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .cs_page_heading {
@@ -6326,10 +6363,12 @@ Isotop Menu Style1
   margin-bottom: 0;
 }
 .cs_testimonial.cs_style_2 .cs_instructor_bio {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
+  padding-left: 105px;
+}
+.cs_testimonial.cs_style_2 .cs_instructor_thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .cs_testimonial.cs_style_2 .cs_instructor_name {
   text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
