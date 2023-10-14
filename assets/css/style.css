@@ -1880,7 +1880,7 @@ button.cs_btn.cs_style_1 {
   top: 0;
   right: 0;
 }
-.cs_accordian.cs_style_1 .cs_accordian_toggle img {
+.cs_accordian.cs_style_1 .cs_accordian_toggle svg {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -1891,7 +1891,7 @@ button.cs_btn.cs_style_1 {
 .cs_accordian.cs_style_1.active .cs_accordian_toggle {
   background-color: #573cff;
 }
-.cs_accordian.cs_style_1.active .cs_accordian_toggle img {
+.cs_accordian.cs_style_1.active .cs_accordian_toggle svg {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
@@ -2573,6 +2573,13 @@ odometer
   right: -20px;
   -webkit-filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.2));
           filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.2));
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_card.cs_style_4 .cs_badge_btn:hover {
+  color: #573cff;
+  background-color: #fff;
+  border-color: #573cff;
 }
 .cs_card.cs_style_4 .cs_badge_btn .fa-arrow-right-long {
   -webkit-transform: translateX(-40px);
@@ -3849,6 +3856,9 @@ odometer
 }
 .cs_footer.cs_style_3 .cs_footer_top .cs_footer_top_nav {
   gap: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .cs_footer.cs_style_3 .cs_footer_top .cs_facility_options {
   display: -webkit-box;
@@ -4973,8 +4983,8 @@ Isotop Menu Style1
   z-index: 3;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .slick-active .cs_hero.cs_style_3 .cs_hero_text {
@@ -5107,6 +5117,9 @@ Isotop Menu Style1
   width: 75px;
   height: 75px;
   margin-bottom: 42px;
+  color: #002935;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cs_category.cs_style_1 .cs_category_title {
   line-height: 1.5em;
@@ -5117,9 +5130,17 @@ Isotop Menu Style1
 .cs_category.cs_style_1 .cs_category_btn {
   line-height: 1.556em;
   color: #747474;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cs_category.cs_style_1 .cs_category_btn svg {
   margin-left: 6px;
+}
+.cs_category.cs_style_1 .cs_category_btn:hover {
+  color: #573cff;
+}
+.cs_category.cs_style_1:hover .cs_category_icon {
+  color: #573cff;
 }
 .cs_category.cs_style_1:hover::after {
   background-color: #573cff;
@@ -5167,9 +5188,15 @@ Isotop Menu Style1
   line-height: 1.458em;
   margin-bottom: 7px;
 }
+.cs_category.cs_style_2 .cs_category_title:hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
 .cs_category.cs_style_2 .cs_category_btn {
   color: #fff;
   line-height: 1.556em;
+}
+.cs_category.cs_style_2 .cs_category_btn:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .cs_feature.cs_style_1 {
@@ -5261,7 +5288,7 @@ Isotop Menu Style1
   z-index: 1;
   margin-bottom: 32px;
 }
-.cs_video.cs_style_1 .cs_play_btn img {
+.cs_video.cs_style_1 .cs_play_btn svg {
   position: absolute;
   z-index: 1;
 }
@@ -5379,7 +5406,7 @@ Isotop Menu Style1
           justify-content: space-between;
   margin-bottom: 18px;
 }
-.cs_course.cs_style_1 .cs_course_meta span {
+.cs_course.cs_style_1 .cs_course_meta div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5416,8 +5443,8 @@ Isotop Menu Style1
   display: flex;
   border-radius: 3px;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 .cs_course.cs_style_2.cs_reverse {
   -webkit-box-orient: horizontal;
@@ -5505,10 +5532,6 @@ Isotop Menu Style1
 .cs_course.cs_style_2:hover {
   -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-}
-.cs_course.cs_style_2:hover .cs_sourse_badge {
-  background-color: #fff;
-  color: #573cff;
 }
 .cs_course.cs_style_2 .cs_course_instructor {
   margin-bottom: 0;
@@ -5988,7 +6011,7 @@ Isotop Menu Style1
   color: #573cff;
 }
 .cs_faq.cs_style_1 .cs_faq_contact_box .cs_btn.cs_style_1:hover::after {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .cs_card_wrapper {

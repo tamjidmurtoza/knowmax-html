@@ -213,6 +213,12 @@
     top: -2px;
     right: -20px;
     filter: drop-shadow(2px 2px 7px rgba(123, 4, 4, 0.2));
+    transition: all 0.4s ease;
+    &:hover {
+      color: $accent;
+      background-color: $white;
+      border-color: $accent;
+    }
 
     .fa-arrow-right-long {
       transform: translateX(-40px);

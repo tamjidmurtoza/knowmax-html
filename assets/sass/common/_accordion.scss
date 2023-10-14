@@ -27,7 +27,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    img {
+    svg {
       transition: all 0.4s ease-in-out;
     }
   }
@@ -40,7 +40,7 @@
     .cs_accordian_toggle {
       background-color: $accent;
 
-      img {
+      svg {
         transform: rotateX(180deg);
       }
     }

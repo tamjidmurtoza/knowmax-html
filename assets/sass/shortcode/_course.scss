@@ -52,7 +52,7 @@
     justify-content: space-between;
     margin-bottom: 18px;
 
-    span {
+    div {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -84,7 +84,7 @@
   display: flex;
   border-radius: 3px;
   background: $white;
-  box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
   &.cs_reverse {
     flex-direction: row-reverse;
   }
@@ -155,10 +155,6 @@
 
   &:hover {
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.1);
-    .cs_sourse_badge {
-      background-color: $white;
-      color: $accent;
-    }
   }
   .cs_course_instructor {
     margin-bottom: 0;
