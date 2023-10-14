@@ -130,19 +130,14 @@
   }
 
   .cs_course_meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 20px;
-
-    span {
+    div {
       display: flex;
       align-items: center;
       gap: 10px;
     }
   }
-
-  .cs_course_title {
+  s .cs_course_title {
     line-height: 1.455em;
   }
 
@@ -200,7 +195,7 @@
 
   .cs_course_meta {
     margin-bottom: 20px;
-    span {
+    div {
       display: flex;
       align-items: center;
       gap: 10px;

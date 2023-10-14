@@ -5499,18 +5499,9 @@ Isotop Menu Style1
   margin-bottom: 20px;
 }
 .cs_course.cs_style_2 .cs_course_meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 20px;
 }
-.cs_course.cs_style_2 .cs_course_meta span {
+.cs_course.cs_style_2 .cs_course_meta div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5519,7 +5510,7 @@ Isotop Menu Style1
           align-items: center;
   gap: 10px;
 }
-.cs_course.cs_style_2 .cs_course_title {
+.cs_course.cs_style_2 s .cs_course_title {
   line-height: 1.455em;
 }
 .cs_course.cs_style_2 .cs_rating {
@@ -5583,7 +5574,7 @@ Isotop Menu Style1
 .cs_course.cs_style_3 .cs_course_meta {
   margin-bottom: 20px;
 }
-.cs_course.cs_style_3 .cs_course_meta span {
+.cs_course.cs_style_3 .cs_course_meta div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7327,10 +7318,8 @@ textarea {
   margin-bottom: 37px;
 }
 .cs_register.cs_style_1 .cs_register_form .cs_register_shape {
-  width: 118px;
-  height: 100px;
   top: 0;
-  right: 0;
+  right: -5px;
 }
 @media (max-width: 1199px) {
   .cs_register.cs_style_1 .cs_register_form .cs_register_shape {
