@@ -244,16 +244,16 @@ hr {
   background-color: #ebedf4;
 }
 .cs_bg_style_2 {
-  background: rgba(235, 244, 244, 0.8);
+  background: rgba($color: $accent, $alpha: 0.08);
 }
 .cs_bg_style_3 {
   background: #ebf4f4;
 }
 .cs_bg_style_4 {
-  background: rgba(239, 246, 246, 0.45);
+  background: rgba($color: $accent, $alpha: 0.045);
 }
 .cs_bg_style_5 {
-  background: rgba(0, 122, 112, 0.05);
+  background: rgba($color: $accent, $alpha: 0.05);
 }
 .cs_mp0 {
   list-style: none;

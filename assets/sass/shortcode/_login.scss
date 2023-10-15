@@ -1,0 +1,110 @@
+.cs_login {
+  height: 100%;
+}
+.cs_login_content_left {
+  padding: 51px 100px;
+  .cs_login_shape {
+    width: 110px;
+    height: 110px;
+    background-color: $accent;
+    border-radius: 100%;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 0;
+    filter: blur(130px);
+    animation: heroShape1Anim 3s cubic-bezier(0.28, 1.84, 0.55, -0.11) infinite;
+  }
+  .cs_brand {
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    line-height: 45px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+  }
+}
+.cs_login_content_right {
+  width: 100%;
+  padding: 51px 20px;
+  .cs_login_form {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    .cs_login_field {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .cs_forgot {
+        text-decoration: underline;
+      }
+    }
+    .cs_form_field {
+      background-color: transparent;
+    }
+    label {
+      margin-bottom: 15px;
+    }
+    .cs_login_btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $accent;
+      color: $white;
+      font-weight: 500;
+      line-height: 1.556em;
+      border: none;
+      padding: 10px 20px;
+      border: 2px solid $accent;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      transition: all 0.4s ease;
+      &.cs_google {
+        background-color: #e94235;
+        border-color: #e94235;
+      }
+      &.cs_facebook {
+        background-color: #034ec8;
+        border-color: #034ec8;
+      }
+      &.cs_twitter {
+        background-color: #0998f8;
+        border-color: #0998f8;
+      }
+
+      &:hover {
+        background-color: transparent;
+        color: $accent;
+        &.cs_facebook {
+          color: #034ec8;
+        }
+        &.cs_twitter {
+          color: #0998f8;
+        }
+        &.cs_google {
+          color: #e94235;
+        }
+      }
+    }
+    .cs_login_info {
+      padding: 10px;
+      span {
+        color: $secondary;
+      }
+    }
+    select {
+      appearance: none;
+    }
+  }
+}
+
+@keyframes heroShape1Anim {
+  50% {
+    transform: scale(1.2);
+  }
+}

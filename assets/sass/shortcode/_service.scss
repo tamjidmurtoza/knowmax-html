@@ -15,6 +15,7 @@
     svg {
       position: absolute;
       z-index: 1;
+      color: $white;
     }
     span {
       display: block;
@@ -35,8 +36,12 @@
         left: -10px;
         top: -10px;
         z-index: -1;
-        animation: pulse-border 5s linear infinite;
+        animation: pulse-border 5s cubic-bezier(0.28, 1.84, 0.55, -0.11)
+          infinite;
       }
+    }
+    &:hover span::after {
+      animation-play-state: paused;
     }
   }
   .cs_video_title {

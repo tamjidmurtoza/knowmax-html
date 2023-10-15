@@ -291,6 +291,13 @@
     .cs_footer_widget_address li {
       display: flex;
       gap: 20px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      h4 {
+        line-height: 26px;
+        margin-bottom: 6px;
+      }
     }
     .cs_schedule_nav {
       display: flex;
