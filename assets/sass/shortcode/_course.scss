@@ -224,6 +224,43 @@
     margin-bottom: 0;
   }
 }
+.cs_course.cs_style_4 {
+  min-height: auto;
+  .cs_course_thumb {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    overflow: hidden;
+    flex: none;
+    margin-right: 20px;
+  }
+  img {
+    transition: all 1s ease;
+  }
+  .cs_course_thumb_overlay {
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  .cs_course_title {
+    margin-bottom: 10px;
+  }
+  .cs_course_subtitle {
+    margin-bottom: 10px;
+  }
+  .cs_course_action {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &:hover {
+    .cs_course_thumb_overlay {
+      transform: scale(1);
+    }
+    img {
+      transform: scale(1.08);
+    }
+  }
+}
 .cs_course_instructor {
   display: flex;
   align-items: center;
@@ -241,7 +278,30 @@
     top: 0;
   }
 }
-
+.cs_course_list {
+  @media (max-width: 1399px) {
+    overflow-x: auto;
+  }
+}
+.cs_courses_table {
+  min-width: 1300px;
+  td,
+  th {
+    padding: 20px;
+    vertical-align: middle;
+    .cs_cart_btn {
+      padding: 5px 10px;
+      border: 2px solid $accent;
+      background-color: transparent;
+      color: $accent;
+      transition: all 0.4s ease;
+      &:hover {
+        background-color: $accent;
+        color: $white;
+      }
+    }
+  }
+}
 /*-----------------------------------
  Start course page design
  -----------------------------------*/
@@ -277,5 +337,4 @@
     }
   }
 }
-
 /* End course page design*/

@@ -216,6 +216,9 @@ hr {
 .cs_gray_color {
   color: $gray;
 }
+.cs_gold_color {
+  color: #ffc107;
+}
 
 .cs_white_bg {
   background-color: #fff;
@@ -375,13 +378,43 @@ br {
   transition: all 0.3s ease;
   border-radius: 5px;
 }
+.cs_filter_action.cs_style_1 {
+  border: 1px solid $border;
+  border-radius: 3px;
+  padding: 10px 0 10px 15px;
+  i {
+    margin-right: 10px;
+  }
+  .select2-container {
+    min-width: 120px;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    color: $secondary;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow::before {
+    color: $secondary;
+    font-size: 14px;
+  }
+}
 /*-----------------------------------
  Start Review 
  ------------------------------------*/
+.cs_rating_container {
+  max-width: 140px;
+}
 .cs_rating_percentage,
 .cs_rating {
   overflow: hidden;
-
+  &.scale_half {
+    transform: scale(0.6);
+    letter-spacing: 10px;
+    width: 180px;
+    margin-left: -15px;
+  }
   &::before {
     content: "\f005\f005\f005\f005\f005";
     font-family: "Font Awesome 6 Free";
@@ -419,6 +452,45 @@ br {
 /*----------------------- 
 End Review
 --------------------------*/
+/*-----------------------------------
+ Start Progress Bar
+ ------------------------------------*/
+.cs_progress_percentage,
+.cs_progress {
+  overflow: hidden;
+  border-radius: 2px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: $accent, $alpha: 0.2);
+  }
+}
+
+.cs_progress {
+  flex: none;
+  width: 152px;
+  height: 12px;
+  position: relative;
+}
+
+.cs_progress_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  &::before {
+    background-color: $accent;
+  }
+}
+/*-----------------------------------
+ End Progress Bar
+ ------------------------------------*/
 /*---------------------------------
  Scroll To Top btn styling
 -----------------------------------*/

@@ -56,6 +56,8 @@
     catToggle();
     review();
     animationInit();
+    progressBar();
+    modal();
   });
 
   $(window).on('scroll', function () {
@@ -488,5 +490,28 @@
       once:true,
     });
   }
-  
+  /*-----------------------------------------------------------
+    17. Progress Bar
+  --------------------------------------------------------------*/
+  function progressBar() {
+    $('.cs_progress').each(function () {
+      var progress = $(this).data('progress');
+      var progressVal = progress * 1 + '%';
+      $(this).find('.cs_progress_percentage').css('width', progressVal);
+    });
+  }
+  /*--------------------------------------------------------------
+   18. Modal
+ --------------------------------------------------------------*/
+  function modal() {
+    $('.cs_modal_btn').on('click', function () {
+      var modalData = $(this).attr('data-modal');
+      $(`[data-modal='${modalData}']`).addClass('active');
+      $(this).parents('.cs_modal').removeClass('active');
+    });
+    $('.cs_close_modal, .cs_close_overlay').on('click', function () {
+      var modalData = $(this).parents('.cs_modal').attr('data-modal');
+      $(`[data-modal='${modalData}']`).removeClass('active');
+    });
+  }
 })(jQuery); // End of use strict

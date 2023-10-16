@@ -1390,6 +1390,10 @@ hr {
   color: #f8f9fa;
 }
 
+.cs_gold_color {
+  color: #ffc107;
+}
+
 .cs_white_bg {
   background-color: #fff;
 }
@@ -1572,12 +1576,43 @@ hr {
   border-radius: 5px;
 }
 
+.cs_filter_action.cs_style_1 {
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  padding: 10px 0 10px 15px;
+}
+.cs_filter_action.cs_style_1 i {
+  margin-right: 10px;
+}
+.cs_filter_action.cs_style_1 .select2-container {
+  min-width: 120px;
+}
+.cs_filter_action.cs_style_1 .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #747474;
+}
+.cs_filter_action.cs_style_1 .select2-container--default .select2-selection--single .select2-selection__arrow::before {
+  color: #747474;
+  font-size: 14px;
+}
+
 /*-----------------------------------
  Start Review 
  ------------------------------------*/
+.cs_rating_container {
+  max-width: 140px;
+}
+
 .cs_rating_percentage,
 .cs_rating {
   overflow: hidden;
+}
+.cs_rating_percentage.scale_half,
+.cs_rating.scale_half {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  letter-spacing: 10px;
+  width: 180px;
+  margin-left: -15px;
 }
 .cs_rating_percentage::before,
 .cs_rating::before {
@@ -1616,6 +1651,47 @@ hr {
 /*----------------------- 
 End Review
 --------------------------*/
+/*-----------------------------------
+ Start Progress Bar
+ ------------------------------------*/
+.cs_progress_percentage,
+.cs_progress {
+  overflow: hidden;
+  border-radius: 2px;
+}
+.cs_progress_percentage::before,
+.cs_progress::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(87, 60, 255, 0.2);
+}
+
+.cs_progress {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  width: 152px;
+  height: 12px;
+  position: relative;
+}
+
+.cs_progress_percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.cs_progress_percentage::before {
+  background-color: #573cff;
+}
+
+/*-----------------------------------
+ End Progress Bar
+ ------------------------------------*/
 /*---------------------------------
  Scroll To Top btn styling
 -----------------------------------*/
@@ -5617,6 +5693,53 @@ Isotop Menu Style1
   margin-bottom: 0;
 }
 
+.cs_course.cs_style_4 {
+  min-height: auto;
+}
+.cs_course.cs_style_4 .cs_course_thumb {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  overflow: hidden;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  margin-right: 20px;
+}
+.cs_course.cs_style_4 img {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.cs_course.cs_style_4 .cs_course_thumb_overlay {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_course.cs_style_4 .cs_course_title {
+  margin-bottom: 10px;
+}
+.cs_course.cs_style_4 .cs_course_subtitle {
+  margin-bottom: 10px;
+}
+.cs_course.cs_style_4 .cs_course_action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.cs_course.cs_style_4:hover .cs_course_thumb_overlay {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.cs_course.cs_style_4:hover img {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
 .cs_course_instructor {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5639,6 +5762,35 @@ Isotop Menu Style1
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media (max-width: 1399px) {
+  .cs_course_list {
+    overflow-x: auto;
+  }
+}
+
+.cs_courses_table {
+  min-width: 1300px;
+}
+.cs_courses_table td,
+.cs_courses_table th {
+  padding: 20px;
+  vertical-align: middle;
+}
+.cs_courses_table td .cs_cart_btn,
+.cs_courses_table th .cs_cart_btn {
+  padding: 5px 10px;
+  border: 2px solid #573cff;
+  background-color: transparent;
+  color: #573cff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_courses_table td .cs_cart_btn:hover,
+.cs_courses_table th .cs_cart_btn:hover {
+  background-color: #573cff;
+  color: #fff;
 }
 
 /*-----------------------------------
@@ -7474,4 +7626,144 @@ textarea {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
   }
+}
+/*--------------------------------------------------------------
+19. Modal
+----------------------------------------------------------------*/
+.cs_modal {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+}
+.cs_modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cs_modal_container {
+  width: 100%;
+  max-width: 1230px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+@media (max-width: 400px) {
+  .cs_modal_container {
+    padding: 30px 15px;
+  }
+}
+
+.cs_modal_in {
+  padding: 60px 20px 30px;
+}
+
+.cs_close_overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  background-color: rgba(13, 12, 23, 0.9);
+  -webkit-backdrop-filter: blur(0px);
+          backdrop-filter: blur(0px);
+}
+
+.cs_close_modal {
+  padding: 0;
+  border: none;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: transparent;
+  color: red;
+  font-size: 18px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_close_modal:hover {
+  border-color: red;
+}
+
+.cs_modal_btn {
+  cursor: pointer;
+}
+
+.cs_modal.cs_size_sm .cs_modal_container {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  padding: 0;
+}
+
+.cs_modal.cs_size_md .cs_modal_container {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 15px;
+  padding: 0;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_modal_header {
+  padding: 30px;
+  border-bottom: 1px solid #dedede;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_modal_body {
+  padding: 0 30px 30px;
+  border-bottom: 1px solid #dedede;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_modal_footer {
+  padding: 30px;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_rating_group {
+  padding: 30px 0;
+  font-size: 24px;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_rating_group .cs_amount {
+  background-color: rgba(0, 41, 53, 0.1);
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_form_field {
+  background-color: transparent;
+}
+.cs_modal.cs_size_md .cs_modal_container label {
+  margin-bottom: 10px;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_btn {
+  border: none;
+  border: 1px solid #dedede;
+  padding: 8px 16px;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_btn.cs_cancel {
+  background-color: transparent;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_btn.cs_cancel:hover {
+  color: #573cff;
+  border-color: #573cff;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_btn.cs_submit {
+  background-color: #573cff;
+  color: #fff;
+  border-color: #573cff;
+}
+.cs_modal.cs_size_md .cs_modal_container .cs_btn.cs_submit:hover {
+  color: #573cff;
+  background-color: transparent;
 }
