@@ -38,16 +38,20 @@ Isotop Menu Style1
     margin: 0 5px;
 
     a {
-      padding: 6px 30px 9px 12px;
+      padding: 8px 32px;
       display: inline-block;
       font-size: 18px;
       font-weight: 500;
-      clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
+      clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%, 1% 100%, 0 100%);
       transition: all 0.4s ease;
     }
+    &:first-child a {
+      padding: 8px 32px 8px 12px;
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 80% 100%, 0 100%, 0 100%);
+    }
     &:last-child a {
-      padding: 6px 12px 9px 32px;
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
+      padding: 8px 12px 8px 32px;
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
     }
     &:hover,
     &.active {

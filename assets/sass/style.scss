@@ -1,6 +1,6 @@
 @import "default/color_variable";
 @import "default/typography";
-//@import 'common/preloader';
+@import "common/preloader";
 @import "common/spacing";
 @import "common/general";
 @import "common/buttons";
@@ -17,7 +17,7 @@
 @import "common/gallery";
 @import "common/iconbox";
 @import "common/cta";
-@import "common/user";
+@import "common/admin";
 @import "shortcode/hero";
 @import "shortcode/category";
 @import "shortcode/features";

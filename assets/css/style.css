@@ -191,6 +191,43 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+  2. Preloader
+----------------------------------------------------------------*/
+.cs_preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background: #002935;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.cs_preloader.hide {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.cs_preloader_text {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 200px;
+  letter-spacing: 3px;
+}
+
+/*--------------------------------------------------------------
   3. Spacing
 ----------------------------------------------------------------*/
 @media screen and (min-width: 992px) {
@@ -1741,43 +1778,6 @@ End Review
             transform: translateY(30%);
   }
 }
-/*--------------------------------------------------------------
-  2. Preloader
-----------------------------------------------------------------*/
-.cs_preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999999;
-  background: #002935;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.cs_preloader.hide {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-}
-
-.cs_preloader_text {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 200px;
-  letter-spacing: 3px;
-}
-
 /*---------------------------------
  Bootstrap Component styling
 -----------------------------------*/
@@ -4384,19 +4384,24 @@ Isotop Menu Style1
   margin: 0 5px;
 }
 .cs_isotope_filter.cs_style_2 li a {
-  padding: 6px 30px 9px 12px;
+  padding: 8px 32px;
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
-  -webkit-clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
-          clip-path: polygon(0 0, 100% 1%, 83% 100%, 0 100%, 0 55%);
+  -webkit-clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%, 1% 100%, 0 100%);
+          clip-path: polygon(20% 0, 100% 0, 80% 100%, 0 100%, 1% 100%, 0 100%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.cs_isotope_filter.cs_style_2 li:first-child a {
+  padding: 8px 32px 8px 12px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 80% 100%, 0 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 80% 100%, 0 100%, 0 100%);
+}
 .cs_isotope_filter.cs_style_2 li:last-child a {
-  padding: 6px 12px 9px 32px;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
-          clip-path: polygon(0 0, 100% 0%, 100% 100%, 17% 100%, 0 0);
+  padding: 8px 12px 8px 32px;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
+          clip-path: polygon(20% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
 }
 .cs_isotope_filter.cs_style_2 li:hover a, .cs_isotope_filter.cs_style_2 li.active a {
   background-color: #573cff;
@@ -4868,6 +4873,33 @@ Isotop Menu Style1
   left: 120px;
   bottom: 0;
   z-index: 0;
+}
+
+/*--------------------------------------------------------------
+## Basic Color
+----------------------------------------------------------------*/
+.cs_admin_courses hr {
+  border-width: 2px;
+  background-color: #fff;
+}
+
+/*--------------------------------
+Chat section design
+-----------------------------------*/
+.cs_user_list {
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+.cs_user_list li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 15px 30px;
+  width: 100%;
+}
+.cs_user_list li .cs_chat_list_title {
+  background-color: #002935;
 }
 
 /*--------------------------------------------------------------

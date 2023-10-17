@@ -10,7 +10,7 @@
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/fabicon.svg">
   <!-- Site Title -->
-  <title>Wishlist</title>
+  <title>My Courses</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
@@ -130,120 +130,358 @@
   <section class="cs_page_heading position-relative  cs_bg_filed cs_vertical_middle" data-src="assets/img/hero4_bg.svg">
     <div class="cs_hero_overlay"></div>
     <div class="container">
-      <h1 class="cs_page_title cs_fs_48 cs_white_color text-center">My Wishlist</h1>
+      <h1 class="cs_page_title cs_fs_48 cs_white_color text-center">My Courses</h1>
     </div>
     <div class="cs_breadcrumb_wrap position-absolute">
       <div class="container">
         <nav class="cs_breadcrumb_in">
           <ol class="breadcrumb mb-0 cs_fs_18 cs_medium cs_white_color">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">My Wishlist</li>
+            <li class="breadcrumb-item" aria-current="page">My Courses</li>
           </ol>
         </nav>
       </div>
     </div>
   </section>
   <!-- End Hero -->
-  <!-- Start Instructor -->
-  <section class="cs_my_learning cs_style_1 cs_bg_style_4">
+  <!-- Start My Courses -->
+  <section class="cs_admin_courses">
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
-      <div class="cs_course_list">
-        <table class="cs_courses_table cs_white_bg mb-0">
-          <thead>
-            <tr>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Item</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Type</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Price</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Action</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Remove</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="cs_course cs_style_4 d-inline-flex align-items-center">
-                  <a href="course_details.html" class="cs_course_thumb cs_radius_5 position-relative">
-                    <img src="assets/img/course1.jpg" alt="Course Image">
-                    <div class="cs_course_thumb_overlay"></div>
+      <h2 class="cs_fs_45 cs_semibold">Courses</h2>
+      <hr>
+      <div class="cs_isotope_filter cs_style_2 ms-0">
+        <ul class="cs_fs_30 cs_primary_color cs_semibold cs_mp0 text-uppercase justify-content-start">
+          <li><a href="#" data-filter=".published">published</a>
+          </li>
+          <li><a href="#" data-filter=".pending">pending</a>
+          </li>
+          <li><a href="#" data-filter=".draft">draft</a></li>
+        </ul>
+      </div>
+      <div class="cs_height_50 cs_height_lg_30"></div>
+      <div class="cs_isotope cs_style_1 cs_isotope_col_3 cs_has_gutter_24">
+        <div class="cs_grid_sizer"></div>
+        <div class="cs_isotope_item published">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course2.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_white_bg cs_accent_color">Data & Tech</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale">
+                    <i class="fa-regular fa-heart"></i>
                   </a>
-                  <div class="cs_course_info">
-                    <h3 class="cs_course_title cs_fs_18 cs_medium">
-                      <a href="course_details.html">
-                        Angular - The Complete Guide</a>
-                    </h3>
-                    <p class="cs_course_subtitle">
-                      John Doe | Author Level 2</p>
-                    <div class="course-item-bottom">
-                      <div class="course-rating d-flex align-items-center">
-                        <span class="cs_medium cs_primary_color">5.00</span>
-                        <div class="cs_rating_container">
-                          <div class="cs_rating scale_half" data-rating="5">
-                            <div class="cs_rating_percentage"></div>
-                          </div>
-                        </div>
-                        <span>(1)</span>
-                      </div>
+                  <a href="#" class="cs_scale">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 25 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 2 hr 30 min
+                </span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Foundation Course to Under Stand About Softwere</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">$32.00 / </strong><s>$67.00</s></span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor2.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Lora Smith</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="4">
+                      <div class="cs_rating_percentage"></div>
                     </div>
                   </div>
+                  <span class="cs_reviews_number">(39)</span>
                 </div>
-              </td>
-              <td>Course</td>
-              <td>$45.00</td>
-              <td>
-                <a href="login.html" class="cs_cart_btn cs_medium cs_radius_5">Add To Cart</a>
-              </td>
-              <td>
-                <button href="#" class="border-0 bg-transparent text-danger"><i
-                    class="fa-solid fa-trash-can"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="cs_course cs_style_4 d-inline-flex align-items-center">
-                  <a href="course_details.html" class="cs_course_thumb cs_radius_5 position-relative">
-                    <img src="assets/img/course3.jpg" alt="Course Image">
-                    <div class="cs_course_thumb_overlay"></div>
-                  </a>
-                  <div class="cs_course_info">
-                    <h3 class="cs_course_title cs_fs_18 cs_medium">
-                      <a href="course_details.html">
-                        Laravel - The Complete Guide</a>
-                    </h3>
-                    <p class="cs_course_subtitle">
-                      John Doe | Author Level 2</p>
-                    <div class="course-item-bottom">
-                      <div class="course-rating d-flex align-items-center">
-                        <span class="cs_medium cs_primary_color">4.5</span>
-                        <div class="cs_rating_container">
-                          <div class="cs_rating scale_half" data-rating="4.5">
-                            <div class="cs_rating_percentage"></div>
-                          </div>
-                        </div>
-                        <span>(7)</span>
-                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_isotope_item published">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course3.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_accent_color cs_white_bg">Web Design</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="cs_scale"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 19 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 1 hr 50
+                  min</span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Theory Learn New Student And Fundamentals</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">$37.00 / </strong><s>$57.00</s>
+                </span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor3.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Robot Smith</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="3.5">
+                      <div class="cs_rating_percentage"></div>
                     </div>
                   </div>
+                  <span class="cs_reviews_number">(23)</span>
                 </div>
-              </td>
-              <td>Course</td>
-              <td>$65.00</td>
-              <td>
-                <a href="login.html" class="cs_cart_btn cs_medium cs_radius_5">Add To Cart</a>
-              </td>
-              <td>
-                <button href="#" class="border-0 bg-transparent text-danger"><i
-                    class="fa-solid fa-trash-can"></i></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_isotope_item published draft">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course5.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_accent_color cs_white_bg">Graphic</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                  <a href="#" class="cs_scale">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 17 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 1 hr 40 min
+                </span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Microservices with Node <br> JS and React</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">$42.00 / </strong><s>$57.00</s></span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor3.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Angel Mili</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="4">
+                      <div class="cs_rating_percentage"></div>
+                    </div>
+                  </div>
+                  <span class="cs_reviews_number">(18)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_isotope_item pending">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course6.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_accent_color cs_white_bg">Data & Tech</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="cs_scale"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 21 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 2 hr 20
+                  min</span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Python for Beginners - Learn Programming</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">
+                    $32.00 / </strong><s>$67.00</s></span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor6.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Wade Warren</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="4.5">
+                      <div class="cs_rating_percentage"></div>
+                    </div>
+                  </div>
+                  <span class="cs_reviews_number">(25)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_isotope_item pending">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course2.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_white_bg cs_accent_color">Data & Tech</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                  <a href="#" class="cs_scale">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 25 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 2 hr 30 min
+                </span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Foundation Course to Under Stand About Softwere</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">$32.00 / </strong><s>$67.00</s></span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor2.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Lora Smith</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="4">
+                      <div class="cs_rating_percentage"></div>
+                    </div>
+                  </div>
+                  <span class="cs_reviews_number">(39)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cs_isotope_item draft">
+          <div class="cs_course cs_style_1">
+            <div class="cs_course_thumb cs_zoom">
+              <div class="cs_course_thumb_overlay"></div>
+              <img src="assets/img/course3.jpg" alt="Image" class="cs_zoom_in">
+              <div class="cs_badge_container">
+                <div class="cs_course_badge cs_radius_2 cs_accent_color cs_white_bg">Web Design</div>
+                <div class="cs_course_cart cs_white_color">
+                  <a href="#" class="cs_scale"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="cs_scale"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="cs_course_info">
+              <div class="cs_course_meta">
+                <span>
+                  <img src="assets/img/course_icon1.svg" alt="Icon" class="cs_course_lesson_icon">
+                  <span class="cs_course_lesson"> 19 Lesson </span>
+                </span>
+                <span class="cs_course_duration">
+                  <img src="assets/img/course_icon2.svg" alt="Icon" class="cs_course_lesson_icon"> 1 hr 50
+                  min</span>
+              </div>
+              <h3 class="cs_course_title cs_fs_22 cs_medium">
+                <a href="course_details.html">Theory Learn New Student And Fundamentals</a>
+              </h3>
+              <div class="cs_course_price">
+                <span class="cs_fs_18 cs_medium">
+                  <strong class="cs_primary_color cs_medium">$37.00 / </strong><s>$57.00</s>
+                </span>
+              </div>
+              <div class="cs_separator"></div>
+              <div class="cs_course_instructor">
+                <a href="#" class="cs_instructor_bio">
+                  <div class="cs_instructor_thumb">
+                    <img src="assets/img/instructor3.png" alt="Avatar">
+                  </div>
+                  <span class="cs_instructor_name cs_medium">Robot Smith</span>
+                </a>
+                <div class="cs_course_rating d-flex">
+                  <div class="cs_rating_container">
+                    <div class="cs_rating" data-rating="3.5">
+                      <div class="cs_rating_percentage"></div>
+                    </div>
+                  </div>
+                  <span class="cs_reviews_number">(23)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    </div>
-    <div class="cs_height_120 cs_height_lg_80"></div>
+    <div class="cs_height_144 cs_height_lg_104"></div>
   </section>
-  <!-- End Instructor -->
+  <!-- End My Courses -->
   <!--Start Footer Section -->
   <footer class="cs_footer cs_style_1" data-src="assets/img/footer_bg.svg">
     <div class="cs_height_100 cs_height_lg_80"></div>

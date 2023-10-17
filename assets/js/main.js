@@ -495,9 +495,11 @@
   --------------------------------------------------------------*/
   function progressBar() {
     $('.cs_progress').each(function () {
-      var progress = $(this).data('progress');
-      var progressVal = progress * 1 + '%';
-      $(this).find('.cs_progress_percentage').css('width', progressVal);
+      let progress = $(this).data('progress');
+      if(progress>100){
+        progress = 100
+      }
+      $(this).find('.cs_progress_percentage').css('width', `${progress}%`);
     });
   }
   /*--------------------------------------------------------------

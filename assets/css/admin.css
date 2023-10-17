@@ -11,4 +11,16 @@ Chat section design
 -----------------------------------*/
 .cs_user_list {
   background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+}
+.cs_user_list li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 15px 30px;
+  width: 100%;
+}
+.cs_user_list li .cs_chat_list_title {
+  background-color: #002935;
 }

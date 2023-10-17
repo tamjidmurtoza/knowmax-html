@@ -1,3 +1,26 @@
 /*--------------------------------------------------------------
   2. Preloader
 ----------------------------------------------------------------*/
+.cs_preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background: $primary;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+  &.hide {
+    transform: translateY(-100%);
+  }
+}
+.cs_preloader_text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 200px;
+  letter-spacing: 3px;
+}
