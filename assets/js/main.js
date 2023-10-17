@@ -350,7 +350,7 @@
   function tabs() {
     $('.cs_tab_links a').on('click', function (e) {
       var currentAttrValue = $(this).attr('href');
-      $('.cs_tabs ' + currentAttrValue)
+      $('.cs_tabs '  + currentAttrValue)
         .fadeIn(400)
         .siblings()
         .hide();

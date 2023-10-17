@@ -4875,9 +4875,6 @@ Isotop Menu Style1
   z-index: 0;
 }
 
-/*--------------------------------------------------------------
-## Basic Color
-----------------------------------------------------------------*/
 .cs_admin_courses hr {
   border-width: 2px;
   background-color: #fff;
@@ -4890,16 +4887,207 @@ Chat section design
   background-color: #fff;
   border: 1px solid #dedede;
   border-radius: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 450px;
 }
 .cs_user_list li {
+  padding: 20px 30px;
+  border-bottom: 1px solid #dedede;
+  cursor: pointer;
+}
+.cs_user_list li:first-child {
+  background-color: #002935;
+  cursor: text;
+}
+.cs_user_list li:nth-child(2) {
+  cursor: text;
+}
+.cs_user_list li:last-child {
+  border-bottom: 0;
+}
+.cs_user_list li .cs_chat_list_title {
+  line-height: 45px;
+}
+.cs_user_list li .cs_searchbox {
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+.cs_user_list li .cs_searchbox .cs_form_field {
+  background-color: transparent;
+  border-radius: 30px;
+}
+.cs_user_list li .cs_searchbox .cs_search_icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+.cs_user_list li .cs_chat_user {
+  position: relative;
+  padding-left: 65px;
+}
+.cs_user_list li .cs_chat_user .cs_user_icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs_user_list li .cs_chat_user .cs_user_icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cs_user_list li .cs_chat_user .cs_user_icon .cs_active_status {
+  width: 15px;
+  height: 15px;
+  background-color: #573cff;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.cs_user_list li .cs_chat_user .cs_user_title {
+  margin-bottom: 0;
+  line-height: 1.556em;
+}
+
+.cs_message_wrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.cs_message_wrapper .cs_user_profile {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
+}
+.cs_message_wrapper .cs_user_profile .cs_chat_user {
+  position: relative;
+  padding-left: 65px;
+}
+.cs_message_wrapper .cs_user_profile .cs_user_icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.cs_message_wrapper .cs_user_profile .cs_user_title {
+  margin-bottom: 0;
+}
+.cs_message_wrapper .cs_user_profile .cs_user_chat_option a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 15px 30px;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #747474;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.cs_user_list li .cs_chat_list_title {
-  background-color: #002935;
+.cs_message_wrapper .cs_user_profile .cs_user_chat_option a:hover {
+  background-color: #573cff;
+  border-color: #573cff;
+  color: #fff;
+}
+.cs_message_wrapper .cs_meessage_sent ul {
+  max-height: 450px;
+  overflow-y: auto;
+}
+.cs_message_wrapper .cs_meessage_sent li {
+  padding-left: 65px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.cs_message_wrapper .cs_meessage_sent li.cs_admin {
+  text-align: right;
+  padding-right: 80px;
+}
+.cs_message_wrapper .cs_meessage_sent li.cs_admin .cs_message_info p {
+  margin-left: auto;
+}
+.cs_message_wrapper .cs_meessage_sent li .cs_sender_icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+.cs_message_wrapper .cs_meessage_sent li .cs_receiver_icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+.cs_message_wrapper .cs_meessage_sent li .cs_message_info p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgba(116, 116, 116, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.cs_message_wrapper .cs_text_input {
+  width: 95%;
+  background-color: rgba(116, 116, 116, 0.1);
+  border-radius: 30px;
+  position: relative;
+  padding-right: 30px;
+}
+.cs_message_wrapper .cs_text_input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px 50px 10px 75px;
+}
+.cs_message_wrapper .cs_text_input .cs_file_icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 100%;
+  border-right: 1px solid #dedede;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.cs_message_wrapper .cs_text_input button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  padding: 10px 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  background-color: #573cff;
+  color: #fff;
+  border-radius: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -6470,6 +6658,29 @@ Chat section design
 }
 .cs_tab_links.cs_style_1 .cs_tab_title:hover::after, .cs_tab_links.cs_style_1 .cs_tab_title.active::after {
   width: 100%;
+}
+
+.cs_tab_links.cs_style_2 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #573cff;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.cs_tab_links.cs_style_2 li a {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.cs_tab_links.cs_style_2 li.active a {
+  background-color: #fff;
+  color: #002935;
 }
 
 /*--------------------------------

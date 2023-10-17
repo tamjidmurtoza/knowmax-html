@@ -93,10 +93,39 @@
     }
   }
 }
+.cs_tab_links.cs_style_2 {
+  width: max-content;
+  background-color: $accent;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  li {
+    a {
+      display: inline-block;
+      background-color: transparent;
+      color: $white;
+      padding: 10px 30px;
+      border-radius: 10px;
+      transition: all 0.4s ease;
+    }
+    &.active {
+      a {
+        background-color: $white;
+        color: $primary;
+      }
+    }
+  }
+}
 
 /*--------------------------------
  Tab styling
  -------------------------------*/
+// .cs_tabs {
+//   display: none;
+//   &.active {
+//     display: block;
+//   }
+// }
 .cs_tab {
   display: none;
 

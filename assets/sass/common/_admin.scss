@@ -1,0 +1,198 @@
+.cs_admin_courses {
+  hr {
+    border-width: 2px;
+    background-color: $white;
+  }
+}
+/*--------------------------------
+Chat section design
+-----------------------------------*/
+.cs_user_list {
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 450px;
+  li {
+    padding: 20px 30px;
+    border-bottom: 1px solid $border;
+    cursor: pointer;
+    &:first-child {
+      background-color: $primary;
+      cursor: text;
+    }
+    &:nth-child(2) {
+      cursor: text;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+    .cs_chat_list_title {
+      line-height: 45px;
+    }
+    .cs_searchbox {
+      width: 100%;
+      border-radius: 20px;
+      position: relative;
+      .cs_form_field {
+        background-color: transparent;
+        border-radius: 30px;
+      }
+      .cs_search_icon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+    .cs_chat_user {
+      position: relative;
+      padding-left: 65px;
+      .cs_user_icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .cs_active_status {
+          width: 15px;
+          height: 15px;
+          background-color: $accent;
+          border: 3px solid $white;
+          border-radius: 50%;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .cs_user_title {
+        margin-bottom: 0;
+        line-height: 1.556em;
+      }
+    }
+  }
+}
+.cs_message_wrapper {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 10px;
+  .cs_user_profile {
+    border-bottom: 1px solid $border;
+    padding-bottom: 20px;
+    .cs_chat_user {
+      position: relative;
+      padding-left: 65px;
+    }
+    .cs_user_icon {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .cs_user_title {
+      margin-bottom: 0;
+    }
+    .cs_user_chat_option a {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $border;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: $secondary;
+      transition: all 0.4s ease;
+      &:hover {
+        background-color: $accent;
+        border-color: $accent;
+        color: $white;
+      }
+    }
+  }
+  .cs_meessage_sent {
+    ul {
+      max-height: 450px;
+      overflow-y: auto;
+    }
+    li {
+      padding-left: 65px;
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &.cs_admin {
+        text-align: right;
+        padding-right: 80px;
+        .cs_message_info p {
+          margin-left: auto;
+        }
+      }
+      .cs_sender_icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+      .cs_receiver_icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+      }
+      .cs_message_info p {
+        width: max-content;
+        background-color: rgba($secondary, 0.1);
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .cs_text_input {
+    width: 95%;
+    background-color: rgba($secondary, 0.1);
+    border-radius: 30px;
+    position: relative;
+    padding-right: 30px;
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      padding: 10px 50px 10px 75px;
+    }
+    .cs_file_icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 100%;
+      border-right: 1px solid $border;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+    button {
+      width: 50px;
+      height: 50px;
+      border: none;
+      padding: 10px 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      background-color: $accent;
+      color: $white;
+      border-radius: 50%;
+    }
+  }
+}
