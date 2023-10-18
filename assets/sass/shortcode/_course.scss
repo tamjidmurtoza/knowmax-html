@@ -320,7 +320,7 @@
     padding: 10px 15px;
   }
 
-  .cs_filter_action {
+  .cs_filter_action.cs_style_1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -330,7 +330,6 @@
     padding: 10px 0;
     padding-left: 15px;
     position: relative;
-
     select {
       border: none;
       outline: none;

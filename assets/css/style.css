@@ -2252,7 +2252,7 @@ Slider arrow design
   min-width: 100%;
   background-color: #fff;
   margin-top: 10px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #dedede;
 }
 
 .select2-selection__rendered {
@@ -4891,6 +4891,9 @@ Chat section design
   overflow-y: auto;
   max-height: 450px;
 }
+.cs_user_list::-webkit-scrollbar {
+  display: none;
+}
 .cs_user_list li {
   padding: 20px 30px;
   border-bottom: 1px solid #dedede;
@@ -5008,6 +5011,9 @@ Chat section design
   max-height: 450px;
   overflow-y: auto;
 }
+.cs_message_wrapper .cs_meessage_sent ul::-webkit-scrollbar {
+  display: none;
+}
 .cs_message_wrapper .cs_meessage_sent li {
   padding-left: 65px;
   position: relative;
@@ -5088,6 +5094,149 @@ Chat section design
   background-color: #573cff;
   color: #fff;
   border-radius: 50%;
+}
+
+/*----------------------------------
+ Profile setting styling
+------------------------------------*/
+.cs_profile_menu {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+  border-right: 1px solid #dedede;
+}
+.cs_profile_menu h3 {
+  margin: 0 0 34px 42px;
+}
+.cs_profile_menu .cs_tab_links.cs_style_3 li a {
+  display: block;
+  padding: 12px 42px;
+}
+.cs_profile_menu .cs_tab_links.cs_style_3 li.active a, .cs_profile_menu .cs_tab_links.cs_style_3 li:hover a {
+  background-color: rgba(248, 249, 250, 0.9);
+}
+
+.cs_profile {
+  padding: 60px 40px;
+}
+.cs_profile h3 {
+  margin: 0 0 40px 0;
+}
+.cs_profile .cs_profile_intro {
+  padding: 0 0 45px 120px;
+}
+.cs_profile .cs_profile_intro .cs_profile_thumb {
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.cs_profile .cs_profile_intro .cs_profile_thumb .cs_thumb_edit {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #573cff;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 5px;
+  right: 0;
+  cursor: pointer;
+}
+.cs_profile .cs_profile_form .cs_form_field {
+  background-color: transparent;
+}
+.cs_profile .cs_profile_form input[type=file] {
+  background-color: rgba(248, 249, 250, 0.9);
+}
+.cs_profile .cs_profile_form label {
+  margin-bottom: 10px;
+}
+.cs_profile .cs_profile_form .cs_choose_thumb_field {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  background-color: rgba(248, 249, 250, 0.9);
+}
+.cs_profile .cs_profile_form .cs_choose_thumb_field input {
+  width: 100%;
+  height: 150px;
+  background-color: transparent;
+  border: none;
+}
+.cs_profile .cs_profile_form .cs_camera_icon {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cs_profile .cs_profile_form .cs_camera_icon span {
+  display: inline-block;
+}
+.cs_profile .cs_custom_select_wrap {
+  padding: 13px 0;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+.cs_profile .cs_custom_select_wrap .select2-container {
+  display: block;
+}
+.cs_profile .select2-container--default .select2-selection--single .select2-selection__rendered,
+.cs_profile .select2-container--default .select2-selection--single .select2-selection__arrow::before {
+  color: #747474;
+}
+.cs_profile.cs_affiliate h3 {
+  margin-bottom: 25px;
+}
+.cs_profile.cs_affiliate hr {
+  margin: 0 0 20px 0;
+}
+
+input[type=file i]::-webkit-file-upload-button {
+  display: none;
+}
+
+/*----------------------------------
+ Support section styling
+------------------------------------*/
+.cs_support .cs_helpful_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.cs_support .cs_btn.cs_style_1:last-child {
+  border: 2px solid #573cff;
+  background-color: transparent;
+  color: #573cff;
+  padding: 14px 25px;
+}
+.cs_support .cs_btn.cs_style_1:last-child:hover {
+  color: #fff;
+}
+.cs_support .cs_btn.cs_style_1:last-child:hover::after {
+  background-color: #573cff;
 }
 
 /*--------------------------------------------------------------
@@ -6033,7 +6182,7 @@ Chat section design
   background: #f8f9fa;
   padding: 10px 15px;
 }
-.cs_course_heading .cs_filter_action {
+.cs_course_heading .cs_filter_action.cs_style_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6050,7 +6199,7 @@ Chat section design
   padding-left: 15px;
   position: relative;
 }
-.cs_course_heading .cs_filter_action select {
+.cs_course_heading .cs_filter_action.cs_style_1 select {
   border: none;
   outline: none;
 }
@@ -6090,14 +6239,14 @@ Chat section design
 }
 
 #curriculum {
-  border: 1px solid #F6F4FF;
+  border: 1px solid #f6f4ff;
 }
 
 #instructor {
   padding: 0 40px;
 }
 #instructor .cs_instructor_bio {
-  padding: 40px 20px;
+  padding: 65px 20px;
 }
 #instructor .cs_instructor_info {
   border: 1px solid #dedede;
@@ -6106,7 +6255,7 @@ Chat section design
 }
 #instructor .cs_instructor_info .cs_title.cs_type_1 {
   padding: 20px;
-  background-color: #F6F4FF;
+  background-color: #f6f4ff;
   border-bottom: 1px solid #dedede;
 }
 #instructor .cs_instructor_desc {
@@ -6120,11 +6269,14 @@ Chat section design
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
 #instructor .cs_instructor_thumb span {
   display: inline-block;
   padding: 2px 6px;
-  background-color: #F6F4FF;
+  background-color: #f6f4ff;
   font-size: 14px;
   border-radius: 3px;
 }
@@ -6133,8 +6285,8 @@ Chat section design
   border-radius: 3px;
   padding: 15px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  right: 25px;
 }
 #instructor .cs_instructor_level li {
   gap: 40px;

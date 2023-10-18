@@ -14,6 +14,9 @@ Chat section design
   overflow: hidden;
   overflow-y: auto;
   max-height: 450px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   li {
     padding: 20px 30px;
     border-bottom: 1px solid $border;
@@ -121,6 +124,9 @@ Chat section design
     ul {
       max-height: 450px;
       overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
     li {
       padding-left: 65px;
@@ -193,6 +199,143 @@ Chat section design
       background-color: $accent;
       color: $white;
       border-radius: 50%;
+    }
+  }
+}
+/*----------------------------------
+ Profile setting styling
+------------------------------------*/
+.cs_profile_menu {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+  border-right: 1px solid $border;
+  h3 {
+    margin: 0 0 34px 42px;
+  }
+  .cs_tab_links.cs_style_3 {
+    li {
+      a {
+        display: block;
+        padding: 12px 42px;
+      }
+      &.active a,
+      &:hover a {
+        background-color: rgba($gray, $alpha: 0.9);
+      }
+    }
+  }
+}
+
+.cs_profile {
+  padding: 60px 40px;
+  h3 {
+    margin: 0 0 40px 0;
+  }
+  .cs_profile_intro {
+    padding: 0 0 45px 120px;
+    .cs_profile_thumb {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      .cs_thumb_edit {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $accent;
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 5px;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .cs_profile_form {
+    .cs_form_field {
+      background-color: transparent;
+    }
+    input[type="file"] {
+      background-color: rgba($gray, $alpha: 0.9);
+    }
+    label {
+      margin-bottom: 10px;
+    }
+    .cs_choose_thumb_field {
+      width: 100%;
+      min-height: 150px;
+      border: 1px solid $border;
+      border-radius: 5px;
+      background-color: rgba($gray, 0.9);
+      input {
+        width: 100%;
+        height: 150px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+    .cs_camera_icon {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+  .cs_custom_select_wrap {
+    padding: 13px 0;
+    border: 1px solid $border;
+    border-radius: 5px;
+    .select2-container {
+      display: block;
+    }
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered,
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow::before {
+    color: $secondary;
+  }
+  &.cs_affiliate {
+    h3 {
+      margin-bottom: 25px;
+    }
+    hr {
+      margin: 0 0 20px 0;
+    }
+  }
+}
+input[type="file" i]::-webkit-file-upload-button {
+  display: none;
+}
+/*----------------------------------
+ Support section styling
+------------------------------------*/
+.cs_support {
+  .cs_helpful_btns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .cs_btn.cs_style_1:last-child {
+    border: 2px solid $accent;
+    background-color: transparent;
+    color: $accent;
+    padding: 14px 25px;
+    &:hover {
+      color: $white;
+      &::after {
+        background-color: $accent;
+      }
     }
   }
 }
