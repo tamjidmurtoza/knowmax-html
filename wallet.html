@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/datatables.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -144,385 +145,218 @@
     </div>
   </section>
   <!-- End Hero -->
-  <!-- Start Profile Setting -->
-  <section class="cs_support cs_bg_style_4">
+  <!-- Start Wallet -->
+  <section class="cs_wallet cs_bg_style_4">
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="cs_profile cs_white_bg">
-            <div class="row cs_dashboard_header align-items-center border-bottom py-3">
-              <div class="col-md-12 col-lg-5 col-xl-5">
-                <h5>My Wallet</h5>
-              </div>
-              <div class="col-md-12 col-lg-7 col-xl-7">
-                <div class="cs_affiliate_top_btns text-end">
-                  <a href="#" class="btn btn-primary cs_modal_btn" data-modal="withdrawal_modal">
-                    Request a Withdrawal
-                  </a>
-                  <a href="#" class="btn btn-success">My
-                    Beneficiary</a>
-                  <a href="#" class="btn btn-secondary cs_modal_btn" data-modal="recharge_modal">Recharge</a>
-                </div>
-              </div>
+      <div class="cs_profile cs_white_bg">
+        <div class="row cs_dashboard_header align-items-center border-bottom py-3">
+          <div class="col-md-12 col-lg-5 col-xl-5">
+            <h5>My Wallet</h5>
+          </div>
+          <div class="col-md-12 col-lg-7 col-xl-7">
+            <div class="cs_affiliate_top_btns text-end">
+              <a href="#" class="btn btn-primary cs_modal_btn" data-modal="withdrawal_modal">
+                Request a Withdrawal
+              </a>
+              <a href="#" class="btn btn-success">My
+                Beneficiary</a>
+              <a href="#" class="btn btn-secondary cs_modal_btn" data-modal="recharge_modal">Recharge</a>
             </div>
-            <div class="cs_balance_box row">
-              <div class="col-md-6 col-lg-4">
-                <div class="cs_dashboard_item cs_radius_4 p-3">
-                  <p class="cs_fs_18">My Balance
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                      aria-hidden="true" role="img" class="iconify iconify--fluent ms-1" width="1em" height="1em"
-                      preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"
-                      data-icon="fluent:arrow-trending-20-filled">
-                      <path fill="currentColor"
-                        d="M17.943 5.463a.748.748 0 0 0-.161-.242l-.002-.001l-.001-.002A.748.748 0 0 0 17.25 5h-5.5a.75.75 0 0 0 0 1.5h3.69l-4.94 4.94l-1.97-1.97a.75.75 0 0 0-1.06 0l-5.25 5.25a.75.75 0 1 0 1.06 1.06L8 11.06l1.97 1.97a.75.75 0 0 0 1.06 0l5.47-5.47v3.69a.75.75 0 0 0 1.5 0v-5.5a.747.747 0 0 0-.057-.287Z">
-                      </path>
-                    </svg>
-                  </p>
-                  <h4 class="cs_balance_title mt-3">
-                    $ 100.00
-                  </h4>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="cs_balance_box row">
+          <div class="col-md-6 col-lg-4">
+            <div class="cs_dashboard_item cs_radius_4 p-3">
+              <p class="cs_fs_18">My Balance
+                <span><i class="fa-solid fa-chart-line"></i></span>
+              </p>
+              <h4 class="cs_balance_title mt-3">
+                $ 100.00
+              </h4>
             </div>
-            <div class="row cs_dashboard_history">
-              <div class="col-12">
-                <ul class="cs_tab_links cs_style_1 cs_mp0" id="myTab" role="tablist">
-                  <li class="active">
-                    <a href="#transaction_history">Transaction history</a>
-                  </li>
-                  <li>
-                    <a href="#withdrawal_history">Withdrawal history</a>
-                  </li>
-                  <li>
-                    <a href="#recharge_history">Wallet Recharge history</a>
-                  </li>
-                </ul>
-                <div class="cs_tabs">
-                  <div class="cs_tab active" id="transaction_history">
-                    <div class="">
-                      <div id="my-earnings_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="dataTables_length" id="my-earnings_length"><label>Show <select
-                                  name="my-earnings_length" aria-controls="my-earnings"
-                                  class="custom-select custom-select-sm form-control form-control-sm">
-                                  <option value="10">10</option>
-                                  <option value="25">25</option>
-                                  <option value="50">50</option>
-                                  <option value="100">100</option>
-                                </select> entries</label></div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="dt-buttons btn-group flex-wrap"> <button
-                                class="btn btn-secondary buttons-copy buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="my-earnings" type="button"><span>Copy</span></button>
-                              <button
-                                class="btn btn-secondary buttons-excel buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="my-earnings" type="button"><span>Excel</span></button>
-                              <button
-                                class="btn btn-secondary buttons-pdf buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="my-earnings" type="button"><span>PDF</span></button>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div id="my-earnings_filter" class="dataTables_filter"><label>Search:<input type="search"
-                                  class="form-control form-control-sm" placeholder=""
-                                  aria-controls="my-earnings"></label></div>
-                          </div>
-                        </div>
-                        <table id="my-earnings"
-                          class="table booking-history-past-table dataTable no-footer dtr-inline collapsed" role="grid"
-                          aria-describedby="my-earnings_info">
-                          <thead>
-                            <tr role="row">
-                              <th class="all sorting" tabindex="0" aria-controls="my-earnings" rowspan="1" colspan="1"
-                                aria-label="Date: activate to sort column ascending">Date</th>
-                              <th class="none sorting" tabindex="0" aria-controls="my-earnings" rowspan="1" colspan="1"
-                                aria-label="Transaction ID: activate to sort column ascending" style="display: none;">
-                                Transaction
-                                ID</th>
-                              <th class="none sorting" tabindex="0" aria-controls="my-earnings" rowspan="1" colspan="1"
-                                aria-label="Description: activate to sort column ascending" style="display: none;">
-                                Description
-                              </th>
-                              <th class="all sorting sorting_asc" tabindex="0" aria-controls="my-earnings" rowspan="1"
-                                colspan="1" aria-label="Type: activate to sort column descending" aria-sort="ascending">
-                                Type</th>
-                              <th class="all sorting" tabindex="0" aria-controls="my-earnings" rowspan="1" colspan="1"
-                                aria-label="Amount: activate to sort column ascending">Amount</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="odd">
-                              <td class="dtr-control">2022-10-13 05:03:51</td>
-                              <td style="display: none;">1e63d19f85764c0c8865304beac9beb2</td>
-                              <td style="display: none;">Earning via sell</td>
-                              <td class="sorting_1">Sell</td>
-                              <td>$ 50.000</td>
-                            </tr>
-                            <tr class="even">
-                              <td class="dtr-control">2022-10-13 03:39:30</td>
-                              <td style="display: none;">f2f1e6404eb64b398735bd2eb157f06f</td>
-                              <td style="display: none;">Earning via Consultation</td>
-                              <td class="sorting_1">Sell</td>
-                              <td>$ 50.000</td>
-                            </tr>
-                            <tr class="odd">
-                              <td class="dtr-control">2022-10-13 03:39:30</td>
-                              <td style="display: none;">e2dda0826c89436cbb0b60c3bf27ac71</td>
-                              <td style="display: none;">Earning via JavaScript: Understanding the Weird Parts</td>
-                              <td class="sorting_1">Sell</td>
-                              <td>$ 45.000</td>
-                            </tr>
-                            <tr class="even">
-                              <td class="dtr-control">2022-10-13 03:39:30</td>
-                              <td style="display: none;">e3e0034400934c5882b6c36ee7d0b97d</td>
-                              <td style="display: none;">Withdrawal via buy</td>
-                              <td class="sorting_1">Withdrawal</td>
-                              <td>$ 0.000</td>
-                            </tr>
-                            <tr class="odd">
-                              <td class="dtr-control">2022-10-13 03:39:30</td>
-                              <td style="display: none;">63ff365725f245a083c03998128571ec</td>
-                              <td style="display: none;">Withdrawal via buy</td>
-                              <td class="sorting_1">Withdrawal</td>
-                              <td>$ 0.000</td>
-                            </tr>
-                            <tr class="even">
-                              <td class="dtr-control">2022-10-13 03:39:30</td>
-                              <td style="display: none;">229b1266687445668a2accf4a952e6b7</td>
-                              <td style="display: none;">Withdrawal via buy</td>
-                              <td class="sorting_1">Withdrawal</td>
-                              <td>$ 45.000</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div id="my-earnings_processing" class="dataTables_processing card" style="display: none;">
-                          Processing...
-                        </div>
-                        <div class="bottom">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="dataTables_info" id="my-earnings_info" role="status" aria-live="polite">
-                                Showing 1 To 6
-                                Of 6 Entries</div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="dataTables_paginate paging_simple_numbers" id="my-earnings_paginate">
-                                <ul class="pagination">
-                                  <li class="paginate_button page-item previous disabled" id="my-earnings_previous"><a
-                                      href="#" aria-controls="my-earnings" data-dt-idx="0" tabindex="0"
-                                      class="page-link">Previous</a></li>
-                                  <li class="paginate_button page-item active"><a href="#" aria-controls="my-earnings"
-                                      data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                  <li class="paginate_button page-item next disabled" id="my-earnings_next"><a href="#"
-                                      aria-controls="my-earnings" data-dt-idx="2" tabindex="0"
-                                      class="page-link">Next</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cs_modal cs_withdrawal_modal" id="withdrawal_modal" role="tabpanel"
-                    aria-labelledby="withdrawal-history-tab">
-                    <div class="">
-                      <div id="withdrawalHistory_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="dataTables_length" id="withdrawalHistory_length"><label>Show <select
-                                  name="withdrawalHistory_length" aria-controls="withdrawalHistory"
-                                  class="custom-select custom-select-sm form-control form-control-sm">
-                                  <option value="10">10</option>
-                                  <option value="25">25</option>
-                                  <option value="50">50</option>
-                                  <option value="100">100</option>
-                                </select> entries</label></div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="dt-buttons btn-group flex-wrap"> <button
-                                class="btn btn-secondary buttons-copy buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="withdrawalHistory" type="button"><span>Copy</span></button>
-                              <button
-                                class="btn btn-secondary buttons-excel buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="withdrawalHistory" type="button"><span>Excel</span></button>
-                              <button
-                                class="btn btn-secondary buttons-pdf buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="withdrawalHistory" type="button"><span>PDF</span></button>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div id="withdrawalHistory_filter" class="dataTables_filter"><label>Search:<input
-                                  type="search" class="form-control form-control-sm" placeholder=""
-                                  aria-controls="withdrawalHistory"></label>
-                            </div>
-                          </div>
-                        </div>
-                        <table id="withdrawalHistory"
-                          class="table booking-history-past-table dataTable no-footer dtr-inline collapsed" role="grid"
-                          aria-describedby="withdrawalHistory_info">
-                          <thead>
-                            <tr role="row">
-                              <th class="all sorting" tabindex="0" aria-controls="withdrawalHistory" rowspan="1"
-                                colspan="1" aria-label="Date: activate to sort column ascending">Date</th>
-                              <th class="none sorting sorting_desc" tabindex="0" aria-controls="withdrawalHistory"
-                                rowspan="1" colspan="1" aria-sort="descending"
-                                aria-label="Transaction ID: activate to sort column ascending" style="display: none;">
-                                Transaction ID</th>
-                              <th class="none sorting" tabindex="0" aria-controls="withdrawalHistory" rowspan="1"
-                                colspan="1" aria-label="Description: activate to sort column ascending"
-                                style="display: none;">Description
-                              </th>
-                              <th class="all sorting" tabindex="0" aria-controls="withdrawalHistory" rowspan="1"
-                                colspan="1" aria-label="Payment Method: activate to sort column ascending">Payment
-                                Method</th>
-                              <th class="all sorting" tabindex="0" aria-controls="withdrawalHistory" rowspan="1"
-                                colspan="1" aria-label="amount: activate to sort column ascending">amount</th>
-                              <th class="all sorting" tabindex="0" aria-controls="withdrawalHistory" rowspan="1"
-                                colspan="1" aria-label="Status: activate to sort column ascending">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="odd">
-                              <td valign="top" colspan="4" class="dataTables_empty">No data available in table</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div id="withdrawalHistory_processing" class="dataTables_processing card"
-                          style="display: none;">
-                          Processing...</div>
-                        <div class="bottom">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="dataTables_info" id="withdrawalHistory_info" role="status" aria-live="polite">
-                                Showing 0
-                                to 0 of 0 entries</div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="dataTables_paginate paging_simple_numbers" id="withdrawalHistory_paginate">
-                                <ul class="pagination">
-                                  <li class="paginate_button page-item previous disabled"
-                                    id="withdrawalHistory_previous"><a href="#" aria-controls="withdrawalHistory"
-                                      data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                                  <li class="paginate_button page-item next disabled" id="withdrawalHistory_next"><a
-                                      href="#" aria-controls="withdrawalHistory" data-dt-idx="1" tabindex="0"
-                                      class="page-link">Next</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade" id="wallet-recharge-history" role="tabpanel"
-                    aria-labelledby="wallet-recharge-history-tab">
-                    <div class="">
-                      <div id="walletRechargeHistory_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                        <div class="row">
-                          <div class="col-sm-4">
-                            <div class="dataTables_length" id="walletRechargeHistory_length"><label>Show <select
-                                  name="walletRechargeHistory_length" aria-controls="walletRechargeHistory"
-                                  class="custom-select custom-select-sm form-control form-control-sm">
-                                  <option value="10">10</option>
-                                  <option value="25">25</option>
-                                  <option value="50">50</option>
-                                  <option value="100">100</option>
-                                </select> entries</label></div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div class="dt-buttons btn-group flex-wrap"> <button
-                                class="btn btn-secondary buttons-copy buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="walletRechargeHistory"
-                                type="button"><span>Copy</span></button>
-                              <button
-                                class="btn btn-secondary buttons-excel buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="walletRechargeHistory"
-                                type="button"><span>Excel</span></button>
-                              <button
-                                class="btn btn-secondary buttons-pdf buttons-html5 theme-btn theme-button1 default-hover-btn"
-                                tabindex="0" aria-controls="walletRechargeHistory"
-                                type="button"><span>PDF</span></button>
-                            </div>
-                          </div>
-                          <div class="col-sm-4">
-                            <div id="walletRechargeHistory_filter" class="dataTables_filter"><label>Search:<input
-                                  type="search" class="form-control form-control-sm" placeholder=""
-                                  aria-controls="walletRechargeHistory"></label></div>
-                          </div>
-                        </div>
-                        <table id="walletRechargeHistory"
-                          class="table booking-history-past-table dataTable no-footer dtr-inline" role="grid"
-                          aria-describedby="walletRechargeHistory_info">
-                          <thead>
-                            <tr role="row">
-                              <th class="all sorting sorting_desc" tabindex="0" aria-controls="walletRechargeHistory"
-                                rowspan="1" colspan="1" aria-sort="descending"
-                                aria-label="Date: activate to sort column ascending">Date</th>
-                              <th class="all sorting" tabindex="0" aria-controls="walletRechargeHistory" rowspan="1"
-                                colspan="1" aria-label="Transaction ID: activate to sort column ascending">Transaction
-                                ID</th>
-                              <th class="all sorting" tabindex="0" aria-controls="walletRechargeHistory" rowspan="1"
-                                colspan="1" aria-label="Payment Method: activate to sort column ascending">Payment
-                                Method</th>
-                              <th class="all sorting" tabindex="0" aria-controls="walletRechargeHistory" rowspan="1"
-                                colspan="1" aria-label="amount: activate to sort column ascending">amount</th>
-                              <th class="all sorting" tabindex="0" aria-controls="walletRechargeHistory" rowspan="1"
-                                colspan="1" aria-label="Status: activate to sort column ascending">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr class="odd">
-                              <td valign="top" colspan="5" class="dataTables_empty">No data available in table</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <div id="walletRechargeHistory_processing" class="dataTables_processing card"
-                          style="display: none;">
-                          Processing...</div>
-                        <div class="bottom">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="dataTables_info" id="walletRechargeHistory_info" role="status"
-                                aria-live="polite">
-                                Showing 0 to 0 of 0 entries</div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="dataTables_paginate paging_simple_numbers"
-                                id="walletRechargeHistory_paginate">
-                                <ul class="pagination">
-                                  <li class="paginate_button page-item previous disabled"
-                                    id="walletRechargeHistory_previous"><a href="#"
-                                      aria-controls="walletRechargeHistory" data-dt-idx="0" tabindex="0"
-                                      class="page-link">Previous</a></li>
-                                  <li class="paginate_button page-item next disabled" id="walletRechargeHistory_next"><a
-                                      href="#" aria-controls="walletRechargeHistory" data-dt-idx="1" tabindex="0"
-                                      class="page-link">Next</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="row align-items-center py-3">
+          <div class="col-md-9">
+            <ul class="cs_tab_links cs_style_4 cs_mp0">
+              <li class="active">
+                <a href="#transaction_history" class="cs_fs_20 cs_medium cs_primary_color">Transaction history</a>
+              </li>
+              <li>
+                <a href="#withdrawal_history" class="cs_fs_20 cs_medium cs_primary_color">Withdrawal history</a>
+              </li>
+              <li>
+                <a href="#recharge_history" class="cs_fs_20 cs_medium cs_primary_color">Wallet Recharge history</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <div class="cs_action_btns ms-end">
+              <button class="cs_action_btn" type="button"><span>Copy</span>
+              </button>
+              <button class="cs_action_btn" type="button"><span>Excel</span></button> <button class="cs_action_btn"
+                type="button"><span>PDF</span></button>
             </div>
+          </div>
+        </div>
+        <hr>
+        <div class="cs_tabs">
+          <div class="cs_tab active" id="transaction_history">
+            <table class="cs_dataTable">
+              <thead>
+                <tr>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Date</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">
+                    Type</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td class="dtr-control">2022-10-13 05:03:51</td>
+                  <td>Course</td>
+                  <td>$ 50.000</td>
+                </tr>
+                <tr class="even">
+                  <td class="dtr-control">2022-10-13 05:03:51</td>
+                  <td>Course</td>
+                  <td>$ 50.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cs_tab" id="withdrawal_history">
+            <table class="cs_dataTable">
+              <thead>
+                <tr>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Date</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">
+                    Payment Method</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">
+                    Amount
+                  </th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">
+                    Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td>2022-10-13 05:03:51</td>
+                  <td>Bank</td>
+                  <td>$ 100.00</td>
+                  <td>Paid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="cs_tab" id="recharge_history">
+            <table class="cs_dataTable">
+              <thead>
+                <tr>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Date</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Transaction ID</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Payment Method</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Amount</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td>2022-10-13 05:03:51</td>
+                  <td>1221</td>
+                  <td>Bank</td>
+                  <td>$ 60.00</td>
+                  <td>Received</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
     <div class="cs_height_120 cs_height_lg_80"></div>
   </section>
-  <!-- End Profile Setting -->
+  <!-- End Wallet -->
+  <!-- Start withdrawal modal -->
+  <div class="cs_modal cs_size_md" data-modal="withdrawal_modal">
+    <div class="cs_close_overlay"></div>
+    <div class="cs_modal_in">
+      <div class="cs_modal_container">
+        <button class="cs_close_modal cs_center cs_primary_bg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="cs_modal_header text-center py-5">
+          <p>Available Balance</p>
+          <h3 class="cs_modal_title mb-0">$ 100.00</h3>
+        </div>
+        <div class="cs_modal_body">
+          <form class="row">
+            <div class="col-12">
+              <div class="cs_rating_group">
+                <div class="cs_modal_input">
+                  <label class="cs_fs_18 cs_primary_color cs_medium">Amount <span class="text-danger">*</span></label>
+                  <input type="text" class="cs_form_field cs_type_1" placeholder="Enter amount">
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="cs_modal_input">
+                <label class="cs_fs_18 cs_medium cs_primary_color">Beneficiary<span class="text-danger">*</span></label>
+                <div class="cs_custom_select_wrap">
+                  <select class="cs_select1 cs_form_field">
+                    <option value="select">Select</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+        <div class="cs_modal_footer justify-content-between align-items-center">
+          <button class="cs_btn cs_submit cs_medium cs_white_color  w-100">Make Withdrawal</button>
+        </div>
+        <div class="cs-height_100 cs-height_lg_70"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End withdrawal modal -->
+  <!-- Start recharge modal -->
+  <div class="cs_modal cs_size_md" data-modal="recharge_modal">
+    <div class="cs_close_overlay"></div>
+    <div class="cs_modal_in">
+      <div class="cs_modal_container">
+        <div class="cs_modal_header">
+          <h3 class="cs_modal_title mb-0">Request for Refund</h3>
+          <button class="cs_close_modal cs_center cs_primary_bg">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="cs_modal_body">
+          <form>
+            <div class="cs_rating_group">
+              <div class="cs_modal_input">
+                <label class="cs_fs_18 cs_medium cs_primary_color">Refund Amount</label>
+                <div class="cs_amount">55.00</div>
+              </div>
+            </div>
+            <div class="cs_modal_input">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Reason</label>
+              <textarea class="cs_form_field cs_feedback" rows="3"
+                placeholder="Please write your Comment here"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="cs_modal_footer d-flex justify-content-between align-items-center">
+          <button class="cs_btn cs_cancel cs_medium cs_primary_color">Cancel</button>
+          <button class="cs_btn cs_submit cs_medium cs_white_color">Refund Request</button>
+        </div>
+        <div class="cs-height_100 cs-height_lg_70"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End recharge modal -->
   <!--Start Footer Section -->
   <footer class="cs_footer cs_style_1" data-src="assets/img/footer_bg.svg">
     <div class="cs_height_100 cs_height_lg_80"></div>
@@ -725,6 +559,7 @@
   <script src="assets/js/odometer.js"></script>
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/isotope.pkg.min.js"></script>
+  <script src="assets/js/datatables.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

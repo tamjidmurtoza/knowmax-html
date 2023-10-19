@@ -58,6 +58,7 @@
     animationInit();
     progressBar();
     modal();
+    dataTable();
   });
 
   $(window).on('scroll', function () {
@@ -515,5 +516,11 @@
       var modalData = $(this).parents('.cs_modal').attr('data-modal');
       $(`[data-modal='${modalData}']`).removeClass('active');
     });
+  }
+  /*--------------------------------------------------------------
+   19. dataTable
+ --------------------------------------------------------------*/
+  function dataTable() {
+    $('.cs_dataTable').DataTable();
   }
 })(jQuery); // End of use strict
