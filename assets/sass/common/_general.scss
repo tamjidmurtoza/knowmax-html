@@ -378,6 +378,18 @@ br {
   transition: all 0.3s ease;
   border-radius: 5px;
 }
+.form-select {
+  padding: 15px 20px;
+
+  &:focus {
+    border-color: $accent;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+// select {
+//   appearance: none;
+// }
 .cs_filter_action.cs_style_1 {
   border: 1px solid $border;
   border-radius: 3px;

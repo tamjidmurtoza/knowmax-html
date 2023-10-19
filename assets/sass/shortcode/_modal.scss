@@ -58,8 +58,8 @@
   height: 35px;
   width: 35px;
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 15px;
+  top: 15px;
   background-color: transparent;
   color: red;
   font-size: 18px;
@@ -114,16 +114,6 @@
     }
     label {
       margin-bottom: 10px;
-    }
-    .cs_modal_input {
-      .cs_custom_select_wrap {
-        padding: 13px 0;
-        border: 1px solid $border;
-        border-radius: 5px;
-        .select2-container {
-          display: block;
-        }
-      }
     }
     .cs_btn {
       border: none;

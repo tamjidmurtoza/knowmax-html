@@ -10,7 +10,7 @@
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/fabicon.svg">
   <!-- Site Title -->
-  <title>My Learning</title>
+  <title>Beneficiary</title>
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/animate.css">
@@ -131,271 +131,161 @@
   <section class="cs_page_heading position-relative  cs_bg_filed cs_vertical_middle" data-src="assets/img/hero4_bg.svg">
     <div class="cs_hero_overlay"></div>
     <div class="container">
-      <h1 class="cs_page_title cs_fs_48 cs_white_color text-center">My Learning</h1>
+      <h1 class="cs_page_title cs_fs_48 cs_white_color text-center">My Beneficiary</h1>
     </div>
     <div class="cs_breadcrumb_wrap position-absolute">
       <div class="container">
         <nav class="cs_breadcrumb_in">
           <ol class="breadcrumb mb-0 cs_fs_18 cs_medium cs_white_color">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">My Learning</li>
+            <li class="breadcrumb-item" aria-current="page">My Beneficiary</li>
           </ol>
         </nav>
       </div>
     </div>
   </section>
   <!-- End Hero -->
-  <!-- Start Instructor -->
-  <section class="cs_my_learning cs_style_1 cs_bg_style_4">
+  <!-- Start Wallet -->
+  <section class="cs_wallet cs_bg_style_4">
     <div class="cs_height_120 cs_height_lg_80"></div>
     <div class="container">
-      <div class="cs_section_heading cs_style_1">
-        <div class="cs_section_heading_right">
-          <a href="courses.html" class="cs_btn cs_style_1 cs_accent_bg cs_medium cs_radius_3">
-            <span>View All Courses</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_641_323)">
-                <path
-                  d="M19.5866 11H0.41235C0.184269 11 0 10.7715 0 10.4886C0 10.2058 0.184269 9.97723 0.41235 9.97723H18.5906L16.0881 6.87375C15.927 6.67399 15.927 6.34958 16.0881 6.14982C16.2492 5.95006 16.5108 5.95006 16.6718 6.14982L19.8792 10.1274C19.9977 10.2745 20.0325 10.4934 19.9681 10.6852C19.9036 10.8753 19.7529 11 19.5866 11Z"
-                  fill="currentColor" />
-                <path
-                  d="M16.3435 14.4241C16.2384 14.4241 16.1333 14.3843 16.0538 14.3035C15.8935 14.1433 15.8935 13.883 16.0538 13.7228L19.2487 10.5279C19.4089 10.3677 19.6692 10.3677 19.8294 10.5279C19.9897 10.6882 19.9897 10.9484 19.8294 11.1087L16.6346 14.3035C16.5538 14.3843 16.4487 14.4241 16.3435 14.4241Z"
-                  fill="currentColor" />
-              </g>
-              <defs>
-                <clipPath id="clip0_641_323">
-                  <rect width="20" height="20" fill="currentColor" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-        </div>
-        <div class="cs_section_heading_in">
-          <div class="cs_filter_action cs_style_1 cs_white_bg d-flex">
-            <p class="mb-0"><i class="fa-solid fa-filter"></i>Sort By:</p>
-            <div class="cs_custom_select_wrap">
-              <select class="cs_select1">
-                <option value="select">Select</option>
-                <option value="newest">Newest</option>
-                <option value="older">Older</option>
-              </select>
+      <div class="cs_profile cs_white_bg">
+        <div class="row cs_dashboard_header align-items-center border-bottom py-3">
+          <div class="col-md-12 col-lg-5 col-xl-5">
+            <h4 class="mb-0">Beneficiary For Withdraw</h4>
+          </div>
+          <div class="col-md-12 col-lg-7 col-xl-7">
+            <div class="cs_affiliate_top_btns text-end">
+              <a href="#" class="cs_modal_btn" data-modal="beneficiary_modal">
+                Add Beneficiary
+              </a>
+              <a href="wallet.html" class="cs_modal_btn">GoTo Wallet</a>
             </div>
           </div>
         </div>
+        <div class="cs_tabs">
+          <div class="cs_tab active" id="recharge_history">
+            <table class="cs_dataTable">
+              <thead>
+                <tr>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Name</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Type</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Data</th>
+                  <th class="cs_fs_18 cs_medium cs_primary_color">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td>Laralink</td>
+                  <td>Web Dev Team</td>
+                  <td>Available</td>
+                  <td>Done</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      <div class="cs_height_60 cs_height_lg_50"></div>
-      <div class="cs_course_list">
-        <table class="cs_courses_table cs_white_bg mb-0">
-          <thead>
-            <tr>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Course</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Author</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Price</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Order ID</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Validity</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Progress</th>
-              <th class="cs_fs_18 cs_medium cs_primary_color">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div class="cs_course cs_style_4 d-inline-flex align-items-center">
-                  <a href="course_details.html" class="cs_course_thumb cs_radius_5 position-relative">
-                    <img src="assets/img/course1.jpg" alt="Course Image">
-                    <div class="cs_course_thumb_overlay"></div>
-                  </a>
-                  <div class="cs_course_info">
-                    <h3 class="cs_course_title cs_fs_18 cs_medium">
-                      <a href="course_details.html">
-                        Angular - The Complete Guide</a>
-                    </h3>
-                    <div class="cs_course_action">
-                      <a href="#" class="cs_refund cs_modal_btn" data-modal="refund">
-                        <span class="cs_gold_color"><i class="fa-solid fa-rotate-left"></i></span>
-                        Refund</a>
-                      <a href="#" class="cs_refund cs_modal_btn" data-modal="review"><span class="cs_gold_color"><i
-                            class="fa-solid fa-star"></i></span>
-                        Give
-                      </a>
-                      <a target="_blank" href="#" class="cs_refund"><span class="cs_gold_color"><i
-                            class="fa-solid fa-file-lines"></i></span>
-                        Invoice</a>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>James Bond</td>
-              <td>$45.00</td>
-              <td>126509</td>
-              <td>Lifetime</td>
-              <td>
-                <div class="cs_review_progress_bar_wrap">
-                  <div class="cs_barras">
-                    <div class="progress_bar_box">
-                      <div class="progress_value"><span>75%</span></div>
-                      <div class="cs_progress_container">
-                        <div class="cs_progress" data-progress="75">
-                          <div class="cs_progress_percentage"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <a href="login.html" class="cs_cart_btn cs_medium cs_radius_5">View</a>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="cs_course cs_style_4 d-inline-flex align-items-center">
-                  <a href="course_details.html" class="cs_course_thumb cs_radius_5 position-relative">
-                    <img src="assets/img/course2.jpg" alt="Course Image">
-                    <div class="cs_course_thumb_overlay"></div>
-                  </a>
-                  <div class="cs_course_info">
-                    <h3 class="cs_course_title cs_fs_18 cs_medium">
-                      <a href="course_details.html">
-                        React - The Complete Guide</a>
-                    </h3>
-                    <div class="cs_course_action">
-                      <a href="#" class="cs_refund cs_modal_btn" data-modal="refund">
-                        <span class="cs_gold_color"><i class="fa-solid fa-rotate-left"></i></span>
-                        Refund</a>
-                      <a href="#" class="cs_refund cs_modal_btn" data-modal="review"><span class="cs_gold_color"><i
-                            class="fa-solid fa-star"></i></span>
-                        Give
-                      </a>
-                      <a target="_blank" href="#" class="cs_refund"><span class="cs_gold_color"><i
-                            class="fa-solid fa-file-lines"></i></span>
-                        Invoice</a>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>James Bond</td>
-              <td>$55.00</td>
-              <td>126509</td>
-              <td>Lifetime</td>
-              <td>
-                <div class="cs_review_progress_bar_wrap">
-                  <div class="cs_barras">
-                    <div class="progress_bar_box">
-                      <div class="progress_value"><span>85%</span></div>
-                      <div class="cs_progress_container">
-                        <div class="cs_progress" data-progress="85">
-                          <div class="cs_progress_percentage"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <a href="login.html" class="cs_cart_btn cs_medium cs_radius_5">View</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
     </div>
     <div class="cs_height_120 cs_height_lg_80"></div>
   </section>
-  <!-- End Instructor -->
-  <!-- Start refund modal -->
-  <div class="cs_modal cs_size_md" data-modal="refund">
+  <!-- End Wallet -->
+  <!-- Start beneficiary modal -->
+  <div class="cs_modal cs_size_md" data-modal="beneficiary_modal">
     <div class="cs_close_overlay"></div>
     <div class="cs_modal_in">
       <div class="cs_modal_container">
-        <div class="cs_modal_header">
-          <h3 class="cs_modal_title mb-0">Request for Refund</h3>
-          <button class="cs_close_modal cs_center cs_primary_bg">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+        <button class="cs_close_modal cs_center cs_primary_bg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="cs_modal_header py-4">
+          <h3 class="cs_modal_title mb-0">Add Beneficiary</h3>
         </div>
-        <div class="cs_modal_body">
-          <form>
-            <div class="cs_rating_group">
-              <div class="cs_modal_input">
-                <label class="cs_fs_18 cs_medium cs_primary_color">Refund Amount</label>
-                <div class="cs_amount">55.00</div>
-              </div>
+        <div class="cs_modal_body border-bottom-0">
+          <form class="cs_form row">
+            <div class="col-md-12">
+              <div class="cs_height_30"></div>
+              <label class="cs_fs_18 cs_medium cs_primary_color">
+                Beneficiary Name<span class="text-danger">*</span></label>
+              <input type="text" class="cs_form_field" name="beneficiary_name" placeholder="Beneficiary Name">
+              <div class="cs_height_30"></div>
             </div>
-            <div class="cs_modal_input">
-              <label class="cs_fs_18 cs_medium cs_primary_color">Reason</label>
-              <textarea class="cs_form_field cs_feedback" rows="3"
-                placeholder="Please write your Comment here"></textarea>
+            <div class="col-md-12">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Type<span class="text-danger">*</span></label>
+              <select name="type" class="form-select">
+                <option value="2">Card</option>
+                <option value="1">Bank</option>
+                <option value="3">Paypal</option>
+              </select>
+              <div class="cs_height_30"></div>
+            </div>
+            <div class="col-md-12">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Card number<span class="text-danger">*</span></label>
+              <input type="text" class="cs_form_field" placeholder="1245 2154 2154 215">
+              <div class="cs_height_30"></div>
+            </div>
+            <div class="col-md-12">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Card Holder Name<span
+                  class="text-danger">*</span></label>
+              <input type="text" class="cs_form_field" placeholder="Your name">
+              <div class="cs_height_30"></div>
+            </div>
+            <div class="col-md-6">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Month<span class="text-danger">*</span></label>
+              <select class="form-select">
+                <option value="">Select Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <div class="cs_height_30"></div>
+            </div>
+            <div class="col-md-6">
+              <label class="cs_fs_18 cs_medium cs_primary_color">Year<span class="text-danger">*</span></label>
+              <select class="form-select">
+                <option value="">Select Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+                <option value="2036">2036</option>
+                <option value="2037">2037</option>
+                <option value="2038">2038</option>
+                <option value="2039">2039</option>
+                <option value="2040">2040</option>
+                <option value="2041">2041</option>
+                <option value="2042">2042</option>
+              </select>
+              <div class="cs_height_30"></div>
+            </div>
+            <div class="col-12">
+              <button class="cs_btn cs_submit cs_medium cs_white_color  w-100">Add Beneficiary</button>
             </div>
           </form>
+          <div class="cs-height_100 cs-height_lg_70"></div>
         </div>
-        <div class="cs_modal_footer d-flex justify-content-between align-items-center">
-          <button class="cs_btn cs_cancel cs_medium cs_primary_color">Cancel</button>
-          <button class="cs_btn cs_submit cs_medium cs_white_color">Refund Request</button>
-        </div>
-        <div class="cs-height_100 cs-height_lg_70"></div>
       </div>
     </div>
   </div>
-  <!-- End refund modal -->
-  <!-- Start review modal -->
-  <div class="cs_modal cs_size_md" data-modal="review">
-    <div class="cs_close_overlay"></div>
-    <div class="cs_modal_in">
-      <div class="cs_modal_container">
-        <div class="cs_modal_header">
-          <h3 class="cs_modal_title mb-0">Write a Review</h3>
-          <button class="cs_close_modal cs_center cs_primary_bg">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="cs_modal_body">
-          <form>
-            <div class="row cs_gap_y_24">
-              <div class="col-md-12 text-center">
-                <div class="cs_btn_group cs_rating_group">
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="rating">
-                  <label class="give-rating-star" for="btncheck1">
-                    <i class="fa-solid fa-star"></i>
-                  </label>
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="rating">
-                  <label class="give-rating-star" for="btncheck1">
-                    <i class="fa-solid fa-star"></i>
-                  </label>
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="rating">
-                  <label class="give-rating-star" for="btncheck1">
-                    <i class="fa-solid fa-star"></i>
-                  </label>
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="rating">
-                  <label class="give-rating-star" for="btncheck1">
-                    <i class="fa-solid fa-star"></i>
-                  </label>
-                  <input type="checkbox" class="btn-check" id="btncheck1" name="rating">
-                  <label class="give-rating-star" for="btncheck1">
-                    <i class="fa-solid fa-star"></i>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="row cs_gap_y_24">
-              <div class="col-md-12">
-                <label class="cs_fs_18 cs_medium cs_primary_color">Feedback</label>
-                <textarea class="cs_form_field cs_feedback" rows="3"
-                  placeholder="Please write your Comment here"></textarea>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="cs_modal_footer d-flex justify-content-between align-items-center">
-          <button class="cs_btn cs_cancel cs_medium cs_primary_color">Cancel</button>
-          <button class="cs_btn cs_submit cs_medium cs_white_color">Submit Review</button>
-        </div>
-        <div class="cs-height_100 cs-height_lg_70"></div>
-      </div>
-    </div>
-  </div>
-  <!-- End review modal -->
+  <!-- End beneficiary modal -->
   <!--Start Footer Section -->
   <footer class="cs_footer cs_style_1" data-src="assets/img/footer_bg.svg">
     <div class="cs_height_100 cs_height_lg_80"></div>

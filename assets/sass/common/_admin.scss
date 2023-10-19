@@ -213,18 +213,6 @@ Chat section design
   h3 {
     margin: 0 0 34px 42px;
   }
-  .cs_tab_links.cs_style_3 {
-    li {
-      a {
-        display: block;
-        padding: 12px 42px;
-      }
-      &.active a,
-      &:hover a {
-        background-color: rgba($gray, $alpha: 0.9);
-      }
-    }
-  }
 }
 
 .cs_profile {
@@ -342,3 +330,31 @@ input[type="file" i]::-webkit-file-upload-button {
 /*----------------------------------
  Wallet section styling
 ------------------------------------*/
+.cs_wallet {
+  .cs_balance_box {
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba($gray, 0.9);
+    padding: 20px 0 20px 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+    span {
+      margin-left: 10px;
+    }
+  }
+  .cs_affiliate_top_btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    a {
+      padding: 10px 25px;
+      border-radius: 2px;
+      border: 2px solid $accent;
+      &.cs_modal_btn {
+        background-color: $accent;
+        color: $white;
+      }
+    }
+  }
+}

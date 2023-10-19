@@ -116,6 +116,18 @@
     }
   }
 }
+.cs_tab_links.cs_style_3 {
+  li {
+    a {
+      display: block;
+      padding: 12px 42px;
+    }
+    &.active a,
+    &:hover a {
+      background-color: rgba($gray, $alpha: 0.9);
+    }
+  }
+}
 .cs_tab_links.cs_style_4 {
   display: flex;
   align-items: center;

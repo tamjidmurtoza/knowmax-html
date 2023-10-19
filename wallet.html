@@ -152,30 +152,25 @@
       <div class="cs_profile cs_white_bg">
         <div class="row cs_dashboard_header align-items-center border-bottom py-3">
           <div class="col-md-12 col-lg-5 col-xl-5">
-            <h5>My Wallet</h5>
+            <h4 class="mb-0">My Wallet</h4>
           </div>
           <div class="col-md-12 col-lg-7 col-xl-7">
             <div class="cs_affiliate_top_btns text-end">
-              <a href="#" class="btn btn-primary cs_modal_btn" data-modal="withdrawal_modal">
+              <a href="#" class="cs_modal_btn" data-modal="withdrawal_modal">
                 Request a Withdrawal
               </a>
-              <a href="#" class="btn btn-success">My
-                Beneficiary</a>
-              <a href="#" class="btn btn-secondary cs_modal_btn" data-modal="recharge_modal">Recharge</a>
+              <a href="benificiary.html">My Beneficiary</a>
+              <a href="#" class="cs_modal_btn" data-modal="recharge_modal">Recharge</a>
             </div>
           </div>
         </div>
-        <div class="cs_balance_box row">
-          <div class="col-md-6 col-lg-4">
-            <div class="cs_dashboard_item cs_radius_4 p-3">
-              <p class="cs_fs_18">My Balance
-                <span><i class="fa-solid fa-chart-line"></i></span>
-              </p>
-              <h4 class="cs_balance_title mt-3">
-                $ 100.00
-              </h4>
-            </div>
-          </div>
+        <div class="cs_balance_box cs_radius_10">
+          <p class="cs_fs_18">My Balance
+            <span><i class="fa-solid fa-chart-line"></i></span>
+          </p>
+          <h4 class="cs_balance_title cs_fs_35 cs_accent_color">
+            $ 100.00
+          </h4>
         </div>
         <div class="row align-items-center py-3">
           <div class="col-md-9">
@@ -290,32 +285,29 @@
           <p>Available Balance</p>
           <h3 class="cs_modal_title mb-0">$ 100.00</h3>
         </div>
-        <div class="cs_modal_body">
+        <div class="cs_modal_body border-bottom-0">
           <form class="row">
             <div class="col-12">
-              <div class="cs_rating_group">
-                <div class="cs_modal_input">
-                  <label class="cs_fs_18 cs_primary_color cs_medium">Amount <span class="text-danger">*</span></label>
-                  <input type="text" class="cs_form_field cs_type_1" placeholder="Enter amount">
-                </div>
+              <div class="cs_modal_input">
+                <div class="cs_height_30"></div>
+                <label class="cs_fs_18 cs_primary_color cs_medium">Amount <span class="text-danger">*</span></label>
+                <input type="text" class="cs_form_field cs_type_1" placeholder="Enter amount">
               </div>
+              <div class="cs_height_30"></div>
             </div>
             <div class="col-12">
               <div class="cs_modal_input">
                 <label class="cs_fs_18 cs_medium cs_primary_color">Beneficiary<span class="text-danger">*</span></label>
-                <div class="cs_custom_select_wrap">
-                  <select class="cs_select1 cs_form_field">
-                    <option value="select">Select</option>
-                  </select>
-                </div>
+                <select class="form-select">
+                  <option value="select">Select</option>
+                </select>
               </div>
+              <div class="cs_height_30"></div>
             </div>
-
-
+            <div class="col-12">
+              <button class="cs_btn cs_submit cs_medium cs_white_color  w-100">Make Withdrawal</button>
+            </div>
           </form>
-        </div>
-        <div class="cs_modal_footer justify-content-between align-items-center">
-          <button class="cs_btn cs_submit cs_medium cs_white_color  w-100">Make Withdrawal</button>
         </div>
         <div class="cs-height_100 cs-height_lg_70"></div>
       </div>
@@ -327,33 +319,30 @@
     <div class="cs_close_overlay"></div>
     <div class="cs_modal_in">
       <div class="cs_modal_container">
-        <div class="cs_modal_header">
-          <h3 class="cs_modal_title mb-0">Request for Refund</h3>
-          <button class="cs_close_modal cs_center cs_primary_bg">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+        <button class="cs_close_modal cs_center cs_primary_bg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="cs_modal_header text-center py-5">
+          <p>Available Balance</p>
+          <h3 class="cs_modal_title mb-0">$ 100.00</h3>
         </div>
-        <div class="cs_modal_body">
-          <form>
-            <div class="cs_rating_group">
+        <div class="cs_modal_body border-bottom-0">
+          <form class="row">
+            <div class="col-12">
               <div class="cs_modal_input">
-                <label class="cs_fs_18 cs_medium cs_primary_color">Refund Amount</label>
-                <div class="cs_amount">55.00</div>
+                <div class="cs_height_30"></div>
+                <label class="cs_fs_18 cs_primary_color cs_medium">Amount <span class="text-danger">*</span></label>
+                <input type="text" class="cs_form_field cs_type_1" placeholder="Enter amount">
               </div>
+              <div class="cs_height_30"></div>
             </div>
-            <div class="cs_modal_input">
-              <label class="cs_fs_18 cs_medium cs_primary_color">Reason</label>
-              <textarea class="cs_form_field cs_feedback" rows="3"
-                placeholder="Please write your Comment here"></textarea>
+            <div class="col-12">
+              <button class="cs_btn cs_submit cs_medium cs_white_color  w-100">Make Recharge</button>
             </div>
           </form>
         </div>
-        <div class="cs_modal_footer d-flex justify-content-between align-items-center">
-          <button class="cs_btn cs_cancel cs_medium cs_primary_color">Cancel</button>
-          <button class="cs_btn cs_submit cs_medium cs_white_color">Refund Request</button>
-        </div>
-        <div class="cs-height_100 cs-height_lg_70"></div>
       </div>
+      <div class="cs-height_100 cs-height_lg_70"></div>
     </div>
   </div>
   <!-- End recharge modal -->
