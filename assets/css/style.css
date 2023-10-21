@@ -2248,10 +2248,10 @@ Slider arrow design
           transform: translateY(-50%);
 }
 .cs_slider_arrows.cs_style_3 .cs_right_arrow {
-  right: 100px;
+  right: 60px;
 }
 .cs_slider_arrows.cs_style_3 .cs_left_arrow {
-  left: 100px;
+  left: 60px;
 }
 
 .select2-container .select2-container--default .select2-container--open {
@@ -6313,7 +6313,7 @@ input[type=file i]::-webkit-file-upload-button {
   border: 1px solid #f0f0f0;
   background: #f8f9fa;
   padding: 10px 0;
-  padding-left: 15px;
+  padding-left: 11px;
   position: relative;
 }
 .cs_course_heading .cs_filter_action.cs_style_1 select {
